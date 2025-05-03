@@ -72,7 +72,7 @@
       </div>
     </section>
 
-    <section class="aboutMe">
+    <section id="2" class="aboutMe">
       <div class="underTitle2">
         <div class="highlightWrapper4">
           <h2 class="highlightText">
@@ -97,7 +97,7 @@
         </div>
       </div>
     </section>
-    <section class="projects">
+    <section id="3" class="projects">
       <div class="underTitle3">
         <div class="highlightWrapper6">
           <h2 class="highlightText">
@@ -113,7 +113,7 @@
         </div>
       </div>
     </section>
-    <section class="skills">
+    <section id="4" class="skills">
       <div class="underTitle4">
         <div class="highlightWrapper7">
           <h2 class="highlightText">
@@ -144,12 +144,14 @@
         </div>
       </div>
     </section>
-    <section class="contact">
+    <section id="5" class="contact">
       <div class="underTitle5">
         <div class="highlightWrapper8">
           <h2 class="highlightText">
             <span class="highlightBg1"></span>
-            <span id="underTitle8" class="highlightContent">My Contact </span>
+            <span id="underTitle8" class="highlightContent jumpy-letter"
+              >My Contact
+            </span>
           </h2>
         </div>
         <div class="highlightWrapper9">
@@ -205,10 +207,10 @@
       function HeaderBar() {
         return (
           <div className="headerBar">
-            <RainbowLink href="#" text="About me" />
-            <RainbowLink href="#" text="Projects" />
-            <RainbowLink href="#" text="Skills" />
-            <RainbowLink href="#" text="Contact" />
+            <RainbowLink href="#2" text="About me" />
+            <RainbowLink href="#3" text="Projects" />
+            <RainbowLink href="#4" text="Skills" />
+            <RainbowLink href="#5" text="Contact" />
           </div>
         );
       }

@@ -270,16 +270,16 @@ section {
 
   top: 4050px;
   left: 100px;
-  z-index: 1;
+  z-index: 2;
 }
 
 .miniL {
   position: absolute;
 
-  z-index: 2;
+  z-index: 1;
 
-  top: 4400px;
-  left: 1200px;
+  top: 4380px;
+  left: 1220px;
 }
 
 .endStar {
@@ -396,6 +396,7 @@ section {
   bottom: 0;
   width: 100%;
   height: 100%;
+  border-radius: 10px;
   background-color: #653080;
   z-index: 0;
 
