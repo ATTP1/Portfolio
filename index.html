@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/style.css" />
+    <title>Document</title>
+
+    <!-- React -->
+    <script
+      src="https://unpkg.com/react@18/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+
+    <!-- Babel pour interpréter le JSX -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <section class="acceuil">
+      <div id="root"></div>
+
+      <div class="underTitle">
+        <div class="highlightWrapper1">
+          <h2 class="highlightText">
+            <span class="highlightBg1"></span>
+            <span id="underTitle1" class="highlightContent">where code</span>
+          </h2>
+        </div>
+
+        <div class="highlightWrapper2">
+          <h2 class="highlightText">
+            <span class="highlightBg2"></span>
+            <span id="underTitle2" class="highlightContent">meets magic</span>
+          </h2>
+        </div>
+      </div>
+      <div class="title">
+        <img src="images/title.png" alt="" />
+      </div>
+      <div class="titleStar"><img src="images/titleStar.png" alt="" /></div>
+      <div class="name">
+        <div class="highlightWrapper3">
+          <h2 class="highlightText">
+            <span class="highlightBg1"></span>
+            <span id="underTitle3" class="highlightContent"
+              >Allan Tri Tam Pham</span
+            >
+          </h2>
+        </div>
+        <h2 id="jumpyName">Allan Tri Tam <span>Pham</span></h2>
+      </div>
+      <div class="imagesZone">
+        <img class="miniMe" src="images/miniMe.png" alt="" />
+        <img class="miniS" src="images/miniS.png" alt="" />
+
+        <img class="prop1" src="images/prop1.png" alt="" />
+        <img class="path1" src="images/path1.png" alt="" />
+        <img class="path2" src="images/path2.png" alt="" />
+
+        <img class="miniR" src="images/miniR.png" alt="" />
+        <img class="miniRP" src="images/miniRP.png" alt="" />
+
+        <img class="path3" src="images/path3.png" alt="" />
+
+        <img class="path4" src="images/path4.png" alt="" />
+        <img class="miniL" src="images/miniL.png" alt="" />
+        <img class="endStar" src="images/endStar.png" alt="" />
+      </div>
+    </section>
+
+    <section class="aboutMe">
+      <div class="underTitle2">
+        <div class="highlightWrapper4">
+          <h2 class="highlightText">
+            <span class="highlightBg1Rev"></span>
+            <span id="underTitle4" class="highlightContent">About me</span>
+          </h2>
+        </div>
+        <div class="highlightWrapper5">
+          <h3 class="highlightText">
+            <span class="highlightBg2Rev"></span>
+            <span id="underTitle5" class="highlightContent"
+              ><p>
+                I’m a passionate front-end developer with a <br />
+                love for design, interactivity, and clean code.<br />
+                Whether I’m building responsive layouts or <br />
+                crafting intuitive user experiences, I’m always <br />
+                driven by creativity and precision. Let’s build <br />
+                something memorable.Code that feels as it looks.
+              </p></span
+            >
+          </h3>
+        </div>
+      </div>
+    </section>
+    <section class="projects">
+      <div class="underTitle3">
+        <div class="highlightWrapper6">
+          <h2 class="highlightText">
+            <span class="highlightBg1"></span>
+            <span id="underTitle6" class="highlightContent">My Projects</span>
+          </h2>
+        </div>
+        <div class="carousselProjects">
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+        </div>
+      </div>
+    </section>
+    <section class="skills">
+      <div class="underTitle4">
+        <div class="highlightWrapper7">
+          <h2 class="highlightText">
+            <span class="highlightBg2Rev"></span>
+            <span id="underTitle7" class="highlightContent">My Skills</span>
+          </h2>
+        </div>
+      </div>
+
+      <div class="scrollingText">
+        <div class="scrollingTextInner">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi quae
+          iste
+        </div>
+      </div>
+      <div class="scrollingLogo">
+        <div class="scrollingLogoInner">
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+        </div>
+      </div>
+    </section>
+    <section class="contact">
+      <div class="underTitle5">
+        <div class="highlightWrapper8">
+          <h2 class="highlightText">
+            <span class="highlightBg1"></span>
+            <span id="underTitle8" class="highlightContent">My Contact </span>
+          </h2>
+        </div>
+        <div class="highlightWrapper9">
+          <h2 class="highlightText">
+            <span class="highlightBg1"></span>
+            <span id="underTitle9" class="highlightContent">
+              <a href="mailto:allantritampham@gmail.com"
+                >allantritampham@gmail.com</a
+              ></span
+            >
+          </h2>
+        </div>
+        <div class="highlightWrapper10">
+          <h2 class="highlightText">
+            <span class="highlightBg1"></span>
+            <span id="underTitle10" class="highlightContent">
+              <a href="https://github.com/ATTP1"
+                >https://github.com/ATTP1</a
+              ></span
+            >
+          </h2>
+        </div>
+      </div>
+    </section>
+
+    <script type="text/babel">
+      function RainbowLink({ text, href }) {
+        const center = Math.floor(text.length / 2);
+        const colors = ["#6930c4", "#7130be", "#aa7beb", "#aaa1f0"];
+
+        return (
+          <a href={href} className="rainbow-link">
+            {text.split("").map((char, i) => {
+              const distance = Math.abs(i - center);
+              const color = colors[i % colors.length];
+              return (
+                <span
+                  key={i}
+                  style={{
+                    "--i": i,
+                    "--distance": distance,
+                    "--rainbow-color": color,
+                  }}
+                >
+                  {char}
+                </span>
+              );
+            })}
+          </a>
+        );
+      }
+
+      function HeaderBar() {
+        return (
+          <div className="headerBar">
+            <RainbowLink href="#" text="About me" />
+            <RainbowLink href="#" text="Projects" />
+            <RainbowLink href="#" text="Skills" />
+            <RainbowLink href="#" text="Contact" />
+          </div>
+        );
+      }
+
+      function injectJumpyEffectToName() {
+        const target = document.getElementById("jumpyName");
+        const text = "Allan Tri Tam Pham";
+
+        if (!target) return;
+
+        const letters = text.split("").map((char, i) => {
+          // Ajoute un span spécial après "Tam" (juste avant "Pham")
+          if (i === 13) {
+            const gap = document.createElement("span");
+            gap.className = "jumpy-gap";
+            gap.innerHTML = "&nbsp;";
+            return gap;
+          }
+
+          if (char === " ") {
+            const space = document.createElement("span");
+            space.className = "jumpy-space";
+            space.innerHTML = "&nbsp;";
+            return space;
+          }
+
+          const span = document.createElement("span");
+          span.className = "jumpy-letter";
+          span.style.animationDelay = `${i * 0.05}s`;
+          span.textContent = char;
+          return span;
+        });
+
+        target.innerHTML = ""; // vide l'ancien contenu
+        letters.forEach((span) => target.appendChild(span));
+      }
+
+      ReactDOM.createRoot(document.getElementById("root")).render(
+        <HeaderBar />
+      );
+      injectJumpyEffectToName();
+    </script>
+  </body>
+</html>

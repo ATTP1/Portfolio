@@ -1,0 +1,534 @@
+$Purple1: #6930c4;
+$Purple2: #bb95f8;
+$Purple3: #653080;
+
+$Black: #363636;
+
+/* TESTER VIEW
+
+* {
+  outline: 1px solid limegreen; 
+
+}
+  */
+
+@font-face {
+  font-family: "mainFont";
+  src: url("../style/MonumentExtended-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+a {
+  font-weight: normal;
+  text-decoration: none;
+  color: $Purple2;
+}
+
+body {
+  overflow-x: hidden;
+  margin: 0;
+  font-family: "mainFont";
+}
+
+section {
+  width: 100%;
+  height: 1080px;
+
+  background-position: center;
+
+  overflow: hidden;
+}
+
+.acceuil,
+.projects,
+.contact {
+  background-color: $Purple1;
+
+  width: 100%;
+
+  background-image: url("../images/bg1.png");
+}
+
+.headerBar {
+  height: 55px;
+  background-color: $Purple2;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.headerBar a {
+  color: $Black;
+  text-decoration: none;
+  font-size: 35px;
+
+  margin-top: 10px;
+}
+
+.aboutMe,
+.skills {
+  background-color: $Purple3;
+
+  width: 100%;
+
+  background-image: url("../images/bg2.png");
+}
+
+.underTitle {
+  margin-top: 190px;
+}
+
+.underTitle h2,
+.name h2 {
+  font-weight: normal;
+  letter-spacing: 5px;
+  color: $Purple2;
+  font-size: 55px;
+  text-align: center;
+  margin: 0;
+}
+
+.title {
+  position: absolute;
+  top: 240px;
+  left: 240px;
+  z-index: 2;
+}
+
+.titleStar {
+  position: absolute;
+  top: 80px;
+  left: 130px;
+  z-index: 0;
+}
+
+.name {
+  position: absolute;
+  top: 730px;
+  left: 400px;
+}
+
+.miniMe {
+  position: absolute;
+  left: 1360px;
+  top: 350px;
+  z-index: 1;
+}
+
+.miniS {
+  position: absolute;
+  z-index: 3;
+  top: 690px;
+  left: -50px;
+}
+
+.prop1 {
+  position: absolute;
+
+  top: 1600px;
+  left: 100px;
+  z-index: 2;
+}
+
+.path1 {
+  position: absolute;
+
+  top: 1050px;
+  left: 180px;
+  z-index: 1;
+}
+.path2 {
+  position: absolute;
+
+  top: 1920px;
+  left: 280px;
+  z-index: 1;
+}
+
+.carousselProjects {
+  position: absolute;
+
+  top: 2500px;
+  height: 550px;
+  width: 100%;
+  background-color: $Black;
+
+  z-index: 3;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.carousselProjects .box {
+  border-radius: 20px;
+  margin-left: 25px;
+  margin-right: 25px;
+  height: 400px;
+  width: 400px;
+  background-color: $Purple2;
+}
+
+.miniR {
+  position: absolute;
+
+  z-index: 2;
+
+  top: 2250px;
+  left: 1400px;
+}
+
+.miniRP {
+  position: absolute;
+
+  z-index: 5;
+
+  top: 2465px;
+  left: 1400px;
+}
+
+.path3 {
+  position: absolute;
+
+  top: 2950px;
+  left: 220px;
+  z-index: 1;
+}
+
+.scrollingText {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  top: 3650px;
+
+  width: 100%;
+  height: 120px;
+  background-color: $Purple1;
+
+  z-index: 5;
+}
+
+.scrollingTextInner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: $Black;
+  width: 100%;
+
+  height: 70px;
+  font-size: 35px;
+  color: $Purple2;
+}
+
+.scrollingLogo {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  top: 3900px;
+
+  width: 100%;
+  height: 250px;
+  background-color: $Purple1;
+
+  z-index: 5;
+}
+
+.scrollingLogoInner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: $Black;
+  width: 100%;
+
+  height: 200px;
+  font-size: 35px;
+  color: $Purple2;
+}
+
+.scrollingLogoInner .box {
+  border-radius: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  height: 150px;
+  width: 150px;
+  background-color: $Purple2;
+}
+
+.path4 {
+  position: absolute;
+
+  top: 4050px;
+  left: 100px;
+  z-index: 1;
+}
+
+.miniL {
+  position: absolute;
+
+  z-index: 2;
+
+  top: 4400px;
+  left: 1200px;
+}
+
+.endStar {
+  position: absolute;
+  top: 4500px;
+  left: 50px;
+  z-index: 0;
+}
+
+//rainbow text
+
+.rainbow-link {
+  font-size: 35px;
+  text-decoration: none;
+  display: flex;
+  gap: 2px;
+  transition: 0.3s ease;
+}
+
+.rainbow-link span {
+  color: $Black; // noir par défaut
+  transition: 0.3s ease;
+  filter: brightness(1);
+}
+
+.rainbow-link:hover span {
+  color: var(--rainbow-color); // prend la couleur dynamique uniquement au hover
+  animation: glow 0.6s ease forwards;
+  animation-delay: calc(var(--distance, 0) * 0.1s);
+}
+
+@keyframes glow {
+  0% {
+    filter: brightness(0.5);
+  }
+  50% {
+    filter: brightness(0.5) drop-shadow(0 0 10px currentColor);
+  }
+  100% {
+    filter: brightness(0.5);
+  }
+}
+/* jumpy text*/
+
+.jumpy-letter {
+  display: inline-block;
+  animation: jumpy 1.2s ease-in-out infinite;
+  letter-spacing: 0px;
+}
+
+@keyframes jumpy {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(0);
+  }
+}
+
+.jumpy-gap {
+  display: inline-block;
+  width: 100px; // ajuste la largeur selon l’effet visuel que tu veux
+}
+
+/*HIghlight effect*/
+.highlightText {
+  position: relative;
+  display: inline-block;
+  font-size: 60px;
+  font-family: "mainFont";
+  color: #bb95f8;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.highlightBg1,
+.highlightBg1Rev {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $Purple3;
+  z-index: 0;
+  border-radius: 10px;
+
+  transform: translateX(-100vw);
+  animation: slideIn 1.8s ease forwards;
+}
+
+.highlightBg1Rev {
+  background-color: $Purple1;
+}
+
+.highlightContent {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes slideIn {
+  to {
+    transform: translateX(0);
+  }
+}
+
+.highlightBg2,
+.highlightBg2Rev {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #653080;
+  z-index: 0;
+
+  transform: translateX(100vw);
+  animation: slideInFromRight 1.8s ease forwards;
+}
+
+.highlightBg2Rev {
+  background-color: $Purple1;
+}
+
+@keyframes slideInFromRight {
+  to {
+    transform: translateX(0);
+  }
+}
+
+.highlightWrapper1,
+.highlightWrapper2,
+.highlightWrapper3,
+.highlightWrapper4,
+.highlightWrapper5,
+.highlightWrapper6,
+.highlightWrapper7,
+.highlightWrapper8,
+.highlightWrapper9,
+.highlightWrapper10 {
+  position: absolute;
+}
+
+.highlightWrapper1 {
+  top: 240px;
+}
+
+.underTitle #underTitle1 {
+  padding-left: 700px;
+}
+
+.highlightWrapper2 {
+  top: 320px;
+  left: 670px;
+}
+.underTitle #underTitle2 {
+  padding-left: 5px;
+  padding-right: 800px;
+}
+
+.name #underTitle3 {
+  padding-left: 700px;
+  color: transparent;
+}
+
+.highlightWrapper3 {
+  top: -5px;
+  left: -685px;
+}
+
+.underTitle2 #underTitle4 {
+  padding-left: 450px;
+  padding-right: 5px;
+}
+
+.highlightWrapper4 {
+  top: 1200px;
+  left: -200px;
+  z-index: 2;
+}
+
+.highlightWrapper5 {
+  top: 1500px;
+  left: 600px;
+  z-index: 2;
+}
+.highlightWrapper5 p {
+  padding-left: 20px;
+  padding-right: 500px;
+  font-size: 35px;
+}
+
+.underTitle3 #underTitle6 {
+  padding-left: 700px;
+  padding-right: 5px;
+}
+
+.highlightWrapper6 {
+  top: 2300px;
+  left: 0px;
+}
+
+.underTitle4 #underTitle7 {
+  padding-right: 700px;
+  padding-left: 5px;
+}
+
+.highlightWrapper7 {
+  top: 3400px;
+  left: 1150px;
+}
+
+///
+.underTitle5 #underTitle8 {
+  padding-left: 200px;
+  padding-right: 5px;
+}
+
+.highlightWrapper8 {
+  top: 4600px;
+}
+
+.underTitle5 #underTitle9 {
+  padding-left: 300px;
+  padding-right: 5px;
+}
+
+.highlightWrapper9 {
+  top: 4750px;
+  z-index: 2;
+}
+
+.highlightWrapper9 a {
+  font-size: 35px;
+}
+
+.underTitle5 #underTitle10 {
+  padding-left: 370px;
+  padding-right: 5px;
+}
+
+.highlightWrapper10 {
+  top: 4850px;
+  z-index: 2;
+}
+
+.highlightWrapper10 a {
+  font-size: 35px;
+}
