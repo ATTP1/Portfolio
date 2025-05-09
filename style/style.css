@@ -620,6 +620,7 @@ section {
   margin-right: 50px; /* écart éventuel entre éléments */
   text-align: center;
   background: #19964b;
+  color: #912e2e;
   padding: 40px 20px;
   box-sizing: border-box;
 }
