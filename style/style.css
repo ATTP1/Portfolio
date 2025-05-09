@@ -461,12 +461,14 @@ section {
   font-size: 35px;
 }
 
+/*
+
 .carouselContainer,
 .scrollingLogo {
   position: absolute;
   top: 2500px;
   z-index: 4;
-  background: #653080;
+  background: $Purple3;
   padding-top: 50px;
   padding-bottom: 50px;
   width: 100%;
@@ -478,19 +480,20 @@ section {
 .scrollingTextInner {
   display: flex;
   gap: 20px;
-  animation: scrollCarousel 10s linear infinite;
+  flex-wrap: nowrap;
+  //animation: scrollCarousel 10s linear infinite;
 }
 
 .carousselProjects .box,
 .scrollingLogoInner .box {
   width: 350px;
   height: 350px;
-  background: #bb95f8;
+  background: $Purple2;
   border-radius: 20px;
   flex-shrink: 0;
 }
 
-/* Animation défilement */
+/* Animation défilement 
 @keyframes scrollCarousel {
   0% {
     transform: translateX(0);
@@ -505,7 +508,7 @@ section {
 
 .scrollingTextContainer {
   margin-top: 420px;
-  background-color: #363636;
+  background-color: $Black;
   width: 100vw;
   height: 100px;
 }
@@ -527,20 +530,18 @@ section {
     transform: translateX(-78%);
   }
 }
-/* Pour cacher le scroll visuel */
+/* Pour cacher le scroll visuel 
 .carousselProjects::-webkit-scrollbar {
   display: none;
 }
 
 .scrollingLogo {
   top: 3800px;
-  background-color: #363636;
+  background-color: $Black;
 }
-
 .scrollingLogoInner {
   animation: scrollCarousel3 5s linear infinite;
 }
-
 .scrollingLogoInner .box {
   width: 200px;
   height: 200px;
@@ -554,6 +555,8 @@ section {
     transform: translateX(0);
   }
 }
+
+//carousell LOGO
 /*
 .scrollingLogo {
   position: absolute;
@@ -592,5 +595,46 @@ section {
   background-color: $Purple2;
 }
 */
+.carousel-container {
+  position: absolute;
+  z-index: 3;
+  top: 2500px;
+  width: 100%; /* peut être une largeur fixe si désiré */
+  max-width: 100%; /* adapte le carrousel à la largeur du parent */
+  overflow: hidden; /* masque les éléments débordants (nécessaire pour le défilement) */
+  margin: 0 auto; /* centrage exemple */
+  background: #912e2e;
+  padding: 50px;
+}
+
+.carousel-track {
+  display: flex;
+  flex-wrap: nowrap;
+  transition: transform 0.3s ease; /* transition douce pour le défilement */
+}
+
+.item {
+  flex: 0 0 auto; /* empêche l'item de réduire, largeur fixe */
+  width: 350px; /* largeur fixe de chaque élément */
+  height: 350px;
+  margin-right: 50px; /* écart éventuel entre éléments */
+  text-align: center;
+  background: #19964b;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+.carousel-prev {
+  left: 10px;
+}
+
+.carousel-next {
+  right: 10px;
+}
+
+.carousel-prev:focus,
+.carousel-next:focus {
+  outline: none;
+}
 
 /*# sourceMappingURL=style.css.map */

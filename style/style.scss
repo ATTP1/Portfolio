@@ -499,6 +499,8 @@ section {
 
 //Carousel
 
+/*
+
 .carouselContainer,
 .scrollingLogo {
   position: absolute;
@@ -516,7 +518,8 @@ section {
 .scrollingTextInner {
   display: flex;
   gap: 20px;
-  animation: scrollCarousel 10s linear infinite;
+  flex-wrap: nowrap;
+  //animation: scrollCarousel 10s linear infinite;
 }
 
 .carousselProjects .box,
@@ -528,7 +531,7 @@ section {
   flex-shrink: 0;
 }
 
-/* Animation défilement */
+/* Animation défilement 
 @keyframes scrollCarousel {
   0% {
     transform: translateX(0);
@@ -565,7 +568,7 @@ section {
     transform: translateX(-78%);
   }
 }
-/* Pour cacher le scroll visuel */
+/* Pour cacher le scroll visuel 
 .carousselProjects::-webkit-scrollbar {
   display: none;
 }
@@ -630,3 +633,45 @@ section {
   background-color: $Purple2;
 }
 */
+
+//projectCarousel
+
+.carousel-container {
+  position: absolute;
+  z-index: 3;
+  top: 2500px;
+  width: 100%; /* peut être une largeur fixe si désiré */
+  max-width: 100%; /* adapte le carrousel à la largeur du parent */
+  overflow: hidden; /* masque les éléments débordants (nécessaire pour le défilement) */
+  margin: 0 auto; /* centrage exemple */
+  background: #912e2e;
+  padding: 50px;
+}
+
+.carousel-track {
+  display: flex;
+  flex-wrap: nowrap;
+  transition: transform 0.3s ease; /* transition douce pour le défilement */
+}
+
+.item {
+  flex: 0 0 auto; /* empêche l'item de réduire, largeur fixe */
+  width: 350px; /* largeur fixe de chaque élément */
+  height: 350px;
+  margin-right: 50px; /* écart éventuel entre éléments */
+  text-align: center;
+  background: #19964b;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+.carousel-prev {
+  left: 10px;
+}
+.carousel-next {
+  right: 10px;
+}
+.carousel-prev:focus,
+.carousel-next:focus {
+  outline: none;
+}
