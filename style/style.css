@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* TESTER VIEW
 
 * {
@@ -461,180 +460,52 @@ section {
   font-size: 35px;
 }
 
-/*
-
-.carouselContainer,
-.scrollingLogo {
+.carouselContainer {
+  max-width: 100vw;
   position: absolute;
   top: 2500px;
-  z-index: 4;
-  background: $Purple3;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  width: 100%;
-  overflow: hidden;
-}
-
-.carousselProjects,
-.scrollingLogoInner,
-.scrollingTextInner {
-  display: flex;
-  gap: 20px;
-  flex-wrap: nowrap;
-  //animation: scrollCarousel 10s linear infinite;
-}
-
-.carousselProjects .box,
-.scrollingLogoInner .box {
-  width: 350px;
-  height: 350px;
-  background: $Purple2;
-  border-radius: 20px;
-  flex-shrink: 0;
-}
-
-/* Animation défilement 
-@keyframes scrollCarousel {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-77%);
-  }
-}
-.scrollingText {
-  background: transparent;
-}
-
-.scrollingTextContainer {
-  margin-top: 420px;
-  background-color: $Black;
-  width: 100vw;
-  height: 100px;
-}
-
-.scrollingTextInner {
-  animation: scrollCarousel2 10s linear infinite;
-}
-
-.scrollingTextInner .box {
-  width: 300px;
-  margin-left: 80px;
-}
-
-@keyframes scrollCarousel2 {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-78%);
-  }
-}
-/* Pour cacher le scroll visuel 
-.carousselProjects::-webkit-scrollbar {
-  display: none;
-}
-
-.scrollingLogo {
-  top: 3800px;
-  background-color: $Black;
-}
-.scrollingLogoInner {
-  animation: scrollCarousel3 5s linear infinite;
-}
-.scrollingLogoInner .box {
-  width: 200px;
-  height: 200px;
-}
-
-@keyframes scrollCarousel3 {
-  0% {
-    transform: translateX(-45%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
-//carousell LOGO
-/*
-.scrollingLogo {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  top: 3900px;
-
-  width: 100%;
-  height: 250px;
-  background-color: $Purple1;
-
-  z-index: 5;
-}
-
-.scrollingLogoInner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  background-color: $Black;
-  width: 100%;
-
-  height: 200px;
-  font-size: 35px;
-  color: $Purple2;
-}
-
-.scrollingLogoInner .box {
-  border-radius: 20px;
-  margin-left: 20px;
-  margin-right: 20px;
-  height: 150px;
-  width: 150px;
-  background-color: $Purple2;
-}
-*/
-.carousel-container {
-  position: absolute;
   z-index: 3;
-  top: 2500px;
-  width: 100%; /* peut être une largeur fixe si désiré */
-  max-width: 100%; /* adapte le carrousel à la largeur du parent */
-  overflow: hidden; /* masque les éléments débordants (nécessaire pour le défilement) */
-  margin: 0 auto; /* centrage exemple */
-  background: #912e2e;
-  padding: 50px;
 }
 
-.carousel-track {
+#carousel1 .item {
+  width: 420px;
+  height: 420px;
+  border-radius: 10px;
+  border: 5px solid #bb95f8;
+  background: #bb95f8;
+}
+
+.carouselTrack {
+  padding-block: 1rem;
   display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.carouselContainer[data-animated=true] {
+  overflow: hidden;
+  padding: 10px 0 10px 0;
+  background: #363636;
+}
+
+[data-animated=true] .carouselTrack {
+  width: max-content;
   flex-wrap: nowrap;
-  transition: transform 0.3s ease; /* transition douce pour le défilement */
+  animation: scroll 30s linear infinite;
 }
 
-.item {
-  flex: 0 0 auto; /* empêche l'item de réduire, largeur fixe */
-  width: 350px; /* largeur fixe de chaque élément */
-  height: 350px;
-  margin-right: 50px; /* écart éventuel entre éléments */
-  text-align: center;
-  background: #19964b;
-  padding: 40px 20px;
-  box-sizing: border-box;
+[data-animated=true] .carouselTrack:hover {
+  animation-play-state: paused;
 }
 
-.carousel-prev {
-  left: 10px;
+.carouselTrack .item:hover {
+  border: 5px solid red !important;
 }
 
-.carousel-next {
-  right: 10px;
-}
-
-.carousel-prev:focus,
-.carousel-next:focus {
-  outline: none;
+@keyframes scroll {
+  to {
+    transform: translate(calc(-50% - 1rem));
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

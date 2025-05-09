@@ -106,14 +106,16 @@
           </h2>
         </div>
 
-        <div id="carousel1" class="carousel-container">
-          <div class="carousel-track">
+        <div id="carousel1" class="carouselContainer">
+          <div class="carouselTrack">
             <div class="item">Slide 1</div>
             <div class="item">Slide 2</div>
             <div class="item">Slide 3</div>
             <div class="item">Slide 4</div>
-
-            <!-- ... autres éléments ... -->
+            <div class="item">Slide 5</div>
+            <div class="item">Slide 6</div>
+            <div class="item">Slide 7</div>
+            <div class="item">Slide 8</div>
           </div>
         </div>
       </div>
@@ -204,123 +206,31 @@
     </section>
 
     <script>
-      /**
-       * Initialise un carrousel infini sur l'élément conteneur d'ID donné.
-       * @param {string} id - ID du conteneur du carrousel.
-       * @param {Object} options - Options (ex: {autoplay: true, interval: 3000, duration: 300}).
-       */
-      function createInfiniteCarousel(id, options = {}) {
-        const container = document.getElementById(id);
-        if (!container)
-          return console.error("Carousel container not found:", id);
-        const track = container.querySelector(".carousel-track") || container;
-        let slides = Array.from(track.children);
-        const nSlides = slides.length;
-        if (nSlides === 0) return;
+      const carouselContainer = document.querySelectorAll(".carouselContainer");
 
-        // Nombre de clones aux extrémités (1 par défaut ; ajuster si plusieurs slides visibles à la fois)
-        const cloneCount = 1;
-        // Dupliquer les éléments de tête et de fin
-        for (let i = 0; i < cloneCount; i++) {
-          const firstClone = slides[i].cloneNode(true);
-          const lastClone = slides[nSlides - 1 - i].cloneNode(true);
-          firstClone.setAttribute("data-clone", "true");
-          lastClone.setAttribute("data-clone", "true");
-          track.appendChild(firstClone); // ajoute le clone du début à la fin
-          track.insertBefore(lastClone, track.firstChild); // ajoute le clone de la fin au début
-        }
-        // Mettre à jour la liste de slides incluant les clones
-        slides = Array.from(track.children);
-        const totalSlides = slides.length;
-        // Calculer la largeur d'un slide (en pixels)
-        const slideWidth = slides[cloneCount].offsetWidth;
-        // Positionner le carrousel pour commencer sur la première slide originale
-        let index = cloneCount;
-        track.style.transform = `translateX(-${index * slideWidth}px)`;
-
-        // Paramétrer la transition (durée par défaut 300ms ou spécifiée)
-        const duration = options.duration || 300;
-        const transitionStyle = `transform ${duration}ms ease`;
-        track.style.transition = transitionStyle;
-
-        // Fonction interne pour aller à un index donné (défilement animé)
-        function goTo(indexTarget) {
-          index = indexTarget;
-          track.style.transition = transitionStyle;
-          track.style.transform = `translateX(-${index * slideWidth}px)`;
-        }
-        // Fonctions de navigation
-        function slideNext() {
-          goTo(index + 1);
-        }
-        function slidePrev() {
-          goTo(index - 1);
-        }
-
-        // Événement de fin de transition pour reset invisible (boucle infinie)
-        track.addEventListener("transitionend", () => {
-          // Si on est sur un clone complètement à gauche (avant première slide originale)
-          if (index === 0) {
-            track.style.transition = "none"; // désactive la transition temporairement
-            index = nSlides; // saute à la dernière slide originale
-            track.style.transform = `translateX(-${index * slideWidth}px)`;
-            setTimeout(() => {
-              track.style.transition = transitionStyle;
-            }, 0); // réactive la transition
-          }
-          // Si on est sur un clone complètement à droite (après dernière slide originale)
-          else if (index >= totalSlides - 3) {
-            const visibleCount = Math.floor(container.offsetWidth / slideWidth);
-            const offset = totalSlides - visibleCount - cloneCount * 2;
-            track.style.transition = "none";
-            const slidesToShift = 2; // ← combien d’items tu veux décaler (par exemple 2)
-            index = cloneCount + slidesToShift;
-            track.style.transform = `translateX(-${index * slideWidth}px)`;
-            setTimeout(() => {
-              track.style.transition = transitionStyle;
-            }, 0);
-          }
-        });
-
-        // Autoplay : défile automatiquement toutes les X millisecondes (optionnel)
-        let autoTimer;
-        if (options.autoplay) {
-          const interval = options.interval || 3000;
-          autoTimer = setInterval(() => {
-            slideNext();
-          }, interval);
-        }
-
-        // Contrôles suivant/précédent (s'ils existent dans le DOM)
-        const nextBtn = container.querySelector(".carousel-next");
-        const prevBtn = container.querySelector(".carousel-prev");
-        if (nextBtn) {
-          nextBtn.addEventListener("click", () => {
-            slideNext();
-            if (options.autoplay) {
-              // réinitialise le timer autoplay au clic
-              clearInterval(autoTimer);
-              autoTimer = setInterval(() => {
-                slideNext();
-              }, options.interval || 3000);
-            }
-          });
-        }
-        if (prevBtn) {
-          prevBtn.addEventListener("click", () => {
-            slidePrev();
-            if (options.autoplay) {
-              clearInterval(autoTimer);
-              autoTimer = setInterval(() => {
-                slideNext();
-              }, options.interval || 3000);
-            }
-          });
-        }
+      //verifier que le browser n'est pas en mode REDUCED MOTION
+      if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        addAnimation();
       }
 
-      // Initialisation du carrousel avec l'ID et options souhaitées :
-      createInfiniteCarousel("carousel1", { autoplay: true, interval: 4000 });
+      function addAnimation() {
+        carouselContainer.forEach((carousel) => {
+          carousel.setAttribute("data-animated", true);
+
+          const carouselTrack = carousel.querySelector(".carouselTrack");
+          const carouselContent = Array.from(carouselTrack.children);
+
+          function cloning() {
+            carouselContent.forEach((item) => {
+              const duplicatedItem = item.cloneNode(true);
+
+              duplicatedItem.setAttribute("aria-hidden", true); //pour eviter de lire en double pour browser adapté
+              carouselTrack.appendChild(duplicatedItem);
+            });
+          }
+          cloning();
+        });
+      }
     </script>
 
     <script type="text/babel">
