@@ -71,7 +71,6 @@
         <img class="endStar" src="images/endStar.png" alt="" />
       </div>
     </section>
-
     <section id="2" class="aboutMe">
       <div class="underTitle2">
         <div class="highlightWrapper4">
@@ -143,44 +142,59 @@
         </div>
       </div>
 
-      <div class="scrollingTextContainer">
-        <div class="scrollingText">
-          <div class="scrollingTextInner" id="scrollingText">
-            <div class="box">HTML5</div>
-            <div class="box">CSS</div>
-            <div class="box">SCSS</div>
-            <div class="box">JAVASCRIPT</div>
-            <div class="box">REACT</div>
-            <div class="box">GIT</div>
+      <div id="carousel2" class="carouselContainer">
+        <div class="carouselTrack2">
+          <div class="item">HTML5</div>
+          <div class="item">CSS</div>
+          <div class="item">SCSS</div>
+          <div class="item">JAVASCRIPT</div>
+          <div class="item">REACT</div>
+          <div class="item">GIT</div>
 
-            <div class="box">HTML5</div>
-            <div class="box">CSS</div>
-            <div class="box">SCSS</div>
-            <div class="box">JAVASCRIPT</div>
-            <div class="box">REACT</div>
-            <div class="box">GIT</div>
-          </div>
+          <div class="item">HTML5</div>
+          <div class="item">CSS</div>
+          <div class="item">SCSS</div>
+          <div class="item">JAVASCRIPT</div>
+          <div class="item">REACT</div>
+          <div class="item">GIT</div>
         </div>
       </div>
 
-      <div class="scrollingLogo">
-        <div class="scrollingLogoInner">
-          <div class="box">a</div>
-          <div class="box">b</div>
-          <div class="box">c</div>
-          <div class="box">d</div>
-
-          <div class="box">a1</div>
-          <div class="box">b1</div>
-          <div class="box">c1</div>
-          <div class="box">d1</div>
-
-          <div class="box">a2</div>
-          <div class="box">b2</div>
-          <div class="box">c2</div>
-          <div class="box">d2</div>
-
-          <div class="box">a3</div>
+      <div id="carousel3" class="carouselContainer">
+        <div class="carouselTrack3">
+          <div class="item">
+            <img src="images/softwareIcons/1.png" alt="" />
+          </div>
+          <div class="item">
+            <img src="images/softwareIcons/2.png" alt="" />
+          </div>
+          <div class="item">
+            <img src="images/softwareIcons/3.png" alt="" />
+          </div>
+          <div class="item">
+            <img src="images/softwareIcons/4.png" alt="" />
+          </div>
+          <div class="item">
+            <img src="images/softwareIcons/5.png" alt="" />
+          </div>
+          <div class="item">
+            <img src="images/softwareIcons/6.png" alt="" />
+          </div>
+          <div class="item">
+            <img src="images/softwareIcons/7.png" alt="" />
+          </div>
+          <div class="item">
+            <img src="images/softwareIcons/8.png" alt="" />
+          </div>
+          <div class="item">
+            <img src="images/softwareIcons/9.png" alt="" />
+          </div>
+          <div class="item">
+            <img src="images/softwareIcons/10.png" alt="" />
+          </div>
+          <div class="item">
+            <img src="images/softwareIcons/11.png" alt="" />
+          </div>
         </div>
       </div>
     </section>
@@ -216,7 +230,7 @@
         </div>
       </div>
     </section>
-    <section class="popup-section">
+    <div class="popup-section">
       <div class="popup" id="popup1">
         <div class="popup-content">
           <div class="popup-text">
@@ -378,7 +392,7 @@
           <div class="popup-text">
             <h2>
               <strong>Electron App</strong><br />
-              ChronoChou
+              Chrono Chou
             </h2>
             <h3>2024</h3>
             <p>
@@ -434,7 +448,7 @@
           <button class="close-btnProject">&times;</button>
         </div>
       </div>
-    </section>
+    </div>
     <script>
       const carouselContainer = document.querySelectorAll(".carouselContainer");
 
@@ -449,14 +463,19 @@
         carouselContainer.forEach((carousel) => {
           carousel.setAttribute("data-animated", true);
 
-          const carouselTrack = carousel.querySelector(".carouselTrack");
+          const carouselTrack =
+            carousel.querySelector(".carouselTrack") ||
+            carousel.querySelector(".carouselTrack2") ||
+            carousel.querySelector(".carouselTrack3");
+
+          if (!carouselTrack) return;
+
           const carouselContent = Array.from(carouselTrack.children);
 
           function cloning() {
             carouselContent.forEach((item) => {
               const duplicatedItem = item.cloneNode(true);
-
-              duplicatedItem.setAttribute("aria-hidden", true); //pour eviter de lire en double pour browser adapté
+              duplicatedItem.setAttribute("aria-hidden", true);
               carouselTrack.appendChild(duplicatedItem);
             });
           }

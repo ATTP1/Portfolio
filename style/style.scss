@@ -311,192 +311,6 @@ section {
   width: 100px; // ajuste la largeur selon l’effet visuel que tu veux
 }
 
-/*HIghlight effect*/
-.highlightText {
-  position: relative;
-  display: inline-block;
-  font-size: 60px;
-  font-family: "mainFont";
-  color: #bb95f8;
-  overflow: hidden;
-  white-space: nowrap;
-}
-
-.highlightBg1,
-.highlightBg1Rev {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  background-color: $Purple3;
-  z-index: 0;
-  border-radius: 10px;
-
-  transform: translateX(-100vw);
-  animation: slideIn 1.8s ease forwards;
-}
-
-.highlightBg1Rev {
-  background-color: $Purple1;
-}
-
-.highlightContent {
-  position: relative;
-  z-index: 1;
-}
-
-@keyframes slideIn {
-  to {
-    transform: translateX(0);
-  }
-}
-
-.highlightBg2,
-.highlightBg2Rev {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-  background-color: #653080;
-  z-index: 0;
-
-  transform: translateX(100vw);
-  animation: slideInFromRight 1.8s ease forwards;
-}
-
-.highlightBg2Rev {
-  background-color: $Purple1;
-}
-
-@keyframes slideInFromRight {
-  to {
-    transform: translateX(0);
-  }
-}
-
-.highlightWrapper1,
-.highlightWrapper2,
-.highlightWrapper3,
-.highlightWrapper4,
-.highlightWrapper5,
-.highlightWrapper6,
-.highlightWrapper7,
-.highlightWrapper8,
-.highlightWrapper9,
-.highlightWrapper10 {
-  position: absolute;
-}
-
-.highlightWrapper1 {
-  top: 240px;
-}
-
-.underTitle #underTitle1 {
-  padding-left: 700px;
-}
-
-.highlightWrapper2 {
-  top: 320px;
-  left: 670px;
-}
-.underTitle #underTitle2 {
-  padding-left: 5px;
-  padding-right: 800px;
-}
-
-.name #underTitle3 {
-  padding-left: 700px;
-  color: transparent;
-}
-
-.highlightWrapper3 {
-  top: -5px;
-  left: -685px;
-}
-
-.underTitle2 #underTitle4 {
-  padding-left: 450px;
-  padding-right: 5px;
-}
-
-.highlightWrapper4 {
-  top: 1200px;
-  left: -200px;
-  z-index: 2;
-}
-
-.highlightWrapper5 {
-  top: 1500px;
-  left: 600px;
-  z-index: 2;
-}
-.highlightWrapper5 p {
-  padding-left: 20px;
-  padding-right: 500px;
-  font-size: 35px;
-}
-
-.underTitle3 #underTitle6 {
-  padding-left: 700px;
-  padding-right: 5px;
-}
-
-.highlightWrapper6 {
-  top: 2300px;
-  left: 0px;
-}
-
-.underTitle4 #underTitle7 {
-  padding-right: 700px;
-  padding-left: 5px;
-}
-
-.highlightWrapper7 {
-  top: 3400px;
-  left: 1150px;
-}
-
-///
-.underTitle5 #underTitle8 {
-  padding-left: 200px;
-  padding-right: 5px;
-}
-
-.highlightWrapper8 {
-  top: 4600px;
-}
-
-.underTitle5 #underTitle9 {
-  padding-left: 300px;
-  padding-right: 5px;
-}
-
-.highlightWrapper9 {
-  top: 4750px;
-  z-index: 2;
-}
-
-.highlightWrapper9 a {
-  font-size: 35px;
-}
-
-.underTitle5 #underTitle10 {
-  padding-left: 370px;
-  padding-right: 5px;
-}
-
-.highlightWrapper10 {
-  top: 4850px;
-  z-index: 2;
-}
-
-.highlightWrapper10 a {
-  font-size: 35px;
-}
-
 //Carousel
 
 .carouselContainer {
@@ -522,7 +336,7 @@ section {
 
 #carousel1 .item img {
   width: auto;
-  height: 300px;
+  height: 400px;
 }
 .carouselTrack {
   padding-block: 1rem;
@@ -553,6 +367,87 @@ section {
 }
 
 @keyframes scroll {
+  to {
+    transform: translate(calc(-50% - 1rem)); //MOITIER DU GAP DE carouselTrack
+  }
+}
+
+//Carousel2
+
+#carousel2 {
+  top: 3650px;
+}
+
+#carousel2 .item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 300px;
+  height: 50px;
+  border-radius: 10px;
+
+  background: $Purple2;
+}
+
+.carouselContainer .carouselTrack2 {
+  color: $Purple3;
+  font-size: 35px;
+}
+
+[data-animated="true"] .carouselTrack2 {
+  width: max-content;
+  flex-wrap: nowrap;
+  animation: scroll2 25s linear infinite;
+}
+
+.carouselTrack2 {
+  padding-block: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 2rem; //ICI!
+}
+
+@keyframes scroll2 {
+  to {
+    transform: translate(calc(-50% - 1rem)); //MOITIER DU GAP DE carouselTrack
+  }
+}
+
+//Carousel 3
+
+#carousel3 {
+  top: 3850px;
+}
+
+#carousel3 .item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+
+  background: $Purple2;
+}
+
+[data-animated="true"] .carouselTrack3 {
+  width: max-content;
+  flex-wrap: nowrap;
+  animation: scroll3 20s linear infinite;
+}
+
+.carouselTrack3 {
+  padding-block: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 2rem; //ICI!
+}
+
+@keyframes scroll3 {
   to {
     transform: translate(calc(-50% - 1rem)); //MOITIER DU GAP DE carouselTrack
   }
@@ -643,7 +538,254 @@ section {
   right: 15px;
   background: none;
   border: none;
-  font-size: 24px;
-  color: white;
+  font-size: 55px;
+  color: $Purple2;
   cursor: pointer;
+}
+
+//fade in effect
+
+.miniMe {
+  animation: fade-in-right 2s linear;
+}
+
+.miniS {
+  animation: fade-in-left 2s linear;
+}
+
+.prop1 {
+  animation: fade-in-left linear;
+  animation-timeline: view();
+  animation-range-start: cover;
+  animation-range-end: 350px;
+}
+
+.miniR,
+.miniRP {
+  animation: fade-in-right linear;
+  animation-timeline: view();
+  animation-range-start: cover;
+  animation-range-end: 350px;
+}
+
+.miniL {
+  animation: fade-in-right linear;
+  animation-timeline: view();
+  animation-range-start: cover;
+  animation-range-end: 850px;
+}
+
+@keyframes fade-in-left {
+  from {
+    transform: translateX(-200px);
+
+    opacity: 0.2;
+  }
+  to {
+    transform: translateX(0px);
+
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-right {
+  from {
+    transform: translateX(200px);
+
+    opacity: 0.2;
+  }
+  to {
+    transform: translateX(0px);
+
+    opacity: 1;
+  }
+}
+
+/*HIghlight effect*/
+.highlightText {
+  position: relative;
+  display: inline-block;
+  font-size: 60px;
+  font-family: "mainFont";
+  color: #bb95f8;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.highlightBg1,
+.highlightBg1Rev {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $Purple3;
+  z-index: 0;
+  border-radius: 10px;
+
+  animation: slideIn 2s forwards;
+}
+
+.highlightBg1Rev {
+  background-color: $Purple1;
+}
+
+.highlightContent {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100vw);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.highlightBg2,
+.highlightBg2Rev {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background-color: #653080;
+  z-index: 0;
+
+  animation: slideInFromRight 2s ease forwards;
+}
+
+.highlightBg2Rev {
+  background-color: $Purple1;
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100vw);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.highlightWrapper1,
+.highlightWrapper2,
+.highlightWrapper3,
+.highlightWrapper4,
+.highlightWrapper5,
+.highlightWrapper6,
+.highlightWrapper7,
+.highlightWrapper8,
+.highlightWrapper9,
+.highlightWrapper10 {
+  position: absolute;
+}
+
+.highlightWrapper1 {
+  top: 240px;
+}
+
+.underTitle #underTitle1 {
+  padding-left: 700px;
+}
+
+.highlightWrapper2 {
+  top: 320px;
+  left: 670px;
+}
+.underTitle #underTitle2 {
+  padding-left: 5px;
+  padding-right: 800px;
+}
+
+.name #underTitle3 {
+  padding-left: 700px;
+  color: transparent;
+}
+
+.highlightWrapper3 {
+  top: -5px;
+  left: -685px;
+}
+
+.underTitle2 #underTitle4 {
+  padding-left: 450px;
+  padding-right: 5px;
+}
+
+.highlightWrapper4 {
+  top: 1200px;
+  left: -200px;
+  z-index: 2;
+}
+
+.highlightWrapper5 {
+  top: 1500px;
+  left: 600px;
+  z-index: 2;
+}
+.highlightWrapper5 p {
+  padding-left: 20px;
+  padding-right: 500px;
+  font-size: 35px;
+}
+
+.underTitle3 #underTitle6 {
+  padding-left: 700px;
+  padding-right: 5px;
+}
+
+.highlightWrapper6 {
+  top: 2300px;
+  left: 0px;
+}
+
+.underTitle4 #underTitle7 {
+  padding-right: 700px;
+  padding-left: 5px;
+}
+
+.highlightWrapper7 {
+  top: 3400px;
+  left: 1150px;
+}
+
+.underTitle5 #underTitle8 {
+  padding-left: 200px;
+  padding-right: 5px;
+}
+
+.highlightWrapper8 {
+  top: 4600px;
+}
+
+.underTitle5 #underTitle9 {
+  padding-left: 300px;
+  padding-right: 5px;
+}
+
+.highlightWrapper9 {
+  top: 4750px;
+  z-index: 2;
+}
+
+.highlightWrapper9 a {
+  font-size: 35px;
+}
+
+.underTitle5 #underTitle10 {
+  padding-left: 370px;
+  padding-right: 5px;
+}
+
+.highlightWrapper10 {
+  top: 4850px;
+  z-index: 2;
+}
+
+.highlightWrapper10 a {
+  font-size: 35px;
 }
