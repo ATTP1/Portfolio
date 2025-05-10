@@ -2,87 +2,157 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Hover Glow Cascade</title>
-    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Popups</title>
     <style>
       body {
-        background-color: #111;
         margin: 0;
-        font-family: Arial, sans-serif;
+        font-family: sans-serif;
+        background: #111;
+        color: #fff;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding: 40px;
       }
 
-      .container {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        font-size: 60px;
-        font-weight: bold;
-        margin-top: 100px;
-        gap: 5px;
+      .card {
+        background: #222;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        width: 300px;
+      }
+
+      .card img {
+        width: 100%;
+        border-radius: 10px;
+      }
+
+      .btn {
+        margin-top: 15px;
+        padding: 10px 20px;
+        background: #555;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
         cursor: pointer;
       }
 
-      .container span {
-        --delay: 0s;
-        color: hsl(calc(var(--i, 0) * 20), 100%, 50%);
-        transition: 0.3s ease;
-        filter: brightness(0.5);
+      .popup {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(8px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 10;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
       }
 
-      .container:hover span {
-        animation: glow 0.6s ease forwards;
-        animation-delay: calc(var(--distance, 0) * 0.1s);
+      .popup.active {
+        opacity: 1;
+        pointer-events: auto;
       }
 
-      @keyframes glow {
-        0% {
-          filter: brightness(0.5);
-        }
-        50% {
-          filter: brightness(2) drop-shadow(0 0 10px currentColor);
-        }
-        100% {
-          filter: brightness(0.5);
-        }
+      .popup-content {
+        background: #333;
+        padding: 30px;
+        border-radius: 10px;
+        max-width: 500px;
+        text-align: center;
+        position: relative;
+      }
+
+      .popup-content img {
+        width: 100%;
+        border-radius: 10px;
+      }
+
+      .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        background: transparent;
+        color: #fff;
+        border: none;
+        font-size: 20px;
+        cursor: pointer;
       }
     </style>
   </head>
   <body>
-    <div id="root"></div>
+    <!-- Card 1 -->
+    <div class="card">
+      <button class="btnProject" data-popup="popup1">Read More</button>
+    </div>
 
-    <script type="text/babel">
-      function NeonText() {
-        const text = "About me";
-        const centerIndex = Math.floor(text.length / 2);
+    <!-- Card 2 -->
+    <div class="card">
+      <button class="btnProject" data-popup="popup2">Read More</button>
+    </div>
 
-        const colors = ["#6930c4", "#7130be", "#aa7beb", "#aaa1f0", "#a223bc"];
+    <!-- Card 3 -->
+    <div class="card">
+      <button class="btnProject" data-popup="popup3">Read More</button>
+    </div>
 
-        return (
-          <div className="container">
-            {text.split("").map((char, i) => {
-              const distance = Math.abs(i - centerIndex);
-              const color = colors[i % colors.length];
+    <!-- Popup 1 -->
+    <div class="popup" id="popup1">
+      <div class="popup-content">
+        <button class="close-btnProject">&times;</button>
 
-              return (
-                <span
-                  key={i}
-                  style={{
-                    "--i": i,
-                    "--distance": distance,
-                    color: color,
-                  }}
-                >
-                  {char}
-                </span>
-              );
-            })}
-          </div>
-        );
-      }
+        <h2>Cat 1</h2>
+        <p>
+          This cat loves naps and tuna fish. It’s also an expert at ignoring
+          you.
+        </p>
+      </div>
+    </div>
 
-      ReactDOM.createRoot(document.getElementById("root")).render(<NeonText />);
+    <!-- Popup 2 -->
+    <div class="popup" id="popup2">
+      <div class="popup-content">
+        <button class="close-btnProject">&times;</button>
+
+        <h2>Cat 2</h2>
+        <p>
+          This curious cat enjoys exploring shelves and knocking over glasses.
+        </p>
+      </div>
+    </div>
+
+    <!-- Popup 3 -->
+    <div class="popup" id="popup3">
+      <div class="popup-content">
+        <button class="close-btnProject">&times;</button>
+
+        <h2>Cat 3</h2>
+        <p>This chill feline lounges in sunbeams and demands belly rubs.</p>
+      </div>
+    </div>
+
+    <script>
+      const buttonsP = document.querySelectorAll(".btnProject");
+      const popups = document.querySelectorAll(".popup");
+      const closeBtns = document.querySelectorAll(".close-btnProject");
+
+      buttonsP.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const popupId = btn.getAttribute("data-popup");
+          document.getElementById(popupId).classList.add("active");
+        });
+      });
+
+      closeBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          btn.closest(".popup").classList.remove("active");
+        });
+      });
     </script>
   </body>
 </html>
