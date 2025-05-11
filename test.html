@@ -5,40 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
+    <!-- GSAP -->
+    <script src="js/gsap.min.js"></script>
+    <script src="js/ScrollTrigger.min.js"></script>
+    <script src="js/MotionPathPlugin.min.js"></script>
+
     <style>
       body {
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        min-height: 100vh;
-        margin: 0;
-        overflow: hidden;
-
         background: rgb(60, 60, 60);
+        height: 800vh;
       }
-
-      .highlight1 {
+      .fakepage {
+        background: black;
+        height: 150vh;
+      }
+      .fakepage2 {
+        background: rgb(192, 94, 94);
+        height: 150vh;
+      }
+      #pathItem1 {
         position: absolute;
-        z-index: 1;
-        top: 600px;
+        left: 100px;
 
-        height: 50px;
-        width: 50vw;
-        background: red;
-
-        transform: translateX(-50vw);
+        
+        
       }
     </style>
   </head>
   <body>
     <script src="js/gsap.min.js"></script>
+    <div class="fakepage"></div>
 
-    <div class="highlight1 highlightEffect"></div>
+    <img src="images/pathItem2.png" id="pathItem1"></div>
 
     <script>
-      gsap.to(".highlightEffect", {
-        x: 0,
-        duration: 8,
+      gsap.registerPlugin(MotionPathPlugin, ScrollTrigger);
+
+      gsap.to("#pathItem1", {
+        scrollTrigger: {
+          trigger: "#pathItem1",
+          start: "top center",
+          end: "bottom -400px",
+          toggleActions: "restart none none none",
+          scrub: 1,
+          duration: 10,
+        },
+        rotation: 720,
+        duration: 25,
+        opacity: 0.5,
+
+        motionPath:
+          "M6,124.82c41.09,77.42,268.67,68.08,357.62,73.65s176.87-23.08,256.3-62.66c59.22-29.51,115.47-65.36,177.87-87.72,54.29-19.46,111.89-28.21,169.16-36.01,34.99-4.77,70.71-9.22,105.47-3.06,30.82,5.47,59.53,19.07,86.49,34.68,118.67,68.71,214.43,191.25,210.82,326.17-3.46,129.48-95.34,249.45-78.92,377.97",
       });
     </script>
   </body>

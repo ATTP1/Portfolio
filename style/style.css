@@ -72,7 +72,7 @@ section {
   position: absolute;
   top: 240px;
   left: 240px;
-  z-index: 2;
+  z-index: 4;
 }
 
 .titleStar {
@@ -86,12 +86,12 @@ section {
   position: absolute;
   left: 1360px;
   top: 350px;
-  z-index: 1;
+  z-index: 3;
 }
 
 .miniS {
   position: absolute;
-  z-index: 3;
+  z-index: 4;
   top: 690px;
   left: -50px;
 }
@@ -172,7 +172,7 @@ section {
   position: absolute;
   z-index: 1;
   top: 4380px;
-  left: 1220px;
+  left: 1320px;
 }
 
 .endStar {
@@ -180,6 +180,28 @@ section {
   top: 4500px;
   left: 50px;
   z-index: 0;
+}
+
+.miniL1 {
+  position: absolute;
+  z-index: 4;
+  top: 4380px;
+  left: 1390px;
+}
+
+.miniL2 {
+  position: absolute;
+  z-index: 1;
+  top: 4612px;
+  left: 1220px;
+}
+
+.miniL3 {
+  position: absolute;
+  z-index: 5;
+  top: 4300px;
+  left: 1320px;
+  opacity: 0;
 }
 
 .rainbow-link {
@@ -470,13 +492,6 @@ section {
   animation-range-end: 350px;
 }
 
-.miniL {
-  animation: fade-in-right linear;
-  animation-timeline: view();
-  animation-range-start: cover;
-  animation-range-end: 850px;
-}
-
 @keyframes fade-in-left {
   from {
     transform: translateX(-200px);
@@ -506,7 +521,7 @@ section {
 .contact h3 {
   position: absolute;
   font-size: 55px;
-  z-index: 2;
+  z-index: 4;
 }
 
 #underTitle1,
@@ -586,7 +601,7 @@ section {
 .highlight9,
 .highlight10 {
   position: absolute;
-  z-index: 1;
+  z-index: 3;
   height: 70px;
   background: #653080;
   margin-top: 42px;
@@ -606,51 +621,90 @@ section {
 }
 
 .highlight1 {
-  width: 57vw;
+  width: 60vw;
 }
 
 .highlight2 {
-  width: 67vw;
-  left: 33vw;
+  width: 70vw;
+  left: 30vw;
 }
 
 .highlight3 {
-  width: 61.5vw;
+  width: 66.5vw;
 }
 
 .highlight4 {
-  width: 39vw;
+  width: 44vw;
 }
 
 .highlight5 {
-  width: 64vw;
+  width: 69vw;
   height: 330px;
-  left: 36vw;
+  left: 31vw;
   top: 1375px;
 }
 
 .highlight6 {
-  width: 60vw;
+  width: 65vw;
 }
 
 .highlight7 {
-  width: 42vw;
-  left: 58vw;
+  width: 47vw;
+  left: 53vw;
 }
 
 .highlight8 {
-  width: 61.5vw;
+  width: 37.5vw;
 }
 
 .highlight9 {
-  width: 53.5vw;
+  width: 58.5vw;
   top: 4675px;
   z-index: 2;
 }
 
 .highlight10 {
-  width: 50.5vw;
+  width: 55.5vw;
   top: 4775px;
+}
+
+.carouselContainer {
+  display: none;
+}
+
+.carouselContainer.show {
+  display: block;
+}
+
+#pathItem1 {
+  position: absolute;
+  z-index: 1;
+  top: 900px;
+  left: 100px;
+  opacity: 0;
+}
+
+#pathItem2 {
+  position: absolute;
+  z-index: 1;
+  top: 1800px;
+  left: 200px;
+  opacity: 0;
+}
+
+#pathItem3 {
+  position: absolute;
+  z-index: 1;
+  top: 2820px;
+  left: 140px;
+  opacity: 0;
+}
+
+#pathItem4 {
+  position: absolute;
+  z-index: 2;
+  top: 3920px;
+  left: 0px;
 }
 
 /*# sourceMappingURL=style.css.map */

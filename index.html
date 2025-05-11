@@ -21,8 +21,30 @@
 
     <!-- GSAP -->
     <script src="js/gsap.min.js"></script>
+    <script src="js/ScrollTrigger.min.js"></script>
+    <script src="js/MotionPathPlugin.min.js"></script>
   </head>
   <body>
+    <div class="imagesZone">
+      <img class="miniMe" src="images/miniMe.png" alt="" />
+      <img class="miniS" src="images/miniS.png" alt="" />
+
+      <img class="prop1" src="images/prop1.png" alt="" />
+      <img class="path1" src="images/path1.png" alt="" />
+      <img class="path2" src="images/path2.png" alt="" />
+
+      <img class="miniR" src="images/miniR.png" alt="" />
+      <img class="miniRP" src="images/miniRP.png" alt="" />
+
+      <img class="path3" src="images/path3.png" alt="" />
+
+      <img class="path4" src="images/path4.png" alt="" />
+      <img class="miniL" src="images/miniL.png" alt="" />
+      <img class="endStar" src="images/endStar.png" alt="" />
+      <img class="miniL1" src="images/miniL1.png" alt="" />
+      <img class="miniL2" src="images/miniL2.png" alt="" />
+      <img class="miniL3" src="images/miniL3.png" alt="" />
+    </div>
     <section class="acceuil">
       <div id="root"></div>
 
@@ -42,23 +64,6 @@
         <h2 class="underTitle3" id="jumpyName">
           Allan Tri Tam <span>Pham</span>
         </h2>
-      </div>
-      <div class="imagesZone">
-        <img class="miniMe" src="images/miniMe.png" alt="" />
-        <img class="miniS" src="images/miniS.png" alt="" />
-
-        <img class="prop1" src="images/prop1.png" alt="" />
-        <img class="path1" src="images/path1.png" alt="" />
-        <img class="path2" src="images/path2.png" alt="" />
-
-        <img class="miniR" src="images/miniR.png" alt="" />
-        <img class="miniRP" src="images/miniRP.png" alt="" />
-
-        <img class="path3" src="images/path3.png" alt="" />
-
-        <img class="path4" src="images/path4.png" alt="" />
-        <img class="miniL" src="images/miniL.png" alt="" />
-        <img class="endStar" src="images/endStar.png" alt="" />
       </div>
     </section>
     <section id="2" class="aboutMe">
@@ -186,33 +191,31 @@
         </div>
       </div>
     </section>
-
     <div class="highlight-section">
-      <div class="leftHighlight highlight1 highlightEffect"></div>
-      <div class="rightHighlight highlight2 highlightEffect"></div>
-      <div class="leftHighlight highlight3 highlightEffect"></div>
+      <div class="leftHighlight highlight1 highlightAcceuil"></div>
+      <div class="rightHighlight highlight2 highlightAcceuil"></div>
+      <div class="leftHighlight highlight3 highlightAcceuil"></div>
 
       <div
         id="colorChange"
-        class="leftHighlight highlight4 highlightEffect"
+        class="leftHighlight highlight4 highlightAboutMe"
       ></div>
       <div
         id="colorChange"
-        class="rightHighlight highlight5 highlightEffect"
+        class="rightHighlight highlight5 highlightAboutMe"
       ></div>
 
-      <div class="leftHighlight highlight6 highlightEffect"></div>
+      <div class="leftHighlight highlight6 highlightProjects"></div>
 
       <div
         id="colorChange"
-        class="rightHighlight highlight7 highlightEffect"
+        class="rightHighlight highlight7 highlightSkills"
       ></div>
 
-      <div class="leftHighlight highlight8 highlightEffect"></div>
-      <div class="leftHighlight highlight9 highlightEffect"></div>
-      <div class="leftHighlight highlight10 highlightEffect"></div>
+      <div class="leftHighlight highlight8 highlightContact"></div>
+      <div class="leftHighlight highlight9 highlightContact"></div>
+      <div class="leftHighlight highlight10 highlightContact"></div>
     </div>
-
     <div class="popup-section">
       <div class="popup" id="popup1">
         <div class="popup-content">
@@ -432,15 +435,183 @@
         </div>
       </div>
     </div>
+    <div class="pathObjects-section">
+      <img src="images/pathItem1.png" id="pathItem1" />
+      <img src="images/pathItem2.png" id="pathItem2" />
+      <img src="images/pathItem3.png" id="pathItem3" />
+      <img src="images/pathItem4.png" id="pathItem4" />
+    </div>
 
     <script>
-      gsap.to(".highlightEffect", {
+      //pathObjects animation
+
+      gsap.registerPlugin(MotionPathPlugin, ScrollTrigger);
+
+      gsap.to("#pathItem1", {
+        scrollTrigger: {
+          trigger: "#pathItem1",
+          start: "top center",
+          end: "bottom -800px",
+          toggleActions: "restart none none none",
+          scrub: 1,
+        },
+        rotation: 360,
+
+        opacity: 4,
+
+        motionPath:
+          "M1166.95,6c-17.21,2.22-31.79,13.44-44.71,25.03-90.46,81.18-142.5,197.79-230.61,281.51-104.89,99.66-259.41,144.25-401.27,115.81-41.84-8.39-83.97-23.65-114.01-53.97-23.79-24.01-38.24-55.72-48.78-87.84-14.11-43.01-21.51-92.1-.21-132.05,23.28-43.66,77.32-65.09,126.46-59.35,14.97,1.75,30.1,5.86,42.03,15.06,9.87,7.62,16.98,18.28,22.7,29.37,27.39,53.09,24.53,120.55-7.26,171.12-31.67,50.4-87.31,81.15-144.04,99.17-56.73,18.02-116.3,25.37-173.7,41.14-57.4,15.76-114.67,41.59-152.07,87.9-37.41,46.3-49.44,116.84-15.51,165.75",
+      });
+
+      gsap.to("#pathItem2", {
+        scrollTrigger: {
+          trigger: "#pathItem2",
+          start: "top center",
+          end: "bottom -400px",
+
+          scrub: 1,
+        },
+        rotation: 180,
+
+        opacity: 4,
+
+        motionPath:
+          "M6,124.82c41.09,77.42,268.67,68.08,357.62,73.65s176.87-23.08,256.3-62.66c59.22-29.51,115.47-65.36,177.87-87.72,54.29-19.46,111.89-28.21,169.16-36.01,34.99-4.77,70.71-9.22,105.47-3.06,30.82,5.47,59.53,19.07,86.49,34.68,118.67,68.71,214.43,191.25,210.82,326.17-3.46,129.48-95.34,249.45-78.92,377.97",
+      });
+
+      gsap.to("#pathItem3", {
+        scrollTrigger: {
+          trigger: "#pathItem3",
+          start: "top 500px",
+          end: "bottom -1000px",
+
+          scrub: 1,
+        },
+        rotation: 720,
+
+        opacity: 7,
+
+        motionPath:
+          "M360.72,6C221.19,60.08,103.12,167.55,36.18,301.39,15.1,343.54-1.33,391.37,9.35,437.28c9.49,40.78,39.9,74.67,76.5,95.01,36.6,20.34,78.91,28.35,120.73,30.43,111.31,5.54,219.02-15.69,306.67-84.53,21.39-16.8,26.73-14.82,37-40,10.27-25.18,16.83-52.38-3-71-19.32-18.14-59.58-25.31-84-15-24.42,10.31-22.84-4.94-40.45,14.87-31.64,35.57-36.81,76.53-15.55,119.13,16.69,33.45,38,51,70.99,54.12,107.56,10.17,197.7-78.47,294-127.44,165.96-84.4,371.81-85.44,538.61-2.73,41.19,20.43,81.58,47.21,104.01,87.34,20.02,35.81,23.61,78.5,21.97,119.5-5.23,131.3-110.38,341.7-203.2,434.71",
+      });
+
+      gsap.to("#pathItem4", {
+        scrollTrigger: {
+          trigger: "#pathItem4",
+          start: "top bottom-=450",
+          end: "bottom -1000px",
+          toggleActions: "restart none none none",
+        },
+        rotation: 360,
+        duration: 9.95,
+
+        motionPath:
+          "M1341.46,6c-110,249.33-290.78,256.92-378.67,284.87-90.71,28.85-185.93-16.64-277.98-40.88-120.66-31.77-251.87-26.12-367.07,21.78-115.21,47.91-213.08,138.88-263.7,252.92-29.88,67.32-43.22,141.06-47.05,214.61-3.49,67.04,1.26,136.52,30.78,196.81,28.13,57.44,77.1,102.67,131.74,135.93,171.11,104.14,396.14,93.16,575.99,4.95,62.95-30.87,122.03-70.8,169.82-122.09,106.49-114.28,151.28-277.65,265.58-384.11,45.04-41.95,110.93-74.35,166.93-48.8",
+      });
+
+      ScrollTrigger.create({
+        trigger: "#pathItem4",
+        start: "top bottom-=450",
+
+        onEnter: () => {
+          gsap.to(".miniL3", {
+            opacity: 1,
+            duration: 1,
+            delay: 10.5,
+          });
+        },
+        onLeaveBack: () => {
+          gsap.set(".miniL3", { opacity: 0 });
+        },
+      });
+
+      ScrollTrigger.create({
+        trigger: "#pathItem4",
+        start: "top bottom-=450",
+        onEnter: () => {
+          gsap.to(".miniL2", {
+            opacity: 0,
+            duration: 1,
+            delay: 10.5,
+          });
+        },
+        onLeaveBack: () => {
+          gsap.set(".miniL2", { opacity: 1 });
+        },
+      });
+
+      ScrollTrigger.create({
+        trigger: "#pathItem4",
+        start: "top bottom-=450",
+        onEnter: () => {
+          gsap.to(".miniL1", {
+            opacity: 0,
+            duration: 1,
+            delay: 10.5,
+          });
+        },
+        onLeaveBack: () => {
+          gsap.set(".miniL1", { opacity: 1 });
+        },
+      });
+      //highlight
+
+      gsap.to(".highlightAcceuil", {
+        duration: 2,
+        x: 0,
+        duration: 4,
+      });
+
+      gsap.to(".highlightAboutMe", {
+        scrollTrigger: {
+          trigger: ".highlightAboutMe",
+          toggleActions: "restart",
+          scrub: true,
+        },
+        x: 0,
+        duration: 4,
+      });
+      gsap.to(".highlightProjects", {
+        scrollTrigger: {
+          trigger: ".highlightProjects",
+          toggleActions: "restart none none none",
+          scrub: true,
+        },
+        x: 0,
+        duration: 4,
+      });
+
+      gsap.to(".highlightSkills", {
+        scrollTrigger: {
+          trigger: ".highlightSkills",
+          toggleActions: "restart none none none",
+          scrub: true,
+        },
+        x: 0,
+        duration: 4,
+      });
+
+      gsap.to(".highlightContact", {
+        scrollTrigger: {
+          trigger: ".highlightContact",
+          toggleActions: "restart none none none",
+          scrub: true,
+        },
         x: 0,
         duration: 4,
       });
     </script>
     <script>
       const carouselContainer = document.querySelectorAll(".carouselContainer");
+
+      //Debug tool pour le glitch des reload de page decall/ par les carousels
+      window.addEventListener("DOMContentLoaded", () => {
+        setTimeout(() => {
+          document.querySelectorAll(".carouselContainer").forEach((el) => {
+            el.classList.add("show");
+          });
+        }, 500);
+      });
 
       //verifier que le browser n'est pas en mode REDUCED MOTION
       if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
