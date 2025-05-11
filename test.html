@@ -3,155 +3,42 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio Popups</title>
+    <title>Document</title>
+
     <style>
       body {
-        margin: 0;
-        font-family: sans-serif;
-        background: #111;
-        color: #fff;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
-        padding: 40px;
-      }
-
-      .card {
-        background: #222;
-        padding: 20px;
-        border-radius: 10px;
-        text-align: center;
-        width: 300px;
-      }
-
-      .card img {
-        width: 100%;
-        border-radius: 10px;
-      }
-
-      .btn {
-        margin-top: 15px;
-        padding: 10px 20px;
-        background: #555;
-        color: #fff;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-      }
-
-      .popup {
-        position: fixed;
-        inset: 0;
-        background: rgba(0, 0, 0, 0.6);
-        backdrop-filter: blur(8px);
         display: flex;
         align-items: center;
-        justify-content: center;
-        z-index: 10;
-        opacity: 0;
-        pointer-events: none;
-        transition: opacity 0.3s ease;
+        justify-content: flex-start;
+        min-height: 100vh;
+        margin: 0;
+        overflow: hidden;
+
+        background: rgb(60, 60, 60);
       }
 
-      .popup.active {
-        opacity: 1;
-        pointer-events: auto;
-      }
-
-      .popup-content {
-        background: #333;
-        padding: 30px;
-        border-radius: 10px;
-        max-width: 500px;
-        text-align: center;
-        position: relative;
-      }
-
-      .popup-content img {
-        width: 100%;
-        border-radius: 10px;
-      }
-
-      .close-btn {
+      .highlight1 {
         position: absolute;
-        top: 10px;
-        right: 15px;
-        background: transparent;
-        color: #fff;
-        border: none;
-        font-size: 20px;
-        cursor: pointer;
+        z-index: 1;
+        top: 600px;
+
+        height: 50px;
+        width: 50vw;
+        background: red;
+
+        transform: translateX(-50vw);
       }
     </style>
   </head>
   <body>
-    <!-- Card 1 -->
-    <div class="card">
-      <button class="btnProject" data-popup="popup1">Read More</button>
-    </div>
+    <script src="js/gsap.min.js"></script>
 
-    <!-- Card 2 -->
-    <div class="card">
-      <button class="btnProject" data-popup="popup2">Read More</button>
-    </div>
-
-    <!-- Card 3 -->
-    <div class="card">
-      <button class="btnProject" data-popup="popup3">Read More</button>
-    </div>
-
-    <!-- Popup 1 -->
-    <div class="popup" id="popup1">
-      <div class="popup-content">
-        <button class="close-btnProject">&times;</button>
-
-        <h2>Cat 1</h2>
-        <p>
-          This cat loves naps and tuna fish. It’s also an expert at ignoring
-          you.
-        </p>
-      </div>
-    </div>
-
-    <!-- Popup 2 -->
-    <div class="popup" id="popup2">
-      <div class="popup-content">
-        <button class="close-btnProject">&times;</button>
-
-        <h2>Cat 2</h2>
-        <p>
-          This curious cat enjoys exploring shelves and knocking over glasses.
-        </p>
-      </div>
-    </div>
-
-    <!-- Popup 3 -->
-    <div class="popup" id="popup3">
-      <div class="popup-content">
-        <button class="close-btnProject">&times;</button>
-
-        <h2>Cat 3</h2>
-        <p>This chill feline lounges in sunbeams and demands belly rubs.</p>
-      </div>
-    </div>
+    <div class="highlight1 highlightEffect"></div>
 
     <script>
-      const buttonsP = document.querySelectorAll(".btnProject");
-      const popups = document.querySelectorAll(".popup");
-      const closeBtns = document.querySelectorAll(".close-btnProject");
-
-      buttonsP.forEach((btn) => {
-        btn.addEventListener("click", () => {
-          const popupId = btn.getAttribute("data-popup");
-          document.getElementById(popupId).classList.add("active");
-        });
-      });
-
-      closeBtns.forEach((btn) => {
-        btn.addEventListener("click", () => {
-          btn.closest(".popup").classList.remove("active");
-        });
+      gsap.to(".highlightEffect", {
+        x: 0,
+        duration: 8,
       });
     </script>
   </body>

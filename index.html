@@ -18,40 +18,30 @@
 
     <!-- Babel pour interpréter le JSX -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- GSAP -->
+    <script src="js/gsap.min.js"></script>
   </head>
   <body>
     <section class="acceuil">
       <div id="root"></div>
 
       <div class="underTitle">
-        <div class="highlightWrapper1">
-          <h2 class="highlightText">
-            <span class="highlightBg1"></span>
-            <span id="underTitle1" class="highlightContent">where code</span>
-          </h2>
-        </div>
-
-        <div class="highlightWrapper2">
-          <h2 class="highlightText">
-            <span class="highlightBg2"></span>
-            <span id="underTitle2" class="highlightContent">meets magic</span>
-          </h2>
-        </div>
+        <h2 id="underTitle1">where code</h2>
       </div>
+
+      <div class="underTitle">
+        <h2 id="underTitle2">meets magic</h2>
+      </div>
+
       <div class="title">
         <img src="images/title.png" alt="" />
       </div>
       <div class="titleStar"><img src="images/titleStar.png" alt="" /></div>
       <div class="name">
-        <div class="highlightWrapper3">
-          <h2 class="highlightText">
-            <span class="highlightBg1"></span>
-            <span id="underTitle3" class="highlightContent"
-              >Allan Tri Tam Pham</span
-            >
-          </h2>
-        </div>
-        <h2 id="jumpyName">Allan Tri Tam <span>Pham</span></h2>
+        <h2 class="underTitle3" id="jumpyName">
+          Allan Tri Tam <span>Pham</span>
+        </h2>
       </div>
       <div class="imagesZone">
         <img class="miniMe" src="images/miniMe.png" alt="" />
@@ -72,74 +62,55 @@
       </div>
     </section>
     <section id="2" class="aboutMe">
-      <div class="underTitle2">
-        <div class="highlightWrapper4">
-          <h2 class="highlightText">
-            <span class="highlightBg1Rev"></span>
-            <span id="underTitle4" class="highlightContent">About me</span>
-          </h2>
-        </div>
-        <div class="highlightWrapper5">
-          <h3 class="highlightText">
-            <span class="highlightBg2Rev"></span>
-            <span id="underTitle5" class="highlightContent"
-              ><p>
-                I’m a passionate front-end developer with a <br />
-                love for design, interactivity, and clean code.<br />
-                Whether I’m building responsive layouts or <br />
-                crafting intuitive user experiences, I’m always <br />
-                driven by creativity and precision. Let’s build <br />
-                something memorable.Code that feels as it looks.
-              </p></span
-            >
-          </h3>
-        </div>
+      <div>
+        <h2 id="underTitle4">About me</h2>
+        <p id="underTitle5">
+          I'm someone who loves learning by doing. Whether it's coding<br />
+          small apps, exploring design tools, or building fun web projects,<br />
+          I enjoy figuring things out and seeing ideas come together.
+          <br />
+          I have a strong interest in gaming, technology, and creative<br />
+          development, and I like mixing those worlds through HTML, CSS,<br />
+          JavaScript, and tools like Illustrator and Spline. I’ve worked on a
+          <br />
+          variety of projects, from desktop timers to interactive websites,<br />
+          each one helping me improve and try something new.
+        </p>
       </div>
     </section>
     <section id="3" class="projects">
-      <div class="underTitle3">
-        <div class="highlightWrapper6">
-          <h2 class="highlightText">
-            <span class="highlightBg1"></span>
-            <span id="underTitle6" class="highlightContent">My Projects</span>
-          </h2>
-        </div>
-
-        <div id="carousel1" class="carouselContainer">
-          <div class="carouselTrack">
-            <div class="item" data-popup="popup1">
-              <img src="images/projects/1.png" alt="" />
-            </div>
-            <div class="item" data-popup="popup2">
-              <img src="images/projects/2.png" alt="" />
-            </div>
-            <div class="item" data-popup="popup3">
-              <img src="images/projects/3.png" alt="" />
-            </div>
-            <div class="item" data-popup="popup4">
-              <img src="images/projects/4.png" alt="" />
-            </div>
-            <div class="item" data-popup="popup5">
-              <img src="images/projects/5.png" alt="" />
-            </div>
-            <div class="item" data-popup="popup6">
-              <img src="images/projects/6.png" alt="" />
-            </div>
-            <div class="item" data-popup="popup7">
-              <img src="images/projects/7.png" alt="" />
-            </div>
+      <div>
+        <h2 id="underTitle6">My Projects</h2>
+      </div>
+      <div id="carousel1" class="carouselContainer">
+        <div class="carouselTrack">
+          <div class="item" data-popup="popup1">
+            <img src="images/projects/1.png" alt="" />
+          </div>
+          <div class="item" data-popup="popup2">
+            <img src="images/projects/2.png" alt="" />
+          </div>
+          <div class="item" data-popup="popup3">
+            <img src="images/projects/3.png" alt="" />
+          </div>
+          <div class="item" data-popup="popup4">
+            <img src="images/projects/4.png" alt="" />
+          </div>
+          <div class="item" data-popup="popup5">
+            <img src="images/projects/5.png" alt="" />
+          </div>
+          <div class="item" data-popup="popup6">
+            <img src="images/projects/6.png" alt="" />
+          </div>
+          <div class="item" data-popup="popup7">
+            <img src="images/projects/7.png" alt="" />
           </div>
         </div>
       </div>
     </section>
     <section id="4" class="skills">
-      <div class="underTitle4">
-        <div class="highlightWrapper7">
-          <h2 class="highlightText">
-            <span class="highlightBg2Rev"></span>
-            <span id="underTitle7" class="highlightContent">My Skills</span>
-          </h2>
-        </div>
+      <div>
+        <h2 id="underTitle7">My Skills</h2>
       </div>
 
       <div id="carousel2" class="carouselContainer">
@@ -199,37 +170,49 @@
       </div>
     </section>
     <section id="5" class="contact">
-      <div class="underTitle5">
-        <div class="highlightWrapper8">
-          <h2 class="highlightText">
-            <span class="highlightBg1"></span>
-            <span id="underTitle8" class="highlightContent jumpy-letter"
-              >My Contact
-            </span>
-          </h2>
-        </div>
-        <div class="highlightWrapper9">
-          <h2 class="highlightText">
-            <span class="highlightBg1"></span>
-            <span id="underTitle9" class="highlightContent">
-              <a href="mailto:allantritampham@gmail.com"
-                >allantritampham@gmail.com</a
-              ></span
+      <div>
+        <h2 id="underTitle8">My Contact</h2>
+
+        <div>
+          <h3 id="underTitle9">
+            <a href="mailto:allantritampham@gmail.com"
+              >allantritampham@gmail.com</a
             >
-          </h2>
-        </div>
-        <div class="highlightWrapper10">
-          <h2 class="highlightText">
-            <span class="highlightBg1"></span>
-            <span id="underTitle10" class="highlightContent">
-              <a href="https://github.com/ATTP1"
-                >https://github.com/ATTP1</a
-              ></span
-            >
-          </h2>
+          </h3>
+
+          <h3 id="underTitle10">
+            <a href="https://github.com/ATTP1">https://github.com/ATTP1</a>
+          </h3>
         </div>
       </div>
     </section>
+
+    <div class="highlight-section">
+      <div class="leftHighlight highlight1 highlightEffect"></div>
+      <div class="rightHighlight highlight2 highlightEffect"></div>
+      <div class="leftHighlight highlight3 highlightEffect"></div>
+
+      <div
+        id="colorChange"
+        class="leftHighlight highlight4 highlightEffect"
+      ></div>
+      <div
+        id="colorChange"
+        class="rightHighlight highlight5 highlightEffect"
+      ></div>
+
+      <div class="leftHighlight highlight6 highlightEffect"></div>
+
+      <div
+        id="colorChange"
+        class="rightHighlight highlight7 highlightEffect"
+      ></div>
+
+      <div class="leftHighlight highlight8 highlightEffect"></div>
+      <div class="leftHighlight highlight9 highlightEffect"></div>
+      <div class="leftHighlight highlight10 highlightEffect"></div>
+    </div>
+
     <div class="popup-section">
       <div class="popup" id="popup1">
         <div class="popup-content">
@@ -449,6 +432,13 @@
         </div>
       </div>
     </div>
+
+    <script>
+      gsap.to(".highlightEffect", {
+        x: 0,
+        duration: 4,
+      });
+    </script>
     <script>
       const carouselContainer = document.querySelectorAll(".carouselContainer");
 
