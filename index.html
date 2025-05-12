@@ -16,13 +16,17 @@
       crossorigin
     ></script>
 
-    <!-- Babel pour interpréter le JSX -->
+    <!-- Babel pour JSX -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
     <!-- GSAP -->
     <script src="js/gsap.min.js"></script>
     <script src="js/ScrollTrigger.min.js"></script>
     <script src="js/MotionPathPlugin.min.js"></script>
+    <script src="js/ScrambleTextPlugin.min.js"></script>
+    <script>
+      gsap.registerPlugin(MotionPathPlugin, ScrollTrigger, ScrambleTextPlugin);
+    </script>
   </head>
   <body>
     <div class="imagesZone">
@@ -49,11 +53,13 @@
       <div id="root"></div>
 
       <div class="underTitle">
-        <h2 id="underTitle1">where code</h2>
+        <h2 id="underTitle1">where</h2>
+        <h2 id="codeAnimation"><span>###</span></h2>
       </div>
 
       <div class="underTitle">
-        <h2 id="underTitle2">meets magic</h2>
+        <h2 id="underTitle2">meets</h2>
+        <h2 id="magicAnimation">###</h2>
       </div>
 
       <div class="title">
@@ -125,6 +131,7 @@
           <div class="item">SCSS</div>
           <div class="item">JAVASCRIPT</div>
           <div class="item">REACT</div>
+          <div class="item">GSAP</div>
           <div class="item">GIT</div>
 
           <div class="item">HTML5</div>
@@ -132,6 +139,7 @@
           <div class="item">SCSS</div>
           <div class="item">JAVASCRIPT</div>
           <div class="item">REACT</div>
+          <div class="item">GSAP</div>
           <div class="item">GIT</div>
         </div>
       </div>
@@ -443,9 +451,123 @@
     </div>
 
     <script>
-      //pathObjects animation
+      //scrambleText Effect
 
-      gsap.registerPlugin(MotionPathPlugin, ScrollTrigger);
+      ScrollTrigger.create({
+        trigger: "#underTitle1",
+        toggleActions: "restart none none none",
+        onEnter: () => {
+          scramble("#underTitle1");
+          scrambleCode("#codeAnimation");
+        },
+        onEnterBack: () => {
+          scramble("#underTitle1");
+          scrambleCode("#codeAnimation");
+          document.querySelector("#codeAnimation").textContent = "###";
+        },
+      });
+
+      ScrollTrigger.create({
+        trigger: "#underTitle2",
+        toggleActions: "restart none none none",
+        onEnter: () => {
+          scramble("#underTitle2");
+          scrambleMagic("#magicAnimation");
+        },
+        onEnterBack: () => {
+          scramble("#underTitle2");
+          scrambleMagic("#magicAnimation");
+          document.querySelector("#magicAnimation").textContent = "###";
+        },
+      });
+
+      ScrollTrigger.create({
+        trigger: ".highlightAboutMe",
+        toggleActions: "restart none none none",
+        onEnter: () => scramble("#underTitle4"),
+        onEnterBack: () => scramble("#underTitle4"),
+      });
+
+      ScrollTrigger.create({
+        trigger: ".highlightProjects",
+        toggleActions: "restart none none none",
+        onEnter: () => scramble("#underTitle6"),
+        onEnterBack: () => scramble("#underTitle6"),
+      });
+
+      ScrollTrigger.create({
+        trigger: ".highlightSkills",
+        toggleActions: "restart none none none",
+        onEnter: () => scramble("#underTitle7"),
+        onEnterBack: () => scramble("#underTitle7"),
+      });
+
+      ScrollTrigger.create({
+        trigger: ".highlightContact",
+        toggleActions: "restart none none none",
+        onEnter: () => scramble("#underTitle8"),
+        onEnterBack: () => scramble("#underTitle8"),
+      });
+
+      // Scramble function
+      function scramble(selector) {
+        const element = document.querySelector(selector);
+        if (!element) return;
+        gsap.to(element, {
+          scrambleText: {
+            text: element.textContent,
+            chars: "lowerCase",
+
+            speed: 0.5,
+          },
+
+          color: "#bb95f8",
+          duration: 2.5,
+        });
+      }
+      function scrambleCode(selector) {
+        const element = document.querySelector(selector);
+
+        gsap.to(element, {
+          scrambleText: {
+            chars: "⚡🔥",
+            text: "code",
+            speed: 0.1,
+          },
+          top: "100px",
+          delay: 2,
+          duration: 4,
+          onComplete: () => {
+            gsap.to(element, {
+              top: "190px",
+              duration: 0.5,
+            });
+          },
+        });
+      }
+      function scrambleMagic(selector) {
+        const element = document.querySelector(selector);
+
+        gsap.to(element, {
+          scrambleText: {
+            chars: "✨💫",
+            text: "magic",
+            speed: 0.1,
+          },
+          top: "180px",
+          delay: 2,
+          duration: 4,
+          onComplete: () => {
+            gsap.to(element, {
+              top: "270px",
+              duration: 0.5,
+            });
+          },
+        });
+      }
+    </script>
+    <script>
+      //pathObjects animation
 
       gsap.to("#pathItem1", {
         scrollTrigger: {
@@ -509,50 +631,29 @@
           "M1341.46,6c-110,249.33-290.78,256.92-378.67,284.87-90.71,28.85-185.93-16.64-277.98-40.88-120.66-31.77-251.87-26.12-367.07,21.78-115.21,47.91-213.08,138.88-263.7,252.92-29.88,67.32-43.22,141.06-47.05,214.61-3.49,67.04,1.26,136.52,30.78,196.81,28.13,57.44,77.1,102.67,131.74,135.93,171.11,104.14,396.14,93.16,575.99,4.95,62.95-30.87,122.03-70.8,169.82-122.09,106.49-114.28,151.28-277.65,265.58-384.11,45.04-41.95,110.93-74.35,166.93-48.8",
       });
 
-      ScrollTrigger.create({
-        trigger: "#pathItem4",
-        start: "top bottom-=450",
+      //Contact closing animation
 
-        onEnter: () => {
-          gsap.to(".miniL3", {
-            opacity: 1,
-            duration: 1,
-            delay: 10.5,
-          });
-        },
-        onLeaveBack: () => {
-          gsap.set(".miniL3", { opacity: 0 });
-        },
-      });
+      const miniElements = [
+        { selector: ".miniL3", enterOpacity: 1, leaveBackOpacity: 0 },
+        { selector: ".miniL2", enterOpacity: 0, leaveBackOpacity: 1 },
+        { selector: ".miniL1", enterOpacity: 0, leaveBackOpacity: 1 },
+      ];
 
-      ScrollTrigger.create({
-        trigger: "#pathItem4",
-        start: "top bottom-=450",
-        onEnter: () => {
-          gsap.to(".miniL2", {
-            opacity: 0,
-            duration: 1,
-            delay: 10.5,
-          });
-        },
-        onLeaveBack: () => {
-          gsap.set(".miniL2", { opacity: 1 });
-        },
-      });
-
-      ScrollTrigger.create({
-        trigger: "#pathItem4",
-        start: "top bottom-=450",
-        onEnter: () => {
-          gsap.to(".miniL1", {
-            opacity: 0,
-            duration: 1,
-            delay: 10.5,
-          });
-        },
-        onLeaveBack: () => {
-          gsap.set(".miniL1", { opacity: 1 });
-        },
+      miniElements.forEach(({ selector, enterOpacity, leaveBackOpacity }) => {
+        ScrollTrigger.create({
+          trigger: "#pathItem4",
+          start: "top bottom-=450",
+          onEnter: () => {
+            gsap.to(selector, {
+              opacity: enterOpacity,
+              duration: 1,
+              delay: 10.5,
+            });
+          },
+          onLeaveBack: () => {
+            gsap.set(selector, { opacity: leaveBackOpacity });
+          },
+        });
       });
       //highlight
 
@@ -571,6 +672,7 @@
         x: 0,
         duration: 4,
       });
+
       gsap.to(".highlightProjects", {
         scrollTrigger: {
           trigger: ".highlightProjects",
@@ -578,7 +680,6 @@
           scrub: true,
         },
         x: 0,
-        duration: 4,
       });
 
       gsap.to(".highlightSkills", {
@@ -588,19 +689,18 @@
           scrub: true,
         },
         x: 0,
-        duration: 4,
       });
 
       gsap.to(".highlightContact", {
         scrollTrigger: {
           trigger: ".highlightContact",
           toggleActions: "restart none none none",
-          scrub: true,
         },
         x: 0,
         duration: 4,
       });
     </script>
+
     <script>
       const carouselContainer = document.querySelectorAll(".carouselContainer");
 

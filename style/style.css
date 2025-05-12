@@ -18,7 +18,7 @@ h4,
 a {
   font-weight: normal;
   text-decoration: none;
-  color: #bb95f8;
+  color: #6930c4;
 }
 
 body {
@@ -165,7 +165,7 @@ section {
   position: absolute;
   top: 4050px;
   left: 100px;
-  z-index: 2;
+  z-index: 3;
 }
 
 .miniL {
@@ -525,21 +525,30 @@ section {
 }
 
 #underTitle1,
-.highlight1 {
+.highlight1,
+#codeAnimation {
   top: 190px;
   left: 690px;
 }
 
 #underTitle2,
-.highlight2 {
+.highlight2,
+#magicAnimation {
   top: 270px;
-  left: 680px;
+  left: 690px;
+}
+
+#codeAnimation,
+#magicAnimation {
+  color: #bb95f8;
+  left: 1000px;
 }
 
 .underTitle3,
 .highlight3 {
   top: 700px;
   left: 415px;
+  color: #bb95f8;
 }
 
 #underTitle4,
@@ -573,6 +582,7 @@ section {
 .highlight8 {
   top: 4500px;
   left: 200px;
+  z-index: 5;
 }
 
 #underTitle9,
@@ -588,6 +598,7 @@ section {
   top: 4800px;
   left: 400px;
   font-size: 35px;
+  z-index: 5;
 }
 
 .highlight1,
@@ -655,6 +666,7 @@ section {
 
 .highlight8 {
   width: 37.5vw;
+  z-index: 4;
 }
 
 .highlight9 {
@@ -666,6 +678,7 @@ section {
 .highlight10 {
   width: 55.5vw;
   top: 4775px;
+  z-index: 4;
 }
 
 .carouselContainer {
@@ -702,7 +715,7 @@ section {
 
 #pathItem4 {
   position: absolute;
-  z-index: 2;
+  z-index: 3;
   top: 3920px;
   left: 0px;
 }
