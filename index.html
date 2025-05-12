@@ -24,8 +24,14 @@
     <script src="js/ScrollTrigger.min.js"></script>
     <script src="js/MotionPathPlugin.min.js"></script>
     <script src="js/ScrambleTextPlugin.min.js"></script>
+    <script src="js/SplitText.min.js"></script>
     <script>
-      gsap.registerPlugin(MotionPathPlugin, ScrollTrigger, ScrambleTextPlugin);
+      gsap.registerPlugin(
+        MotionPathPlugin,
+        ScrollTrigger,
+        ScrambleTextPlugin,
+        SplitText
+      );
     </script>
   </head>
   <body>
@@ -73,7 +79,7 @@
       </div>
     </section>
     <section id="2" class="aboutMe">
-      <div>
+      <div class="blockText">
         <h2 id="underTitle4">About me</h2>
         <p id="underTitle5">
           I'm someone who loves learning by doing. Whether it's coding<br />
@@ -126,54 +132,46 @@
 
       <div id="carousel2" class="carouselContainer">
         <div class="carouselTrack2">
-          <div class="item">HTML5</div>
-          <div class="item">CSS</div>
-          <div class="item">SCSS</div>
-          <div class="item">JAVASCRIPT</div>
-          <div class="item">REACT</div>
-          <div class="item">GSAP</div>
-          <div class="item">GIT</div>
-
-          <div class="item">HTML5</div>
-          <div class="item">CSS</div>
-          <div class="item">SCSS</div>
-          <div class="item">JAVASCRIPT</div>
-          <div class="item">REACT</div>
-          <div class="item">GSAP</div>
-          <div class="item">GIT</div>
+          <div class="item candyPulseHover">HTML5</div>
+          <div class="item candyPulseHover">CSS</div>
+          <div class="item candyPulseHover">SCSS</div>
+          <div class="item candyPulseHover">JAVASCRIPT</div>
+          <div class="item candyPulseHover">REACT</div>
+          <div class="item candyPulseHover">GSAP</div>
+          <div class="item candyPulseHover">GIT</div>
         </div>
       </div>
 
       <div id="carousel3" class="carouselContainer">
         <div class="carouselTrack3">
-          <div class="item">
+          <div class="item candyPulseHover">
             <img src="images/softwareIcons/1.png" alt="" />
           </div>
-          <div class="item">
+          <div class="item candyPulseHover">
             <img src="images/softwareIcons/2.png" alt="" />
           </div>
-          <div class="item">
+          <div class="item candyPulseHover">
             <img src="images/softwareIcons/3.png" alt="" />
           </div>
-          <div class="item">
+          <div class="item candyPulseHover">
             <img src="images/softwareIcons/4.png" alt="" />
           </div>
-          <div class="item">
+          <div class="item candyPulseHover">
             <img src="images/softwareIcons/5.png" alt="" />
           </div>
-          <div class="item">
+          <div class="item candyPulseHover">
             <img src="images/softwareIcons/6.png" alt="" />
           </div>
-          <div class="item">
+          <div class="item candyPulseHover">
             <img src="images/softwareIcons/7.png" alt="" />
           </div>
-          <div class="item">
+          <div class="item candyPulseHover">
             <img src="images/softwareIcons/8.png" alt="" />
           </div>
-          <div class="item">
+          <div class="item candyPulseHover">
             <img src="images/softwareIcons/9.png" alt="" />
           </div>
-          <div class="item">
+          <div class="item candyPulseHover">
             <img src="images/softwareIcons/10.png" alt="" />
           </div>
           <div class="item">
@@ -395,14 +393,14 @@
               <strong>Electron.</strong> Designed using
               <strong>HTML</strong> and styled with <strong>CSS</strong>, it
               offers a clean, user-friendly way to clock in and out of work
-              sessions. The logic behind the app—built in JavaScript ;lets users
-              start, stop, and track their time, with a full list of previously
-              recorded sessions. Everything runs <strong>locally,</strong> with
-              no need for third-party time-tracking tools. From the animated
-              timer to the exportable log of time recorded, the app was built
-              from scratch as a complete front-end and desktop experience.
-              ChronoChou makes time management simple—and marks a proud step in
-              real-world app development.
+              sessions. The logic behind the app, built in JavaScript, lets
+              users start, stop, and track their time, with a full list of
+              previously recorded sessions. Everything runs
+              <strong>locally,</strong> with no need for third-party
+              time-tracking tools. From the animated timer to the exportable log
+              of time recorded, the app was built from scratch as a complete
+              front-end and desktop experience. ChronoChou makes time management
+              simple and marks a proud step in real-world app development.
             </p>
           </div>
           <div class="popup-images">
@@ -451,6 +449,38 @@
     </div>
 
     <script>
+      //blockText Effect
+
+      const st = SplitText.create("p", { type: "chars", charsClass: "char" });
+
+      st.chars.forEach((char) => {
+        gsap.set(char, { attr: { "data-content": char.innerHTML } });
+      });
+
+      const textBlock = document.querySelector(".blockText");
+
+      textBlock.onpointermove = (e) => {
+        st.chars.forEach((char) => {
+          const rect = char.getBoundingClientRect();
+          const cx = rect.left + rect.width / 2;
+          const cy = rect.top + rect.height / 2;
+          const dx = e.clientX - cx;
+          const dy = e.clientY - cy;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < 100)
+            gsap.to(char, {
+              overwrite: true,
+              duration: 1.2 - dist / 100,
+              scrambleText: {
+                text: char.dataset.content,
+                chars: ".:",
+                speed: 0.5,
+              },
+              ease: "none",
+            });
+        });
+      };
+
       //scrambleText Effect
 
       ScrollTrigger.create({
@@ -522,7 +552,7 @@
           },
 
           color: "#bb95f8",
-          duration: 2.5,
+          duration: 2,
         });
       }
       function scrambleCode(selector) {
@@ -535,7 +565,7 @@
             speed: 0.1,
           },
           top: "100px",
-          delay: 2,
+          delay: 1.5,
           duration: 4,
           onComplete: () => {
             gsap.to(element, {
@@ -555,7 +585,7 @@
             speed: 0.1,
           },
           top: "180px",
-          delay: 2,
+          delay: 1.5,
           duration: 4,
           onComplete: () => {
             gsap.to(element, {
@@ -710,7 +740,7 @@
           document.querySelectorAll(".carouselContainer").forEach((el) => {
             el.classList.add("show");
           });
-        }, 500);
+        }, 300);
       });
 
       //verifier que le browser n'est pas en mode REDUCED MOTION

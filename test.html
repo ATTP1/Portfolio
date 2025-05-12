@@ -3,60 +3,181 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-
-    <!-- GSAP -->
-    <script src="js/gsap.min.js"></script>
-    <script src="js/ScrollTrigger.min.js"></script>
-    <script src="js/MotionPathPlugin.min.js"></script>
-
+    <title>Magical Border Hover Effects</title>
     <style>
       body {
-        background: rgb(60, 60, 60);
-        height: 800vh;
+        background: #fef6ff;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+        padding: 50px;
+        font-family: "Comic Sans MS", cursive, sans-serif;
       }
-      .fakepage {
-        background: black;
-        height: 150vh;
-      }
-      .fakepage2 {
-        background: rgb(192, 94, 94);
-        height: 150vh;
-      }
-      #pathItem1 {
-        position: absolute;
-        left: 100px;
 
-        
-        
+      .square {
+        width: 150px;
+        height: 150px;
+        background: white;
+        border-radius: 20px;
+        position: relative;
+        transition: all 0.3s ease;
+      }
+
+      /* 1. Rainbow Glow Border */
+      .effect1 {
+        border: 4px solid transparent;
+        z-index: 0;
+      }
+      .effect1::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        inset: -4px;
+        border-radius: inherit;
+        background: linear-gradient(
+          45deg,
+          #ff0080,
+          #ff8c00,
+          #40e0d0,
+          #8a2be2,
+          #ff0080
+        );
+        background-size: 400%;
+        animation: rainbowFlow 10s linear infinite;
+        opacity: 0;
+        transition: opacity 0.4s ease;
+      }
+      .effect1:hover::before {
+        opacity: 1;
+      }
+      @keyframes rainbowFlow {
+        0% {
+          background-position: 0%;
+        }
+        100% {
+          background-position: 400%;
+        }
+      }
+
+      /* 2. Sparkle Border (animated dots) */
+      .effect2 {
+        border: 4px dotted transparent;
+      }
+      .effect2:hover {
+        border: 4px dotted #ff69b4;
+        box-shadow: 0 0 20px #ff69b4, 0 0 40px #ffb6c1;
+      }
+
+      /* 3. Candy Pulse Border */
+      .effect3 {
+        border: 4px solid #ff66cc;
+      }
+      .effect3:hover {
+        animation: pulseCandy 1s infinite;
+      }
+      @keyframes pulseCandy {
+        0% {
+          box-shadow: 0 0 0 0 #ff66cc;
+        }
+        70% {
+          box-shadow: 0 0 0 10px rgba(255, 102, 204, 0);
+        }
+        100% {
+          box-shadow: 0 0 0 0 rgba(255, 102, 204, 0);
+        }
+      }
+
+      /* 4. Glimmering Border (gradient spin) */
+      .effect4::before {
+        content: "";
+        position: absolute;
+        inset: -3px;
+        border-radius: inherit;
+        padding: 3px;
+        background: conic-gradient(
+          from 0deg,
+          #ff00cc,
+          #3333ff,
+          #00ccff,
+          #ff00cc
+        );
+        -webkit-mask: linear-gradient(#fff 0 0) content-box,
+          linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        z-index: -1;
+        animation: spin 4s linear infinite;
+      }
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      /* 5. Magical Gradient Border on Hover */
+      .effect5 {
+        border: 4px solid #ccc;
+      }
+      .effect5:hover {
+        border-image: linear-gradient(
+            135deg,
+            #ffafbd,
+            #ffc3a0,
+            #fbc2eb,
+            #a6c1ee
+          )
+          1;
+        animation: shimmer 2s infinite;
+      }
+      @keyframes shimmer {
+        0% {
+          border-image-slice: 1;
+        }
+        50% {
+          border-image-slice: 1;
+        }
+        100% {
+          border-image-slice: 1;
+        }
+      }
+
+      .label {
+        text-align: center;
+        margin-top: 10px;
+        font-size: 14px;
+      }
+
+      .box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
       }
     </style>
   </head>
   <body>
-    <script src="js/gsap.min.js"></script>
-    <div class="fakepage"></div>
-
-    <img src="images/pathItem2.png" id="pathItem1"></div>
-
-    <script>
-      gsap.registerPlugin(MotionPathPlugin, ScrollTrigger);
-
-      gsap.to("#pathItem1", {
-        scrollTrigger: {
-          trigger: "#pathItem1",
-          start: "top center",
-          end: "bottom -400px",
-          toggleActions: "restart none none none",
-          scrub: 1,
-          duration: 10,
-        },
-        rotation: 720,
-        duration: 25,
-        opacity: 0.5,
-
-        motionPath:
-          "M6,124.82c41.09,77.42,268.67,68.08,357.62,73.65s176.87-23.08,256.3-62.66c59.22-29.51,115.47-65.36,177.87-87.72,54.29-19.46,111.89-28.21,169.16-36.01,34.99-4.77,70.71-9.22,105.47-3.06,30.82,5.47,59.53,19.07,86.49,34.68,118.67,68.71,214.43,191.25,210.82,326.17-3.46,129.48-95.34,249.45-78.92,377.97",
-      });
-    </script>
+    <div class="box">
+      <div class="square effect1"></div>
+      <div class="label">Rainbow Glow</div>
+    </div>
+    <div class="box">
+      <div class="square effect2"></div>
+      <div class="label">Sparkle Dots</div>
+    </div>
+    <div class="box">
+      <div class="square effect3"></div>
+      <div class="label">Candy Pulse</div>
+    </div>
+    <div class="box">
+      <div class="square effect4"></div>
+      <div class="label">Glimmer Spin</div>
+    </div>
+    <div class="box">
+      <div class="square effect5"></div>
+      <div class="label">Magic Gradient</div>
+    </div>
   </body>
 </html>

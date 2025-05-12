@@ -2,6 +2,8 @@ $Purple1: #6930c4;
 $Purple2: #bb95f8;
 $Purple3: #653080;
 
+$Pink: #ff6a8a;
+
 $Black: #363636;
 
 /* TESTER VIEW
@@ -306,7 +308,7 @@ section {
   max-width: 100vw;
   position: absolute;
   top: 2500px;
-  z-index: 3;
+  z-index: 5;
 }
 
 #carousel1 .item {
@@ -417,7 +419,7 @@ section {
 
   width: 200px;
   height: 200px;
-  border-radius: 10px;
+  border-radius: 50px;
 
   background: $Purple2;
 }
@@ -483,6 +485,7 @@ section {
 }
 
 .popup-text h2 {
+  color: $Purple2;
   font-size: 55px;
 }
 
@@ -615,6 +618,8 @@ section {
 #magicAnimation {
   color: $Purple2;
   left: 1000px;
+
+  z-index: 5;
 }
 .underTitle3,
 .highlight3 {
@@ -676,6 +681,11 @@ section {
   font-size: 35px;
 
   z-index: 5;
+}
+
+#underTitle9 a,
+#underTitle10 a {
+  color: $Purple2;
 }
 
 //highlight effect
@@ -806,4 +816,21 @@ section {
   z-index: 3;
   top: 3920px;
   left: 0px;
+}
+//skills effect
+
+.candyPulseHover:hover {
+  animation: pulseCandy 2s infinite;
+}
+
+@keyframes pulseCandy {
+  0% {
+    box-shadow: 0 0 0 0 $Purple3;
+  }
+  70% {
+    box-shadow: 0 0 0 30px rgba(91, 31, 71, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 $Black;
+  }
 }
