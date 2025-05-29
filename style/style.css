@@ -120,7 +120,7 @@ section {
 
 .miniRP {
   position: absolute;
-  z-index: 5;
+  z-index: 6;
   top: 2465px;
   left: 1400px;
 }
@@ -812,9 +812,17 @@ section {
     left: 60vw;
     top: 45vh;
   }
+  .miniR {
+    left: 72vw;
+  }
+  .miniRP {
+    left: 72vw;
+  }
   .acceuil img,
   .miniMe,
-  .miniS {
+  .miniS,
+  .miniR,
+  .miniRP {
     transform: scale(88%) !important;
   }
   .title img {
@@ -1276,5 +1284,234 @@ section {
   }
 }
 /* Phones  Iphone 12 Pro*/
+@media (max-width: 500px) {
+  section {
+    height: 132vh;
+  }
+  .headerBar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5vw;
+    height: fit-content;
+    justify-content: space-between;
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+  .title img {
+    transform: scale(28%) !important;
+    left: -182vw;
+    top: -15vh;
+  }
+  .titleStar {
+    transform: scale(78%) !important;
+    left: -175vw;
+    top: 5vh;
+  }
+  .miniS {
+    left: -55vw;
+    top: 96vh;
+    transform: scale(55%) !important;
+  }
+  .miniMe {
+    transform: scale(50%) !important;
+    left: -20vw;
+    top: 68vh;
+  }
+  .miniR,
+  .miniRP {
+    transform: scale(70%) rotate(180deg) !important;
+  }
+  .miniR {
+    left: -30vw;
+    top: 335vh;
+  }
+  .miniRP {
+    left: 72vw;
+    top: 350vh;
+  }
+  .path1,
+  .path2,
+  .path3,
+  .path4 {
+    display: none;
+  }
+  #pathItem1,
+  #pathItem2,
+  #pathItem3,
+  #pathItem4 {
+    display: none;
+  }
+  .prop1 {
+    display: none;
+  }
+  .popup-images img:hover {
+    border: red solid 5px;
+  }
+  .miniL,
+  .miniL1,
+  .miniL3 {
+    left: -15vw;
+    top: 565vh;
+    transform: scale(60%) !important;
+  }
+  .miniL1 {
+    display: none;
+  }
+  .miniL2 {
+    display: none;
+  }
+  .miniL3 {
+    opacity: 1;
+    left: -5.5vw;
+    top: 575vh;
+  }
+  .endStar {
+    left: 10vw;
+    top: 430vh;
+  }
+  #underTitle1 {
+    left: 5vw;
+    top: 19vh;
+  }
+  #underTitle2 {
+    left: 24vw;
+    top: 29vh;
+  }
+  #magicAnimation {
+    left: 65vw;
+    top: 29vh;
+  }
+  .underTitle3 {
+    left: 2vw;
+    top: 75vh;
+  }
+  #underTitle4 {
+    left: 10vw;
+    top: 143.5vh;
+  }
+  #underTitle5 {
+    left: 5vw;
+    width: 90vw;
+  }
+  #underTitle6 {
+    left: 10vw;
+    width: 100%;
+    top: 274vh;
+  }
+  #underTitle7 {
+    left: 45vw;
+    width: 100%;
+    top: 404vh;
+  }
+  #underTitle8 {
+    left: 6vw;
+    top: 534.5vh;
+  }
+  #underTitle9,
+  #underTitle10 {
+    left: 10vw;
+    font-size: 14pt !important;
+  }
+  #underTitle9 {
+    top: 556vh;
+    left: 2vw;
+  }
+  #underTitle10 {
+    top: 567.5vh;
+    left: 6vw;
+  }
+  .highlight1 {
+    width: 75vw;
+  }
+  .highlight3 {
+    top: 75vh;
+    width: 84vw;
+    height: 10vh;
+  }
+  .highlight4 {
+    width: 90vw;
+  }
+  .highlight5 {
+    height: 90vh;
+    width: 100vw;
+    left: 0vw;
+  }
+  .highlight6 {
+    width: 85vw;
+  }
+  .highlight7 {
+    width: 120vw;
+    left: 30vw;
+  }
+  .highlight8 {
+    width: 80vw;
+  }
+  .highlight9 {
+    width: 100vw;
+    left: 50vw;
+  }
+  .highlight10 {
+    width: 100vw;
+    left: 50vw;
+  }
+  .rainbow-link {
+    font-size: 15pt;
+    color: #363636 !important;
+  }
+  .carouselContainer .carouselTrack2 {
+    font-size: 15pt;
+    color: #653080 !important;
+  }
+  .popup-text h2 {
+    font-size: 25pt;
+    color: #bb95f8 !important;
+  }
+  .popup-text h2 strong {
+    font-size: 15pt;
+    color: #6930c4 !important;
+  }
+  .popup-text h3 {
+    font-size: 15pt;
+    color: #6930c4 !important;
+  }
+  .popup-text p {
+    font-size: 10pt;
+    color: #363636 !important;
+    line-height: 18px;
+  }
+  .popup-text p strong {
+    font-size: 10pt;
+    color: #6930c4 !important;
+  }
+  .close-btnProject {
+    font-size: 25pt;
+    color: #bb95f8 !important;
+  }
+  #underTitle5,
+  .highlight5 {
+    font-size: 12pt;
+    color: #bb95f8 !important;
+  }
+  #underTitle9,
+  .highlight9 {
+    font-size: 25pt;
+    color: #bb95f8 !important;
+  }
+  #underTitle10,
+  .highlight10 {
+    font-size: 25pt;
+    color: #bb95f8 !important;
+  }
+  .acceuil h2,
+  .aboutMe h2,
+  .aboutMe p,
+  .projects h2,
+  .skills h2,
+  .contact h2,
+  .contact h3 {
+    margin-top: 50px;
+    font-size: 30px;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
