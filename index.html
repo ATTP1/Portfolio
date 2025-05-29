@@ -59,13 +59,12 @@
       <div id="root"></div>
 
       <div class="underTitle">
-        <h2 id="underTitle1">where</h2>
-        <h2 id="codeAnimation"><span>###</span></h2>
+        <h2 id="underTitle1">where code</h2>
       </div>
 
       <div class="underTitle">
         <h2 id="underTitle2">meets</h2>
-        <h2 id="magicAnimation">###</h2>
+        <h2 id="magicAnimation">°°°°°</h2>
       </div>
 
       <div class="title">
@@ -82,16 +81,14 @@
       <div class="blockText">
         <h2 id="underTitle4">About me</h2>
         <p id="underTitle5">
-          I'm someone who loves learning by doing. Whether it's coding<br />
-          small apps, exploring design tools, or building fun web projects,<br />
-          I enjoy figuring things out and seeing ideas come together.
-          <br />
-          I have a strong interest in gaming, technology, and creative<br />
-          development, and I like mixing those worlds through HTML, CSS,<br />
-          JavaScript, and tools like Illustrator and Spline. I’ve worked on a
-          <br />
-          variety of projects, from desktop timers to interactive websites,<br />
-          each one helping me improve and try something new.
+          I'm someone who loves learning by doing. Whether it's coding small
+          apps, exploring design tools, or building fun web projects, I enjoy
+          figuring things out and seeing ideas come together. I have a strong
+          interest in gaming, technology, and creative development, and I like
+          mixing those worlds through HTML, CSS, JavaScript, and tools like
+          Illustrator and Spline. I’ve worked on a variety of projects, from
+          desktop timers to interactive websites, each one helping me improve
+          and try something new.
         </p>
       </div>
     </section>
@@ -451,7 +448,7 @@
     <script>
       //blockText Effect
 
-      const st = SplitText.create("p", { type: "chars", charsClass: "char" });
+      /*const st = SplitText.create("p", { type: "chars", charsClass: "char" });
 
       st.chars.forEach((char) => {
         gsap.set(char, { attr: { "data-content": char.innerHTML } });
@@ -480,7 +477,7 @@
             });
         });
       };
-
+*/
       //scrambleText Effect
 
       ScrollTrigger.create({
@@ -488,11 +485,11 @@
         toggleActions: "restart none none none",
         onEnter: () => {
           scramble("#underTitle1");
-          scrambleCode("#codeAnimation");
+          scramble("#codeAnimation");
         },
         onEnterBack: () => {
           scramble("#underTitle1");
-          scrambleCode("#codeAnimation");
+          scramble("#codeAnimation");
           document.querySelector("#codeAnimation").textContent = "###";
         },
       });
@@ -502,11 +499,11 @@
         toggleActions: "restart none none none",
         onEnter: () => {
           scramble("#underTitle2");
-          scrambleMagic("#magicAnimation");
+          scrambleWild("#magicAnimation");
         },
         onEnterBack: () => {
           scramble("#underTitle2");
-          scrambleMagic("#magicAnimation");
+          scrambleWild("#magicAnimation");
           document.querySelector("#magicAnimation").textContent = "###";
         },
       });
@@ -552,9 +549,26 @@
           },
 
           color: "#bb95f8",
+          duration: 1,
+        });
+      }
+
+      function scrambleWild(selector) {
+        const element = document.querySelector(selector);
+
+        gsap.to(element, {
+          scrambleText: {
+            text: "magic",
+            chars: "✧✦✩★",
+
+            speed: 0.35,
+          },
+
+          color: "#bb95f8",
           duration: 2,
         });
       }
+      /*
       function scrambleCode(selector) {
         const element = document.querySelector(selector);
 
@@ -564,12 +578,11 @@
             text: "code",
             speed: 0.1,
           },
-          top: "100px",
-          delay: 1.5,
+          top: "160px",
+          delay: 0.5,
           duration: 4,
           onComplete: () => {
             gsap.to(element, {
-              top: "190px",
               duration: 0.5,
             });
           },
@@ -584,17 +597,17 @@
             text: "magic",
             speed: 0.1,
           },
-          top: "180px",
-          delay: 1.5,
+          top: "250px",
+          delay: 0.5,
           duration: 4,
           onComplete: () => {
             gsap.to(element, {
-              top: "270px",
               duration: 0.5,
             });
           },
         });
       }
+        */
     </script>
     <script>
       //pathObjects animation
@@ -826,10 +839,10 @@
       function HeaderBar() {
         return (
           <div className="headerBar">
-            <RainbowLink href="#2" text="About me" />
-            <RainbowLink href="#3" text="Projects" />
-            <RainbowLink href="#4" text="Skills" />
-            <RainbowLink href="#5" text="Contact" />
+            <RainbowLink className="headerBarLink" href="#2" text="About me" />
+            <RainbowLink className="headerBarLink" href="#3" text="Projects" />
+            <RainbowLink className="headerBarLink" href="#4" text="Skills" />
+            <RainbowLink className="headerBarLink" href="#5" text="Contact" />
           </div>
         );
       }

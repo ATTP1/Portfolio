@@ -6,13 +6,70 @@ $Pink: #ff6a8a;
 
 $Black: #363636;
 
-/* TESTER VIEW
-
-* {
-  outline: 1px solid limegreen; 
-
+/* Tablets (landscape) */
+@media (max-width: 992px) {
 }
-  */
+
+/* Tablets (portrait) / small laptops */
+@media (max-width: 768px) {
+}
+
+/* Phones */
+@media (max-width: 576px) {
+}
+
+@mixin police-style($taille, $couleur, $format) {
+  //2k 125%WinZoom DEFAULT
+  @if ($format == "default") {
+    @if ($taille == "petit") {
+      font-size: 20pt;
+    } @else if($taille == "moyen") {
+      font-size: 35pt;
+    } @else if($taille == "grand") {
+      font-size: 55pt;
+    } @else {
+      font-size: $taille;
+    }
+  }
+  //1080p
+  @else if($format == 1950) {
+    @if ($taille == "petit") {
+      font-size: 20pt;
+    } @else if($taille == "moyen") {
+      font-size: 25pt;
+    } @else if($taille == "grand") {
+      font-size: 40pt;
+    } @else {
+      font-size: $taille;
+    }
+  }
+  //MacBook Pro
+  @else if($format == 1450) {
+    @if ($taille == "petit") {
+      font-size: 15pt;
+    } @else if($taille == "moyen") {
+      font-size: 20pt;
+    } @else if($taille == "grand") {
+      font-size: 35pt;
+    } @else {
+      font-size: $taille;
+    }
+  }
+  //Ipad Vertical
+  @else if($format == 770) {
+    @if ($taille == "petit") {
+      font-size: 15pt;
+    } @else if($taille == "moyen") {
+      font-size: 20pt;
+    } @else if($taille == "grand") {
+      font-size: 30pt;
+    } @else {
+      font-size: $taille;
+    }
+  }
+
+  color: $couleur !important;
+}
 
 @font-face {
   font-family: "mainFont";
@@ -65,10 +122,7 @@ section {
 }
 
 .headerBar a {
-  color: $Black;
   text-decoration: none;
-  font-size: 35px;
-
   margin-top: 10px;
 }
 
@@ -177,19 +231,6 @@ section {
   z-index: 5;
 }
 
-.scrollingTextInner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  background-color: $Black;
-  width: 100%;
-
-  height: 70px;
-  font-size: 35px;
-  color: $Purple2;
-}
-
 .path4 {
   position: absolute;
 
@@ -246,7 +287,7 @@ section {
 //rainbow text
 
 .rainbow-link {
-  font-size: 35px;
+  @include police-style("moyen", $Black, "default");
   text-decoration: none;
   display: flex;
   gap: 2px;
@@ -254,7 +295,6 @@ section {
 }
 
 .rainbow-link span {
-  color: $Black; // noir par défaut
   transition: 0.3s ease;
   filter: brightness(1);
 }
@@ -382,8 +422,7 @@ section {
 }
 
 .carouselContainer .carouselTrack2 {
-  color: $Purple3;
-  font-size: 35px;
+  @include police-style("moyen", $Purple3, "default");
 }
 
 [data-animated="true"] .carouselTrack2 {
@@ -485,28 +524,26 @@ section {
 }
 
 .popup-text h2 {
-  color: $Purple2;
-  font-size: 55px;
+  @include police-style("grand", $Purple2, "default");
 }
 
 .popup-text h2 strong {
-  color: $Purple1;
-  font-size: 35px;
+  @include police-style("moyen", $Purple1, "default");
 }
 
 .popup-text h3 {
-  font-size: 35px;
-  color: $Purple1;
+  @include police-style("moyen", $Purple1, "default");
 }
 
 .popup-text p {
   line-height: 30px;
-  font-size: 20px;
+  @include police-style("petit", $Black, "default");
 }
 
 .popup-text p strong {
   font-weight: normal;
-  color: $Purple1;
+
+  @include police-style("petit", $Purple1, "default");
 }
 .popup-images {
   display: flex;
@@ -530,8 +567,9 @@ section {
   right: 15px;
   background: none;
   border: none;
-  font-size: 55px;
-  color: $Purple2;
+
+  @include police-style("grand", $Purple2, "default");
+
   cursor: pointer;
 }
 
@@ -617,7 +655,7 @@ section {
 #codeAnimation,
 #magicAnimation {
   color: $Purple2;
-  left: 1000px;
+  left: 975px;
 
   z-index: 5;
 }
@@ -639,7 +677,7 @@ section {
   top: 1400px;
   left: 750px;
 
-  font-size: 25px;
+  @include police-style("petit", $Black, "default");
   line-height: 40px;
   color: $Purple2;
 }
@@ -668,7 +706,7 @@ section {
   top: 4700px;
   left: 400px;
 
-  font-size: 35px;
+  @include police-style(25pt, $Purple2, "default");
 
   z-index: 3;
 }
@@ -678,7 +716,7 @@ section {
   top: 4800px;
   left: 400px;
 
-  font-size: 35px;
+  @include police-style(25pt, $Purple2, "default");
 
   z-index: 5;
 }
@@ -724,7 +762,7 @@ section {
 }
 
 .highlight1 {
-  width: 60vw;
+  width: 65vw;
 }
 
 .highlight2 {
@@ -833,4 +871,670 @@ section {
   100% {
     box-shadow: 0 0 0 0 $Black;
   }
+}
+
+//RESPONSIVE
+
+/* Large desktops 1080p*/
+@media (max-width: 1950px) {
+  .highlight5 {
+    height: 40vh;
+  }
+
+  //FONT
+  .rainbow-link {
+    @include police-style("moyen", $Black, 1950);
+  }
+
+  .carouselContainer .carouselTrack2 {
+    @include police-style("moyen", $Purple3, 1950);
+  }
+
+  .popup-text h2 {
+    @include police-style("grand", $Purple2, 1950);
+  }
+
+  .popup-text h2 strong {
+    @include police-style("moyen", $Purple1, 1950);
+  }
+
+  .popup-text h3 {
+    @include police-style("moyen", $Purple1, 1950);
+  }
+
+  .popup-text p {
+    @include police-style(15pt, $Black, 1950);
+  }
+
+  .popup-text p strong {
+    @include police-style(15pt, $Purple1, 1950);
+  }
+
+  .close-btnProject {
+    @include police-style("grand", $Purple2, 1950);
+  }
+
+  #underTitle5,
+  .highlight5 {
+    @include police-style("petit", $Purple2, 1950);
+  }
+
+  #underTitle9,
+  .highlight9 {
+    @include police-style(25pt, $Purple2, 1950);
+  }
+
+  #underTitle10,
+  .highlight10 {
+    @include police-style(25pt, $Purple2, 1950);
+  }
+
+  .acceuil h2,
+  .aboutMe h2,
+  .aboutMe p,
+  .projects h2,
+  .skills h2,
+  .contact h2,
+  .contact h3 {
+    margin-top: 50px;
+    font-size: 42px;
+  }
+}
+
+/* Medium desktops MacBook Pro */
+@media (max-width: 1450px) {
+  .acceuil {
+    img {
+      position: absolute;
+      left: -15vw;
+      top: -5vh;
+    }
+  }
+
+  section {
+    height: 120vh;
+    width: 50vw;
+  }
+
+  .miniS {
+    left: -9vw;
+    top: 78vh;
+  }
+
+  .miniMe {
+    left: 60vw;
+    top: 45vh;
+  }
+
+  .acceuil img,
+  .miniMe,
+  .miniS {
+    transform: scale(88%) !important;
+  }
+
+  .title img {
+    top: 5vh;
+  }
+
+  .path1,
+  .path2,
+  .path3,
+  .path4 {
+    left: -14vw !important;
+  }
+
+  #pathItem1,
+  #pathItem2,
+  #pathItem3,
+  #pathItem4 {
+    left: -17vw !important;
+  }
+
+  .miniL,
+  .miniL1,
+  .miniL3 {
+    left: 75vw;
+  }
+
+  .miniL1 {
+    left: 80vw;
+  }
+
+  .miniL2 {
+    left: 68vw;
+  }
+
+  .endStar {
+    left: -10vw;
+  }
+
+  //MOT//
+
+  #underTitle1 {
+    left: 34vw;
+  }
+  #underTitle2 {
+    left: 33vw;
+  }
+
+  #magicAnimation {
+    left: 51vw;
+  }
+
+  .underTitle3 {
+    left: 19vw;
+  }
+
+  #underTitle5 {
+    left: 35vw;
+  }
+
+  #underTitle6 {
+    left: 40vw;
+  }
+
+  #underTitle7 {
+    left: 65vw;
+  }
+
+  #underTitle8 {
+    left: 6vw;
+  }
+
+  #underTitle9,
+  #underTitle10 {
+    left: 10vw;
+  }
+
+  #underTitle9 {
+    top: 520.5vh;
+  }
+
+  #underTitle10 {
+    top: 531.5vh;
+  }
+
+  //HIGHLIGHT
+
+  .highlight3 {
+    width: 70vw;
+  }
+
+  .highlight4 {
+    width: 55vw;
+  }
+
+  .highlight5 {
+    height: 42vh;
+  }
+
+  .highlight6 {
+    width: 75vw;
+  }
+
+  //FONT//
+
+  .rainbow-link {
+    @include police-style("moyen", $Black, 1450);
+  }
+
+  .carouselContainer .carouselTrack2 {
+    @include police-style("moyen", $Purple3, 1450);
+  }
+
+  .popup-text h2 {
+    @include police-style("grand", $Purple2, 1450);
+  }
+
+  .popup-text h2 strong {
+    @include police-style("moyen", $Purple1, 1450);
+  }
+
+  .popup-text h3 {
+    @include police-style("moyen", $Purple1, 1450);
+  }
+
+  .popup-text p {
+    @include police-style(10pt, $Black, 1450);
+  }
+
+  .popup-text p strong {
+    @include police-style(10pt, $Purple1, 1450);
+  }
+
+  .close-btnProject {
+    @include police-style("grand", $Purple2, 1450);
+  }
+
+  #underTitle5,
+  .highlight5 {
+    @include police-style("petit", $Purple2, 1450);
+  }
+
+  #underTitle9,
+  .highlight9 {
+    @include police-style(25pt, $Purple2, 1450);
+  }
+
+  #underTitle10,
+  .highlight10 {
+    @include police-style(25pt, $Purple2, 1450);
+  }
+
+  .acceuil h2,
+  .aboutMe h2,
+  .aboutMe p,
+  .projects h2,
+  .skills h2,
+  .contact h2,
+  .contact h3 {
+    margin-top: 50px;
+    font-size: 45px;
+  }
+}
+
+/* Tablets (landscape) Ipad */
+@media (max-width: 1025px) {
+  section {
+    height: 140vh;
+    width: 50vw;
+  }
+
+  .miniS {
+    left: -12vw;
+    top: 95vh;
+  }
+
+  .miniMe {
+    left: 58vw;
+    top: 57vh;
+  }
+
+  .acceuil img,
+  .titleStar,
+  .endStar,
+  .miniMe,
+  .miniS,
+  .prop1 {
+    transform: scale(75%) !important;
+  }
+
+  .title img {
+    top: -10vh;
+    left: -38vw;
+  }
+
+  .titleStar {
+    top: 3vh;
+    left: 0vw;
+  }
+
+  .path1 {
+    left: -20vw !important;
+  }
+
+  #pathItem1 {
+    left: -28vw !important;
+  }
+
+  .path4 {
+    left: -35vw !important;
+  }
+
+  #pathItem4 {
+    left: -43vw !important;
+  }
+
+  .prop1 {
+    left: -5vw;
+  }
+
+  .popup-text {
+    width: 100%;
+    text-align: left;
+  }
+
+  .popup-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .popup-images img {
+    transform: scale(85%);
+  }
+
+  .popup-images {
+    flex-direction: row;
+    gap: 5vw;
+  }
+
+  .miniL,
+  .miniL1,
+  .miniL3 {
+    left: 75vw;
+    top: 565vh;
+  }
+
+  .miniL1 {
+    left: 81vw;
+    top: 565vh;
+  }
+
+  .miniL2 {
+    left: 65vw;
+    top: 595vh;
+  }
+  .miniL3 {
+    left: 75vw;
+    top: 555vh;
+  }
+
+  .endStar {
+    left: -20vw;
+    top: 565vh;
+  }
+
+  //MOT//
+
+  #underTitle1 {
+    left: 27vw;
+    top: 18vh;
+  }
+  #underTitle2 {
+    left: 26vw;
+    top: 28vh;
+  }
+
+  #magicAnimation {
+    left: 51vw;
+    top: 28vh;
+  }
+
+  .underTitle3 {
+    left: 10vw;
+    top: 78vh;
+  }
+
+  #underTitle5 {
+    left: 35vw;
+  }
+
+  #underTitle6 {
+    left: 40vw;
+  }
+
+  #underTitle7 {
+    left: 65vw;
+  }
+
+  #underTitle8 {
+    left: 6vw;
+  }
+
+  #underTitle9,
+  #underTitle10 {
+    left: 10vw;
+  }
+
+  #underTitle9 {
+    top: 610vh;
+  }
+
+  #underTitle10 {
+    top: 622.5vh;
+  }
+
+  //HIGHLIGHT
+
+  .highlight1 {
+    top: 18vh;
+    width: 70vw;
+  }
+
+  .highlight2 {
+    top: 28vh;
+    width: 80vw;
+    left: 20vw;
+  }
+
+  .highlight3 {
+    width: 80vw;
+    top: 78vh;
+  }
+
+  .highlight4 {
+    width: 75vw;
+  }
+
+  .highlight5 {
+    height: 72vh;
+  }
+
+  .highlight6 {
+    width: 85vw;
+  }
+
+  .highlight8 {
+    width: 48vw;
+  }
+
+  .highlight9,
+  .highlight10 {
+    width: 80vw;
+  }
+}
+
+/* Tablets (portrait) Ipad / small laptops */
+@media (max-width: 770px) {
+  section {
+    height: 106vh;
+  }
+
+  .title img {
+    transform: scale(55%) !important;
+    left: -68vw;
+    top: -7vh;
+  }
+
+  .titleStar {
+    transform: scale(100%) !important;
+    left: -8vw;
+  }
+
+  .miniS {
+    left: -9vw;
+    top: 71vh;
+  }
+
+  .miniMe {
+    left: 40vw;
+    top: 45vh;
+  }
+
+  .popup-images img {
+    transform: scale(120%);
+    margin: 2vw;
+  }
+
+  .path1,
+  .path2,
+  .path3,
+  .path4 {
+    left: -74vw !important;
+  }
+
+  #pathItem1,
+  #pathItem2,
+  #pathItem3,
+  #pathItem4 {
+    left: -92vw !important;
+  }
+
+  .miniL,
+  .miniL1,
+  .miniL3 {
+    left: 65vw;
+    top: 430vh;
+  }
+
+  .miniL1 {
+    left: 74vw;
+    top: 430vh;
+  }
+
+  .miniL2 {
+    left: 51vw;
+    top: 453vh;
+  }
+
+  .miniL3 {
+    top: 422vh;
+  }
+
+  .endStar {
+    left: -30vw;
+    top: 425vh;
+  }
+
+  //MOT//
+
+  #underTitle1 {
+    left: 25vw;
+  }
+  #underTitle2 {
+    left: 24vw;
+  }
+
+  #magicAnimation {
+    left: 51vw;
+  }
+
+  .underTitle3 {
+    left: 2vw;
+    top: 55vh;
+  }
+
+  #underTitle5 {
+    left: 35vw;
+  }
+
+  #underTitle6 {
+    left: 40vw;
+  }
+
+  #underTitle7 {
+    left: 65vw;
+  }
+
+  #underTitle8 {
+    left: 6vw;
+  }
+
+  #underTitle9,
+  #underTitle10 {
+    left: 10vw;
+  }
+
+  #underTitle9 {
+    top: 457.5vh;
+    left: 5vw;
+  }
+
+  #underTitle10 {
+    top: 467vh;
+    left: 5vw;
+  }
+
+  //HIGHLIGHT
+
+  .highlight3 {
+    top: 55vh;
+    width: 84vw;
+  }
+
+  .highlight4 {
+    width: 90vw;
+  }
+
+  .highlight5 {
+    height: 68vh;
+  }
+
+  .highlight6 {
+    width: 85vw;
+  }
+
+  .highlight9 {
+    width: 100vw;
+    left: 50vw;
+  }
+
+  .highlight10 {
+    width: 100vw;
+    left: 50vw;
+  }
+
+  //FONT//
+
+  .rainbow-link {
+    @include police-style("moyen", $Black, 770);
+  }
+
+  .carouselContainer .carouselTrack2 {
+    @include police-style("moyen", $Purple3, 770);
+  }
+
+  .popup-text h2 {
+    @include police-style("grand", $Purple2, 770);
+  }
+
+  .popup-text h2 strong {
+    @include police-style("moyen", $Purple1, 770);
+  }
+
+  .popup-text h3 {
+    @include police-style("moyen", $Purple1, 770);
+  }
+
+  .popup-text p {
+    @include police-style(10pt, $Black, 770);
+  }
+
+  .popup-text p strong {
+    @include police-style(10pt, $Purple1, 770);
+  }
+
+  .close-btnProject {
+    @include police-style("grand", $Purple2, 770);
+  }
+
+  #underTitle5,
+  .highlight5 {
+    @include police-style("petit", $Purple2, 770);
+  }
+
+  #underTitle9,
+  .highlight9 {
+    @include police-style(25pt, $Purple2, 770);
+  }
+
+  #underTitle10,
+  .highlight10 {
+    @include police-style(25pt, $Purple2, 770);
+  }
+
+  .acceuil h2,
+  .aboutMe h2,
+  .aboutMe p,
+  .projects h2,
+  .skills h2,
+  .contact h2,
+  .contact h3 {
+    margin-top: 50px;
+    font-size: 38px;
+  }
+}
+
+/* Phones  Iphone 12 Pro*/
+@media (max-width: 500px) {
 }

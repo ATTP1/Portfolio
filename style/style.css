@@ -1,10 +1,6 @@
-/* TESTER VIEW
-
-* {
-  outline: 1px solid limegreen; 
-
-}
-  */
+/* Tablets (landscape) */
+/* Tablets (portrait) / small laptops */
+/* Phones */
 @font-face {
   font-family: "mainFont";
   src: url("../style/MonumentExtended-Regular.otf") format("opentype");
@@ -51,9 +47,7 @@ section {
 }
 
 .headerBar a {
-  color: #363636;
   text-decoration: none;
-  font-size: 35px;
   margin-top: 10px;
 }
 
@@ -150,17 +144,6 @@ section {
   z-index: 5;
 }
 
-.scrollingTextInner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #363636;
-  width: 100%;
-  height: 70px;
-  font-size: 35px;
-  color: #bb95f8;
-}
-
 .path4 {
   position: absolute;
   top: 4050px;
@@ -205,7 +188,8 @@ section {
 }
 
 .rainbow-link {
-  font-size: 35px;
+  font-size: 35pt;
+  color: #363636 !important;
   text-decoration: none;
   display: flex;
   gap: 2px;
@@ -213,7 +197,6 @@ section {
 }
 
 .rainbow-link span {
-  color: #363636;
   transition: 0.3s ease;
   filter: brightness(1);
 }
@@ -329,8 +312,8 @@ section {
 }
 
 .carouselContainer .carouselTrack2 {
-  color: #653080;
-  font-size: 35px;
+  font-size: 35pt;
+  color: #653080 !important;
 }
 
 [data-animated=true] .carouselTrack2 {
@@ -421,28 +404,30 @@ section {
 }
 
 .popup-text h2 {
-  color: #bb95f8;
-  font-size: 55px;
+  font-size: 55pt;
+  color: #bb95f8 !important;
 }
 
 .popup-text h2 strong {
-  color: #6930c4;
-  font-size: 35px;
+  font-size: 35pt;
+  color: #6930c4 !important;
 }
 
 .popup-text h3 {
-  font-size: 35px;
-  color: #6930c4;
+  font-size: 35pt;
+  color: #6930c4 !important;
 }
 
 .popup-text p {
   line-height: 30px;
-  font-size: 20px;
+  font-size: 20pt;
+  color: #363636 !important;
 }
 
 .popup-text p strong {
   font-weight: normal;
-  color: #6930c4;
+  font-size: 20pt;
+  color: #6930c4 !important;
 }
 
 .popup-images {
@@ -465,8 +450,8 @@ section {
   right: 15px;
   background: none;
   border: none;
-  font-size: 55px;
-  color: #bb95f8;
+  font-size: 55pt;
+  color: #bb95f8 !important;
   cursor: pointer;
 }
 
@@ -542,7 +527,7 @@ section {
 #codeAnimation,
 #magicAnimation {
   color: #bb95f8;
-  left: 1000px;
+  left: 975px;
   z-index: 5;
 }
 
@@ -563,7 +548,8 @@ section {
 .highlight5 {
   top: 1400px;
   left: 750px;
-  font-size: 25px;
+  font-size: 20pt;
+  color: #363636 !important;
   line-height: 40px;
   color: #bb95f8;
 }
@@ -591,7 +577,8 @@ section {
 .highlight9 {
   top: 4700px;
   left: 400px;
-  font-size: 35px;
+  font-size: 25pt;
+  color: #bb95f8 !important;
   z-index: 3;
 }
 
@@ -599,7 +586,8 @@ section {
 .highlight10 {
   top: 4800px;
   left: 400px;
-  font-size: 35px;
+  font-size: 25pt;
+  color: #bb95f8 !important;
   z-index: 5;
 }
 
@@ -639,7 +627,7 @@ section {
 }
 
 .highlight1 {
-  width: 60vw;
+  width: 65vw;
 }
 
 .highlight2 {
@@ -742,5 +730,551 @@ section {
     box-shadow: 0 0 0 0 #363636;
   }
 }
+/* Large desktops 1080p*/
+@media (max-width: 1950px) {
+  .highlight5 {
+    height: 40vh;
+  }
+  .rainbow-link {
+    font-size: 25pt;
+    color: #363636 !important;
+  }
+  .carouselContainer .carouselTrack2 {
+    font-size: 25pt;
+    color: #653080 !important;
+  }
+  .popup-text h2 {
+    font-size: 40pt;
+    color: #bb95f8 !important;
+  }
+  .popup-text h2 strong {
+    font-size: 25pt;
+    color: #6930c4 !important;
+  }
+  .popup-text h3 {
+    font-size: 25pt;
+    color: #6930c4 !important;
+  }
+  .popup-text p {
+    font-size: 15pt;
+    color: #363636 !important;
+  }
+  .popup-text p strong {
+    font-size: 15pt;
+    color: #6930c4 !important;
+  }
+  .close-btnProject {
+    font-size: 40pt;
+    color: #bb95f8 !important;
+  }
+  #underTitle5,
+  .highlight5 {
+    font-size: 20pt;
+    color: #bb95f8 !important;
+  }
+  #underTitle9,
+  .highlight9 {
+    font-size: 25pt;
+    color: #bb95f8 !important;
+  }
+  #underTitle10,
+  .highlight10 {
+    font-size: 25pt;
+    color: #bb95f8 !important;
+  }
+  .acceuil h2,
+  .aboutMe h2,
+  .aboutMe p,
+  .projects h2,
+  .skills h2,
+  .contact h2,
+  .contact h3 {
+    margin-top: 50px;
+    font-size: 42px;
+  }
+}
+/* Medium desktops MacBook Pro */
+@media (max-width: 1450px) {
+  .acceuil img {
+    position: absolute;
+    left: -15vw;
+    top: -5vh;
+  }
+  section {
+    height: 120vh;
+    width: 50vw;
+  }
+  .miniS {
+    left: -9vw;
+    top: 78vh;
+  }
+  .miniMe {
+    left: 60vw;
+    top: 45vh;
+  }
+  .acceuil img,
+  .miniMe,
+  .miniS {
+    transform: scale(88%) !important;
+  }
+  .title img {
+    top: 5vh;
+  }
+  .path1,
+  .path2,
+  .path3,
+  .path4 {
+    left: -14vw !important;
+  }
+  #pathItem1,
+  #pathItem2,
+  #pathItem3,
+  #pathItem4 {
+    left: -17vw !important;
+  }
+  .miniL,
+  .miniL1,
+  .miniL3 {
+    left: 75vw;
+  }
+  .miniL1 {
+    left: 80vw;
+  }
+  .miniL2 {
+    left: 68vw;
+  }
+  .endStar {
+    left: -10vw;
+  }
+  #underTitle1 {
+    left: 34vw;
+  }
+  #underTitle2 {
+    left: 33vw;
+  }
+  #magicAnimation {
+    left: 51vw;
+  }
+  .underTitle3 {
+    left: 19vw;
+  }
+  #underTitle5 {
+    left: 35vw;
+  }
+  #underTitle6 {
+    left: 40vw;
+  }
+  #underTitle7 {
+    left: 65vw;
+  }
+  #underTitle8 {
+    left: 6vw;
+  }
+  #underTitle9,
+  #underTitle10 {
+    left: 10vw;
+  }
+  #underTitle9 {
+    top: 520.5vh;
+  }
+  #underTitle10 {
+    top: 531.5vh;
+  }
+  .highlight3 {
+    width: 70vw;
+  }
+  .highlight4 {
+    width: 55vw;
+  }
+  .highlight5 {
+    height: 42vh;
+  }
+  .highlight6 {
+    width: 75vw;
+  }
+  .rainbow-link {
+    font-size: 20pt;
+    color: #363636 !important;
+  }
+  .carouselContainer .carouselTrack2 {
+    font-size: 20pt;
+    color: #653080 !important;
+  }
+  .popup-text h2 {
+    font-size: 35pt;
+    color: #bb95f8 !important;
+  }
+  .popup-text h2 strong {
+    font-size: 20pt;
+    color: #6930c4 !important;
+  }
+  .popup-text h3 {
+    font-size: 20pt;
+    color: #6930c4 !important;
+  }
+  .popup-text p {
+    font-size: 10pt;
+    color: #363636 !important;
+  }
+  .popup-text p strong {
+    font-size: 10pt;
+    color: #6930c4 !important;
+  }
+  .close-btnProject {
+    font-size: 35pt;
+    color: #bb95f8 !important;
+  }
+  #underTitle5,
+  .highlight5 {
+    font-size: 15pt;
+    color: #bb95f8 !important;
+  }
+  #underTitle9,
+  .highlight9 {
+    font-size: 25pt;
+    color: #bb95f8 !important;
+  }
+  #underTitle10,
+  .highlight10 {
+    font-size: 25pt;
+    color: #bb95f8 !important;
+  }
+  .acceuil h2,
+  .aboutMe h2,
+  .aboutMe p,
+  .projects h2,
+  .skills h2,
+  .contact h2,
+  .contact h3 {
+    margin-top: 50px;
+    font-size: 45px;
+  }
+}
+/* Tablets (landscape) Ipad */
+@media (max-width: 1025px) {
+  section {
+    height: 140vh;
+    width: 50vw;
+  }
+  .miniS {
+    left: -12vw;
+    top: 95vh;
+  }
+  .miniMe {
+    left: 58vw;
+    top: 57vh;
+  }
+  .acceuil img,
+  .titleStar,
+  .endStar,
+  .miniMe,
+  .miniS,
+  .prop1 {
+    transform: scale(75%) !important;
+  }
+  .title img {
+    top: -10vh;
+    left: -38vw;
+  }
+  .titleStar {
+    top: 3vh;
+    left: 0vw;
+  }
+  .path1 {
+    left: -20vw !important;
+  }
+  #pathItem1 {
+    left: -28vw !important;
+  }
+  .path4 {
+    left: -35vw !important;
+  }
+  #pathItem4 {
+    left: -43vw !important;
+  }
+  .prop1 {
+    left: -5vw;
+  }
+  .popup-text {
+    width: 100%;
+    text-align: left;
+  }
+  .popup-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .popup-images img {
+    transform: scale(85%);
+  }
+  .popup-images {
+    flex-direction: row;
+    gap: 5vw;
+  }
+  .miniL,
+  .miniL1,
+  .miniL3 {
+    left: 75vw;
+    top: 565vh;
+  }
+  .miniL1 {
+    left: 81vw;
+    top: 565vh;
+  }
+  .miniL2 {
+    left: 65vw;
+    top: 595vh;
+  }
+  .miniL3 {
+    left: 75vw;
+    top: 555vh;
+  }
+  .endStar {
+    left: -20vw;
+    top: 565vh;
+  }
+  #underTitle1 {
+    left: 27vw;
+    top: 18vh;
+  }
+  #underTitle2 {
+    left: 26vw;
+    top: 28vh;
+  }
+  #magicAnimation {
+    left: 51vw;
+    top: 28vh;
+  }
+  .underTitle3 {
+    left: 10vw;
+    top: 78vh;
+  }
+  #underTitle5 {
+    left: 35vw;
+  }
+  #underTitle6 {
+    left: 40vw;
+  }
+  #underTitle7 {
+    left: 65vw;
+  }
+  #underTitle8 {
+    left: 6vw;
+  }
+  #underTitle9,
+  #underTitle10 {
+    left: 10vw;
+  }
+  #underTitle9 {
+    top: 610vh;
+  }
+  #underTitle10 {
+    top: 622.5vh;
+  }
+  .highlight1 {
+    top: 18vh;
+    width: 70vw;
+  }
+  .highlight2 {
+    top: 28vh;
+    width: 80vw;
+    left: 20vw;
+  }
+  .highlight3 {
+    width: 80vw;
+    top: 78vh;
+  }
+  .highlight4 {
+    width: 75vw;
+  }
+  .highlight5 {
+    height: 72vh;
+  }
+  .highlight6 {
+    width: 85vw;
+  }
+  .highlight8 {
+    width: 48vw;
+  }
+  .highlight9,
+  .highlight10 {
+    width: 80vw;
+  }
+}
+/* Tablets (portrait) Ipad / small laptops */
+@media (max-width: 770px) {
+  section {
+    height: 106vh;
+  }
+  .title img {
+    transform: scale(55%) !important;
+    left: -68vw;
+    top: -7vh;
+  }
+  .titleStar {
+    transform: scale(100%) !important;
+    left: -8vw;
+  }
+  .miniS {
+    left: -9vw;
+    top: 71vh;
+  }
+  .miniMe {
+    left: 40vw;
+    top: 45vh;
+  }
+  .popup-images img {
+    transform: scale(120%);
+    margin: 2vw;
+  }
+  .path1,
+  .path2,
+  .path3,
+  .path4 {
+    left: -74vw !important;
+  }
+  #pathItem1,
+  #pathItem2,
+  #pathItem3,
+  #pathItem4 {
+    left: -92vw !important;
+  }
+  .miniL,
+  .miniL1,
+  .miniL3 {
+    left: 65vw;
+    top: 430vh;
+  }
+  .miniL1 {
+    left: 74vw;
+    top: 430vh;
+  }
+  .miniL2 {
+    left: 51vw;
+    top: 453vh;
+  }
+  .miniL3 {
+    top: 422vh;
+  }
+  .endStar {
+    left: -30vw;
+    top: 425vh;
+  }
+  #underTitle1 {
+    left: 25vw;
+  }
+  #underTitle2 {
+    left: 24vw;
+  }
+  #magicAnimation {
+    left: 51vw;
+  }
+  .underTitle3 {
+    left: 2vw;
+    top: 55vh;
+  }
+  #underTitle5 {
+    left: 35vw;
+  }
+  #underTitle6 {
+    left: 40vw;
+  }
+  #underTitle7 {
+    left: 65vw;
+  }
+  #underTitle8 {
+    left: 6vw;
+  }
+  #underTitle9,
+  #underTitle10 {
+    left: 10vw;
+  }
+  #underTitle9 {
+    top: 457.5vh;
+    left: 5vw;
+  }
+  #underTitle10 {
+    top: 467vh;
+    left: 5vw;
+  }
+  .highlight3 {
+    top: 55vh;
+    width: 84vw;
+  }
+  .highlight4 {
+    width: 90vw;
+  }
+  .highlight5 {
+    height: 68vh;
+  }
+  .highlight6 {
+    width: 85vw;
+  }
+  .highlight9 {
+    width: 100vw;
+    left: 50vw;
+  }
+  .highlight10 {
+    width: 100vw;
+    left: 50vw;
+  }
+  .rainbow-link {
+    font-size: 20pt;
+    color: #363636 !important;
+  }
+  .carouselContainer .carouselTrack2 {
+    font-size: 20pt;
+    color: #653080 !important;
+  }
+  .popup-text h2 {
+    font-size: 30pt;
+    color: #bb95f8 !important;
+  }
+  .popup-text h2 strong {
+    font-size: 20pt;
+    color: #6930c4 !important;
+  }
+  .popup-text h3 {
+    font-size: 20pt;
+    color: #6930c4 !important;
+  }
+  .popup-text p {
+    font-size: 10pt;
+    color: #363636 !important;
+  }
+  .popup-text p strong {
+    font-size: 10pt;
+    color: #6930c4 !important;
+  }
+  .close-btnProject {
+    font-size: 30pt;
+    color: #bb95f8 !important;
+  }
+  #underTitle5,
+  .highlight5 {
+    font-size: 15pt;
+    color: #bb95f8 !important;
+  }
+  #underTitle9,
+  .highlight9 {
+    font-size: 25pt;
+    color: #bb95f8 !important;
+  }
+  #underTitle10,
+  .highlight10 {
+    font-size: 25pt;
+    color: #bb95f8 !important;
+  }
+  .acceuil h2,
+  .aboutMe h2,
+  .aboutMe p,
+  .projects h2,
+  .skills h2,
+  .contact h2,
+  .contact h3 {
+    margin-top: 50px;
+    font-size: 38px;
+  }
+}
+/* Phones  Iphone 12 Pro*/
 
 /*# sourceMappingURL=style.css.map */
