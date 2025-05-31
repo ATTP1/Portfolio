@@ -1,0 +1,47 @@
+.projets {
+  background: rgb(74, 117, 74);
+  width: 100%;
+  height: 100vh;
+}
+
+.section__boite {
+  .projets__top {
+    background: rgb(91, 187, 255);
+    height: 30%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: row-reverse;
+
+  }
+
+  .projets__bottom {
+    background: rgb(17, 20, 52);
+    height: 70%;
+    width: 100%;
+  }
+
+  .projects__miniR{
+    height: 100%;
+    width: fit-content;
+  }
+  
+}
+
+.section__overlay{
+
+.projets__top {
+    
+    height: 30%;
+    width: 100%;
+  }
+
+  .projets__bottom {
+    
+    height: 70%;
+    width: 100%;
+  }
+
+
+  
+}

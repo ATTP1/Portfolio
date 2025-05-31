@@ -1,0 +1,84 @@
+$Purple1: #6930c4;
+$Purple2: #bb95f8;
+$Purple3: #653080;
+
+$Pink: #ff6a8a;
+
+$Black: #363636;
+
+@mixin fontStyle($taille, $couleur, $format) {
+  //2k 125%WinZoom DEFAULT
+  @if ($format == "default") {
+    @if ($taille == "petit") {
+      font-size: 20pt;
+    } @else if($taille == "moyen") {
+      font-size: 30pt;
+    } @else if($taille == "grand") {
+      font-size: 55pt;
+    } @else {
+      font-size: $taille;
+    }
+  }
+  //1080p
+  @else if($format == 1950) {
+    @if ($taille == "petit") {
+      font-size: 20pt;
+    } @else if($taille == "moyen") {
+      font-size: 25pt;
+    } @else if($taille == "grand") {
+      font-size: 40pt;
+    } @else {
+      font-size: $taille;
+    }
+  }
+  //MacBook Pro
+  @else if($format == 1450) {
+    @if ($taille == "petit") {
+      font-size: 15pt;
+    } @else if($taille == "moyen") {
+      font-size: 20pt;
+    } @else if($taille == "grand") {
+      font-size: 35pt;
+    } @else {
+      font-size: $taille;
+    }
+  }
+  //Ipad Vertical
+  @else if($format == 770) {
+    @if ($taille == "petit") {
+      font-size: 15pt;
+    } @else if($taille == "moyen") {
+      font-size: 20pt;
+    } @else if($taille == "grand") {
+      font-size: 30pt;
+    } @else {
+      font-size: $taille;
+    }
+  }
+  //Iphone 12 Pro
+  @else if($format == 500) {
+    @if ($taille == "petit") {
+      font-size: 12pt;
+    } @else if($taille == "moyen") {
+      font-size: 15pt;
+    } @else if($taille == "grand") {
+      font-size: 25pt;
+    } @else {
+      font-size: $taille;
+    }
+  }
+
+  font-family: "mainFont";
+  
+  text-decoration: none !important;
+  color: $couleur !important;
+
+  h1,h2{font-weight: normal !important;}
+}
+
+@font-face {
+  font-family: "mainFont";
+  src: url("../style/MonumentExtended-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}

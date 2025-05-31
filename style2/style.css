@@ -1,0 +1,267 @@
+@font-face {
+  font-family: "mainFont";
+  src: url("../style/MonumentExtended-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  background: #ff6a8a;
+  margin: 0;
+  font-size: 20pt;
+  font-family: "mainFont";
+  text-decoration: none !important;
+  color: #ff6a8a !important;
+  overflow-x: hidden;
+}
+body h1, body h2 {
+  font-weight: normal !important;
+}
+
+.MainContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 5vh;
+}
+
+.popup {
+  display: none;
+}
+
+section {
+  max-width: 95%;
+  max-height: 100%;
+  position: relative;
+}
+
+.section__boite {
+  width: 100%;
+  height: 100%;
+}
+
+.section__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+@font-face {
+  font-family: "mainFont";
+  src: url("../style/MonumentExtended-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+.intro {
+  background: rgb(192, 251, 192);
+  width: 100%;
+  height: 100vh;
+}
+
+h1 {
+  font-size: 55pt;
+  font-family: "mainFont";
+  text-decoration: none !important;
+  color: #ff6a8a !important;
+}
+h1 h1, h1 h2 {
+  font-weight: normal !important;
+}
+
+.section__boite .intro__top {
+  background: red;
+  height: 50%;
+  width: 100%;
+}
+.section__boite .intro__bottom {
+  background: rgb(113, 59, 59);
+  height: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section__boite .intro__topTop {
+  background: rgb(34, 0, 255);
+  height: 60%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.section__boite .intro__navBar {
+  background-color: rgb(238, 255, 0);
+  height: 20%;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.section__boite .intro__navBar a {
+  font-size: 30pt;
+  font-family: "mainFont";
+  text-decoration: none !important;
+  color: #ff6a8a !important;
+}
+.section__boite .intro__navBar a h1, .section__boite .intro__navBar a h2 {
+  font-weight: normal !important;
+}
+.section__boite .intro__topBottom {
+  background: rgb(59, 63, 113);
+  height: 40%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.section__overlay .intro__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  height: 100%;
+}
+.section__overlay .intro__top .intro__miniS {
+  height: fit-content;
+  width: 25%;
+}
+.section__overlay .intro__top .intro__miniMe {
+  height: fit-content;
+  width: 45%;
+  margin-right: -10%;
+}
+
+.aPropos {
+  background: rgb(113, 178, 113);
+  width: 100%;
+  height: 100vh;
+}
+
+.section__boite .aPropos__top {
+  background: rgb(91, 255, 102);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+.section__boite .aPropos__tasse {
+  width: 100%;
+  height: fit-content;
+}
+
+.section__overlay .aPropos__top {
+  height: 30%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-left: 10%;
+}
+.section__overlay .aPropos__bottom {
+  height: 70%;
+  width: 100%;
+}
+.section__overlay .aPropos__texte {
+  margin-left: 20%;
+  background: yellow;
+}
+
+.projets {
+  background: rgb(74, 117, 74);
+  width: 100%;
+  height: 100vh;
+}
+
+.section__boite .projets__top {
+  background: rgb(91, 187, 255);
+  height: 30%;
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+}
+.section__boite .projets__bottom {
+  background: rgb(17, 20, 52);
+  height: 70%;
+  width: 100%;
+}
+.section__boite .projects__miniR {
+  height: 100%;
+  width: fit-content;
+}
+
+.section__overlay .projets__top {
+  height: 30%;
+  width: 100%;
+}
+.section__overlay .projets__bottom {
+  height: 70%;
+  width: 100%;
+}
+
+.competences {
+  background: rgb(48, 77, 48);
+  width: 100%;
+  height: 100vh;
+}
+
+.section__boite .competences__top {
+  background: rgb(91, 187, 255);
+  height: 30%;
+  width: 100%;
+}
+.section__boite .competences__bottom {
+  background: rgb(17, 20, 52);
+  height: 70%;
+  width: 100%;
+}
+
+.section__overlay .competences__top {
+  height: 50%;
+  width: 100%;
+}
+.section__overlay .competences__bottom {
+  height: 50%;
+  width: 100%;
+}
+.section__overlay .competences__topTop {
+  height: 50%;
+  width: 100%;
+}
+.section__overlay .competences__topBottom {
+  height: 50%;
+  width: 100%;
+}
+
+.contact {
+  background: rgb(25, 39, 25);
+  width: 100%;
+  height: 100vh;
+}
+
+.section__boite .contact__top {
+  background: rgb(177, 98, 52);
+  height: 100%;
+  width: 100%;
+}
+.section__boite .contact__topTop {
+  height: 50%;
+  width: 100%;
+}
+.section__boite .contact__topBottom {
+  height: 50%;
+  width: 100%;
+}
+
+.section__overlay .contact__top {
+  height: 50%;
+  width: 100%;
+}
+.section__overlay .contact__bottom {
+  height: 50%;
+  width: 100%;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,37 @@
+.contact {
+  background: rgb(25, 39, 25);
+  width: 100%;
+  height: 100vh;
+}
+
+.section__boite {
+  .contact__top {
+    background: rgb(177, 98, 52);
+    height: 100%;
+    width: 100%;
+  }
+
+  
+
+  .contact__topTop {
+    height: 50%;
+    width: 100%;
+  }
+
+  .contact__topBottom {
+    height: 50%;
+    width: 100%;
+  }
+}
+
+.section__overlay {
+  .contact__top {
+    height: 50%;
+    width: 100%;
+  }
+
+  .contact__bottom {
+    height: 50%;
+    width: 100%;
+  }
+}

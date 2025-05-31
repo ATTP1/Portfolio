@@ -89,6 +89,16 @@ $Black: #363636;
   font-weight: normal;
   font-style: normal;
 }
+html{
+  display: flex;
+  align-items: center;
+}
+
+body {
+  overflow-x: hidden;
+  margin: 0;
+  font-family: "mainFont";
+}
 
 h1,
 h2,
@@ -100,11 +110,7 @@ a {
   color: $Purple1;
 }
 
-body {
-  overflow-x: hidden;
-  margin: 0;
-  font-family: "mainFont";
-}
+
 
 section {
   width: 100%;
