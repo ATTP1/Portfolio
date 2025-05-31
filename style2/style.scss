@@ -17,9 +17,7 @@ body {
   gap: 5vh;
 }
 
-.popup {
-  display: none;
-}
+
 
 section {
   max-width: 95%;
@@ -48,6 +46,8 @@ section {
 @import "aPropos";
 
 @import "projets";
+
+@import "popupMenu";
 
 @import "competences";
 
