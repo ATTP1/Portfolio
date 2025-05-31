@@ -1,89 +1,33 @@
 @import "font";
 
-.popup {
+
+.popup-menu {
+  display: none; /* Masqué par défaut */
   position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(8px);
-  display: flex;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  z-index: 9;
   align-items: center;
   justify-content: center;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
-  z-index: 9999;
 }
-
-.popup.active {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.popup-content {
-  background: rgb(25, 24, 24);
-  padding: 30px;
-  border-radius: 12px;
-  max-width: 80vw;
-  height: 80vh;
-  text-align: center;
-  color: #bb95f8;
-  position: relative;
-
+.popup-menu--ouvert {
   display: flex;
-  justify-content: space-around;
 }
-
-.popup-text {
-  width: 40%;
-  text-align: left;
-}
-
-.popup-text h2 {
-  @include fontStyle("grand", $Purple2, "default");
-}
-
-.popup-text h2 strong {
-  @include fontStyle("moyen", $Purple1, "default");
-}
-
-.popup-text h3 {
-  @include fontStyle("moyen", $Purple1, "default");
-}
-
-.popup-text p {
-  line-height: 30px;
-  @include fontStyle("petit", $Black, "default");
-}
-
-.popup-text p strong {
-  font-weight: normal;
-
-  @include fontStyle("petit", $Purple1, "default");
-}
-.popup-images {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-
-  width: 35%;
-
-  border-radius: 30px;
-}
-
-.popup-images img {
-  width: 90%;
-  border-radius: 5px;
-}
-
-.close-btnProject {
+.popup-menu__overlay {
   position: absolute;
-  top: 10px;
-  right: 15px;
-  background: none;
-  border: none;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.8);
+  z-index: 9;
+}
+.popup-menu__contenu {
+  position: relative;
+  z-index: 10;
 
-  @include fontStyle("grand", $Purple2, "default");
+  width: 90%; height: 90%;
+  
+  background: #fff;
+  /* Ajoute ton style */
+}
 
-  cursor: pointer;
+.close-btnProject{
+
 }

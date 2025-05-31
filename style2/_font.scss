@@ -69,11 +69,24 @@ $Black: #363636;
   }
 
   font-family: "mainFont";
-  
+
   text-decoration: none !important;
   color: $couleur !important;
 
-  h1,h2{font-weight: normal !important;}
+  h1,
+  h2 {
+    font-weight: normal !important;
+  }
+
+  button {
+    all: unset;
+    display: inline-block;
+    cursor: pointer;
+
+    position: absolute;
+    top: 0;
+    left: 95%;
+  }
 }
 
 @font-face {
