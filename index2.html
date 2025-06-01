@@ -38,6 +38,17 @@
     <section class="intro">
       <div class="section__boite">
         <div class="intro__top">
+          <img class="intro__miniS" src="images/intro__miniS.png" alt="" />
+          <div class="intro__titreBoite">
+            <img class="intro__titre" src="images/intro__titre.png" alt="" />
+          </div>
+
+          <img class="intro__miniMe" src="images/intro__miniMe.png" alt="" />
+        </div>
+      </div>
+
+      <div class="section__overlay">
+        <div class="intro__top">
           <div class="intro__topTop">
             <div class="intro__navBar">
               <a href="#aPropos">À Propos</a>
@@ -46,21 +57,14 @@
               <a href="#contact">Contact</a>
             </div>
 
-            <h2>Que du code et</h2>
+            <h1>Que du code et</h1>
           </div>
           <div class="intro__topBottom">
-            <h2>un peu de magie</h2>
+            <h1>un peu de magie</h1>
           </div>
         </div>
         <div class="intro__bottom">
-          <h2>Allan Tri Tam</h2>
-          <h2>Pham</h2>
-        </div>
-      </div>
-      <div class="section__overlay">
-        <div class="intro__top">
-          <img class="intro__miniS" src="images/intro__miniS.png" alt="" />
-          <img class="intro__miniMe" src="images/intro__miniMe.png" alt="" />
+          <h2>Allan Tri Tam Pham</h2>
         </div>
       </div>
     </section>
@@ -74,7 +78,7 @@
 
       <div class="section__overlay">
         <div class="aPropos__top">
-          <h2>À propos</h2>
+          <h1>À propos</h1>
         </div>
         <div class="aPropos__bottom">
           <p class="aPropos__texte">
@@ -132,33 +136,103 @@
         </div>
       </div>
       <div class="section__overlay">
-        <div class="projets__top"></div>
+        <div class="projets__top">
+          <h1>Mes Projets</h1>
+        </div>
         <div class="projets__bottom"></div>
       </div>
     </section>
 
     <section id="competences" class="section competences">
       <div class="section__boite">
-        <div class="competences__top"></div>
+        <div class="competences__top">
+          <h1 class="competences__titre">Mes Compétences</h1>
+        </div>
         <div class="competences__bottom"></div>
       </div>
       <div class="section__overlay">
         <div class="competences__top">
           <div class="competences__topTop"></div>
-          <div class="competences__topBottom"></div>
+          <div class="competences__topBottom">
+            <div id="carousel2" class="carouselContainer">
+              <div class="carouselTrack2">
+                <div class="item candyPulseHover">HTML5</div>
+                <div class="item candyPulseHover">CSS</div>
+                <div class="item candyPulseHover">SCSS</div>
+                <div class="item candyPulseHover">JAVASCRIPT</div>
+                <div class="item candyPulseHover">REACT</div>
+                <div class="item candyPulseHover">GSAP</div>
+                <div class="item candyPulseHover">GIT</div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="competences__bottom"></div>
+        <div class="competences__bottom">
+          <div id="carousel3" class="carouselContainer">
+            <div class="carouselTrack3">
+              <div class="item candyPulseHover">
+                <img src="images/softwareIcons/1.png" alt="" />
+              </div>
+              <div class="item candyPulseHover">
+                <img src="images/softwareIcons/2.png" alt="" />
+              </div>
+              <div class="item candyPulseHover">
+                <img src="images/softwareIcons/3.png" alt="" />
+              </div>
+              <div class="item candyPulseHover">
+                <img src="images/softwareIcons/4.png" alt="" />
+              </div>
+              <div class="item candyPulseHover">
+                <img src="images/softwareIcons/5.png" alt="" />
+              </div>
+              <div class="item candyPulseHover">
+                <img src="images/softwareIcons/6.png" alt="" />
+              </div>
+              <div class="item candyPulseHover">
+                <img src="images/softwareIcons/7.png" alt="" />
+              </div>
+              <div class="item candyPulseHover">
+                <img src="images/softwareIcons/8.png" alt="" />
+              </div>
+              <div class="item candyPulseHover">
+                <img src="images/softwareIcons/9.png" alt="" />
+              </div>
+              <div class="item candyPulseHover">
+                <img src="images/softwareIcons/10.png" alt="" />
+              </div>
+              <div class="item">
+                <img src="images/softwareIcons/11.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
     <section id="contact" class="section contact">
       <div class="section__boite">
-        <div class="contact__top"></div>
+        <div class="contact__top">
+          <img
+            class="contact__etoile"
+            src="images/contact__etoile.png"
+            alt=""
+          />
+          <img class="contact__miniL" src="images/contact__miniL.png" alt="" />
+        </div>
       </div>
       <div class="section__overlay">
         <div class="contact__top">
-          <div class="contact__topTop"></div>
-          <div class="contact__topBottom"></div>
+          <div class="contact__topTop">
+            <h1>Mes Contacts</h1>
+          </div>
+          <div class="contact__topBottom">
+            <a class="contact__links" href="mailto:allantritampham@gmail.com"
+              >allantritampham@gmail.com</a
+            >
+            <a class="contact__links" href="https://github.com/ATTP1"
+              >https://github.com/ATTP1</a
+            >
+          </div>
         </div>
         <div class="contact__bottom"></div>
       </div>
@@ -627,8 +701,6 @@
         });
       }
 
-      
-    
       // Ouvre le popup
       document.querySelectorAll(".item").forEach((item) => {
         item.addEventListener("click", function () {
@@ -645,9 +717,8 @@
 
       // Ferme le popup (clic sur overlay)
 
-      document
-        .querySelector(".close-btnProject")
-        .addEventListener("click", function () {
+      document.querySelectorAll(".close-btnProject").forEach((btn) => {
+        btn.addEventListener("click", function () {
           document
             .getElementById("popupMenu")
             .classList.remove("popup-menu--ouvert");
@@ -655,6 +726,7 @@
             .querySelectorAll(".popup-menu__contenu")
             .forEach((el) => (el.style.display = "none"));
         });
+      });
 
       document
         .querySelector(".popup-menu__overlay")

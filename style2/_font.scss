@@ -14,7 +14,7 @@ $Black: #363636;
     } @else if($taille == "moyen") {
       font-size: 30pt;
     } @else if($taille == "grand") {
-      font-size: 55pt;
+      font-size: 45pt;
     } @else {
       font-size: $taille;
     }
@@ -67,6 +67,8 @@ $Black: #363636;
       font-size: $taille;
     }
   }
+
+  a{z-index: 50;}
 
   font-family: "mainFont";
 

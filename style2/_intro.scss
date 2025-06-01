@@ -1,24 +1,67 @@
 @import "font";
 
 .intro {
-  background: rgb(192, 251, 192);
+  background-image: url("../images/bg1.png");
+  background-size: cover;
+  background-position: center;
+
+  background-color: $Purple1;
+
   width: 100%;
   height: 100vh;
 }
 
 h1 {
-  @include fontStyle("grand", $Pink, "default");
+  @include fontStyle("grand", $Purple2, "default");
 }
 
 .section__boite {
   .intro__top {
-    background: red;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    height: 100%;
+
+    .intro__miniS {
+      height: fit-content;
+      width: 25%;
+
+      margin-left: -3%;
+    }
+
+    .intro__titreBoite {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 100%;
+      height: 100%;
+    }
+
+    .intro__titre {
+      margin-bottom: -8%;
+      width: 70%;
+      height: fit-content;
+    }
+
+    .intro__miniMe {
+      height: fit-content;
+
+      width: 45%;
+      margin-right: -10%;
+    }
+  }
+}
+
+.section__overlay {
+  .intro__top {
     height: 50%;
     width: 100%;
   }
 
   .intro__bottom {
-    background: rgb(113, 59, 59);
     height: 50%;
     width: 100%;
 
@@ -28,7 +71,6 @@ h1 {
   }
 
   .intro__topTop {
-    background: rgb(34, 0, 255);
     height: 60%;
     width: 100%;
 
@@ -39,54 +81,28 @@ h1 {
   }
 
   .intro__navBar {
-    background-color: rgb(238, 255, 0);
+    background-color: $Black;
     height: 20%;
     width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    z-index: 20;
 
     a {
-      @include fontStyle("moyen", $Pink, "default");
+      @include fontStyle("moyen", $Purple2, "default");
+    }
+
+    a:hover{
+      color: red;
     }
   }
 
   .intro__topBottom {
-    background: rgb(59, 63, 113);
     height: 40%;
     width: 100%;
 
     display: flex;
     justify-content: center;
-  }
-}
-
-.section__overlay {
-
-
-
-  .intro__top {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    width: 100%;
-    height: 100%;
-    
-    
-
-    .intro__miniS{
-        
-height: fit-content;
-        width: 25%; 
-
-    }
-
-    .intro__miniMe{
-
-        height: fit-content;
-
-        width: 45%; 
-        margin-right: -10%;
-    }
   }
 }

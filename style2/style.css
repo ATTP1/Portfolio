@@ -6,13 +6,16 @@
   font-style: normal;
 }
 body {
-  background: #ff6a8a;
+  background: #363636;
   margin: 0;
   font-size: 20pt;
   font-family: "mainFont";
   text-decoration: none !important;
-  color: #ff6a8a !important;
+  color: #bb95f8 !important;
   overflow-x: hidden;
+}
+body a {
+  z-index: 50;
 }
 body h1,
 body h2 {
@@ -31,7 +34,6 @@ body button {
   display: flex;
   align-items: center;
   flex-direction: column;
-  gap: 5vh;
 }
 
 section {
@@ -43,6 +45,7 @@ section {
 .section__boite {
   width: 100%;
   height: 100%;
+  z-index: 1;
 }
 
 .section__overlay {
@@ -62,16 +65,22 @@ section {
   font-style: normal;
 }
 .intro {
-  background: rgb(192, 251, 192);
+  background-image: url("../images/bg1.png");
+  background-size: cover;
+  background-position: center;
+  background-color: #6930c4;
   width: 100%;
   height: 100vh;
 }
 
 h1 {
-  font-size: 55pt;
+  font-size: 45pt;
   font-family: "mainFont";
   text-decoration: none !important;
-  color: #ff6a8a !important;
+  color: #bb95f8 !important;
+}
+h1 a {
+  z-index: 50;
 }
 h1 h1,
 h1 h2 {
@@ -87,20 +96,48 @@ h1 button {
 }
 
 .section__boite .intro__top {
-  background: red;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  height: 100%;
+}
+.section__boite .intro__top .intro__miniS {
+  height: fit-content;
+  width: 25%;
+  margin-left: -3%;
+}
+.section__boite .intro__top .intro__titreBoite {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.section__boite .intro__top .intro__titre {
+  margin-bottom: -8%;
+  width: 70%;
+  height: fit-content;
+}
+.section__boite .intro__top .intro__miniMe {
+  height: fit-content;
+  width: 45%;
+  margin-right: -10%;
+}
+
+.section__overlay .intro__top {
   height: 50%;
   width: 100%;
 }
-.section__boite .intro__bottom {
-  background: rgb(113, 59, 59);
+.section__overlay .intro__bottom {
   height: 50%;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.section__boite .intro__topTop {
-  background: rgb(34, 0, 255);
+.section__overlay .intro__topTop {
   height: 60%;
   width: 100%;
   display: flex;
@@ -108,25 +145,29 @@ h1 button {
   justify-content: space-between;
   align-items: center;
 }
-.section__boite .intro__navBar {
-  background-color: rgb(238, 255, 0);
+.section__overlay .intro__navBar {
+  background-color: #363636;
   height: 20%;
   width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  z-index: 20;
 }
-.section__boite .intro__navBar a {
+.section__overlay .intro__navBar a {
   font-size: 30pt;
   font-family: "mainFont";
   text-decoration: none !important;
-  color: #ff6a8a !important;
+  color: #bb95f8 !important;
 }
-.section__boite .intro__navBar a h1,
-.section__boite .intro__navBar a h2 {
+.section__overlay .intro__navBar a a {
+  z-index: 50;
+}
+.section__overlay .intro__navBar a h1,
+.section__overlay .intro__navBar a h2 {
   font-weight: normal !important;
 }
-.section__boite .intro__navBar a button {
+.section__overlay .intro__navBar a button {
   all: unset;
   display: inline-block;
   cursor: pointer;
@@ -134,39 +175,26 @@ h1 button {
   top: 0;
   left: 95%;
 }
-.section__boite .intro__topBottom {
-  background: rgb(59, 63, 113);
+.section__overlay .intro__navBar a:hover {
+  color: red;
+}
+.section__overlay .intro__topBottom {
   height: 40%;
   width: 100%;
   display: flex;
   justify-content: center;
 }
 
-.section__overlay .intro__top {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  width: 100%;
-  height: 100%;
-}
-.section__overlay .intro__top .intro__miniS {
-  height: fit-content;
-  width: 25%;
-}
-.section__overlay .intro__top .intro__miniMe {
-  height: fit-content;
-  width: 45%;
-  margin-right: -10%;
-}
-
 .aPropos {
-  background: rgb(113, 178, 113);
+  background-image: url("../images/bg2.png");
+  background-size: cover;
+  background-position: center;
+  background-color: #653080;
   width: 100%;
   height: 100vh;
 }
 
 .section__boite .aPropos__top {
-  background: rgb(91, 255, 102);
   height: 100%;
   width: 100%;
   display: flex;
@@ -175,6 +203,7 @@ h1 button {
 .section__boite .aPropos__tasse {
   width: 100%;
   height: fit-content;
+  margin-left: -2%;
 }
 
 .section__overlay .aPropos__top {
@@ -190,24 +219,24 @@ h1 button {
 }
 .section__overlay .aPropos__texte {
   margin-left: 20%;
-  background: yellow;
 }
 
 .projets {
-  background: rgb(74, 117, 74);
+  background-image: url("../images/bg1.png");
+  background-size: cover;
+  background-position: center;
+  background-color: #6930c4;
   width: 100%;
   height: 100vh;
 }
 
 .section__boite .projets__top {
-  background: rgb(91, 187, 255);
   height: 30%;
   width: 100%;
   display: flex;
   flex-direction: row-reverse;
 }
 .section__boite .projets__bottom {
-  background: rgb(17, 20, 52);
   height: 70%;
   width: 100%;
 }
@@ -265,6 +294,9 @@ h1 button {
 .section__overlay .projets__top {
   height: 30%;
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .section__overlay .projets__bottom {
   height: 70%;
@@ -312,19 +344,32 @@ h1 button {
   /* Ajoute ton style */
 }
 
+@font-face {
+  font-family: "mainFont";
+  src: url("../style/MonumentExtended-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
 .competences {
-  background: rgb(48, 77, 48);
+  background-image: url("../images/bg2.png");
+  background-size: cover;
+  background-position: center;
+  background-color: #653080;
   width: 100%;
   height: 100vh;
 }
 
 .section__boite .competences__top {
-  background: rgb(91, 187, 255);
   height: 30%;
   width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+.section__boite .competences__top .competences__titre {
+  margin-right: 10%;
 }
 .section__boite .competences__bottom {
-  background: rgb(17, 20, 52);
   height: 70%;
   width: 100%;
 }
@@ -337,6 +382,35 @@ h1 button {
   height: 50%;
   width: 100%;
 }
+.section__overlay .competences__bottom #carousel3 {
+  top: 3850px;
+  background: #363636;
+}
+.section__overlay .competences__bottom #carousel3 .item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  height: 250px;
+  border-radius: 50px;
+  background: #bb95f8;
+}
+.section__overlay .competences__bottom [data-animated=true] .carouselTrack3 {
+  width: max-content;
+  flex-wrap: nowrap;
+  animation: scroll3 20s linear infinite;
+}
+.section__overlay .competences__bottom .carouselTrack3 {
+  padding-block: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+@keyframes scroll3 {
+  to {
+    transform: translate(calc(-50% - 1rem));
+  }
+}
 .section__overlay .competences__topTop {
   height: 50%;
   width: 100%;
@@ -345,33 +419,131 @@ h1 button {
   height: 50%;
   width: 100%;
 }
+.section__overlay .competences__topBottom #carousel2 {
+  top: 3650px;
+  background: #363636;
+}
+.section__overlay .competences__topBottom #carousel2 .item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: 50px;
+  border-radius: 10px;
+  background: #bb95f8;
+}
+.section__overlay .competences__topBottom .carouselContainer .carouselTrack2 {
+  font-size: 30pt;
+  font-family: "mainFont";
+  text-decoration: none !important;
+  color: #653080 !important;
+}
+.section__overlay .competences__topBottom .carouselContainer .carouselTrack2 a {
+  z-index: 50;
+}
+.section__overlay .competences__topBottom .carouselContainer .carouselTrack2 h1,
+.section__overlay .competences__topBottom .carouselContainer .carouselTrack2 h2 {
+  font-weight: normal !important;
+}
+.section__overlay .competences__topBottom .carouselContainer .carouselTrack2 button {
+  all: unset;
+  display: inline-block;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 95%;
+}
+.section__overlay .competences__topBottom [data-animated=true] .carouselTrack2 {
+  width: max-content;
+  flex-wrap: nowrap;
+  animation: scroll2 25s linear infinite;
+}
+.section__overlay .competences__topBottom .carouselTrack2 {
+  padding-block: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+@keyframes scroll2 {
+  to {
+    transform: translate(calc(-50% - 1rem));
+  }
+}
 
+@font-face {
+  font-family: "mainFont";
+  src: url("../style/MonumentExtended-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
 .contact {
-  background: rgb(25, 39, 25);
+  background-image: url("../images/bg1.png");
+  background-size: cover;
+  background-position: center;
+  background-color: #6930c4;
   width: 100%;
   height: 100vh;
 }
 
 .section__boite .contact__top {
-  background: rgb(177, 98, 52);
   height: 100%;
   width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
-.section__boite .contact__topTop {
-  height: 50%;
-  width: 100%;
+.section__boite .contact__top .contact__miniL {
+  margin-right: -10%;
 }
-.section__boite .contact__topBottom {
-  height: 50%;
-  width: 100%;
+.section__boite .contact__top .contact__etoile {
+  margin-left: -4%;
+}
+.section__boite .contact__top .contact__etoile,
+.section__boite .contact__top .contact__miniL {
+  transform: scale(85%);
 }
 
 .section__overlay .contact__top {
+  height: 80%;
+  width: 100%;
+  margin-left: 10%;
+}
+.section__overlay .contact__top .contact__links {
+  font-size: 30pt;
+  font-family: "mainFont";
+  text-decoration: none !important;
+  color: #bb95f8 !important;
+}
+.section__overlay .contact__top .contact__links a {
+  z-index: 50;
+}
+.section__overlay .contact__top .contact__links h1,
+.section__overlay .contact__top .contact__links h2 {
+  font-weight: normal !important;
+}
+.section__overlay .contact__top .contact__links button {
+  all: unset;
+  display: inline-block;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 95%;
+}
+.section__overlay .contact__topTop {
   height: 50%;
   width: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+.section__overlay .contact__topBottom {
+  height: 50%;
+  width: 100%;
+  margin-left: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 .section__overlay .contact__bottom {
-  height: 50%;
+  height: 20%;
   width: 100%;
 }
 

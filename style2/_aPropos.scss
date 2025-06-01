@@ -1,12 +1,19 @@
 .aPropos {
-  background: rgb(113, 178, 113);
+  background-image: url("../images/bg2.png");
+  background-size: cover;
+  background-position: center;
+
+  background-color: $Purple3;
+
+
+
   width: 100%;
   height: 100vh;
 }
 
 .section__boite {
   .aPropos__top {
-    background: rgb(91, 255, 102);
+    
     height: 100%;
     width: 100%;
 
@@ -17,6 +24,8 @@
   .aPropos__tasse {
     width: 100%;
     height: fit-content;
+
+    margin-left: -2%;
   }
 }
 
@@ -39,6 +48,6 @@
 
   .aPropos__texte{
     margin-left: 20%;
-    background: yellow;
+   
   }
 }

@@ -1,37 +1,73 @@
+@import "font";
+
 .contact {
-  background: rgb(25, 39, 25);
+  background-image: url("../images/bg1.png");
+  background-size: cover;
+  background-position: center;
+
+  background-color: $Purple1;
+
   width: 100%;
   height: 100vh;
 }
 
 .section__boite {
   .contact__top {
-    background: rgb(177, 98, 52);
+    
     height: 100%;
     width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    
+    .contact__miniL{margin-right: -10%;}
+
+    .contact__etoile{margin-left: -4%;}
+
+    .contact__etoile,
+    .contact__miniL{
+      transform: scale(85%);
+    }
   }
 
   
 
+}
+
+.section__overlay {
+  .contact__top {
+    height: 80%;
+    width: 100%;
+
+    margin-left: 10%;
+
+    .contact__links{
+      @include fontStyle("moyen", $Purple2, "default");
+    }
+  }
+
+  
   .contact__topTop {
     height: 50%;
     width: 100%;
+
+    display: flex;
+    align-items: flex-end;
   }
 
   .contact__topBottom {
     height: 50%;
     width: 100%;
-  }
-}
 
-.section__overlay {
-  .contact__top {
-    height: 50%;
-    width: 100%;
+    margin-left: 5%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
   }
 
   .contact__bottom {
-    height: 50%;
+    height: 20%;
     width: 100%;
   }
 }
