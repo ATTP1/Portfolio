@@ -1,10 +1,12 @@
 @import "font";
 
-
 .popup-menu {
   display: none; /* Masqué par défaut */
   position: fixed;
-  top: 0; left: 0; width: 100vw; height: 100vh;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
   z-index: 9;
   align-items: center;
   justify-content: center;
@@ -14,17 +16,59 @@
 }
 .popup-menu__overlay {
   position: absolute;
-  top: 0; left: 0; width: 100vw; height: 100vh;
-  background: rgba(0,0,0,0.8);
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
   z-index: 9;
 }
 .popup-menu__contenu {
   position: relative;
   z-index: 10;
 
-  width: 90%; height: 90%;
-  
-  background: #fff;
-  /* Ajoute ton style */
-}
+  width: 90%;
+  height: 90%;
 
+  margin: 50px;
+
+  border-radius: 30px;
+
+  background: $Purple1;
+
+  
+  
+
+  p,
+  h2,
+  h3 {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 2%;
+
+    strong {
+      @include fontStyle("petit", $Pink, "default");
+      font-weight: normal;
+    }
+  }
+
+  .popup-menu__texte{
+    height: 55%;
+  }
+
+  .popup-images{
+    height: 35%;
+
+    display: flex;
+    justify-content: space-evenly;
+
+  }
+
+  .close-btnProject{
+    font-size: 35pt;
+    margin-left: -1%;
+    margin-top: 1%;
+    
+  }
+
+}

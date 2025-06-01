@@ -18,7 +18,8 @@ body a {
   z-index: 50;
 }
 body h1,
-body h2 {
+body h2,
+body h3 {
   font-weight: normal !important;
 }
 body button {
@@ -55,7 +56,6 @@ section {
   right: 0;
   bottom: 0;
   z-index: 2;
-  pointer-events: none;
 }
 
 @font-face {
@@ -83,7 +83,8 @@ h1 a {
   z-index: 50;
 }
 h1 h1,
-h1 h2 {
+h1 h2,
+h1 h3 {
   font-weight: normal !important;
 }
 h1 button {
@@ -106,6 +107,7 @@ h1 button {
   height: fit-content;
   width: 25%;
   margin-left: -3%;
+  z-index: 2;
 }
 .section__boite .intro__top .intro__titreBoite {
   position: absolute;
@@ -124,6 +126,7 @@ h1 button {
   height: fit-content;
   width: 45%;
   margin-right: -10%;
+  z-index: 2;
 }
 
 .section__overlay .intro__top {
@@ -164,7 +167,8 @@ h1 button {
   z-index: 50;
 }
 .section__overlay .intro__navBar a h1,
-.section__overlay .intro__navBar a h2 {
+.section__overlay .intro__navBar a h2,
+.section__overlay .intro__navBar a h3 {
   font-weight: normal !important;
 }
 .section__overlay .intro__navBar a button {
@@ -176,7 +180,7 @@ h1 button {
   left: 95%;
 }
 .section__overlay .intro__navBar a:hover {
-  color: red;
+  color: red !important;
 }
 .section__overlay .intro__topBottom {
   height: 40%;
@@ -234,17 +238,29 @@ h1 button {
   height: 30%;
   width: 100%;
   display: flex;
-  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
 }
 .section__boite .projets__bottom {
   height: 70%;
   width: 100%;
 }
-.section__boite .projets__bottom .carouselContainer {
+
+.section__overlay .projets__top {
+  height: 30%;
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+}
+.section__overlay .projets__bottom {
+  height: 70%;
+  width: 100%;
+}
+.section__overlay .projets__bottom .carouselContainer {
   max-width: 100vw;
   z-index: 5;
 }
-.section__boite .projets__bottom #carousel1 .item {
+.section__overlay .projets__bottom #carousel1 .item {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -255,52 +271,40 @@ h1 button {
   background: #bb95f8;
   cursor: pointer;
 }
-.section__boite .projets__bottom #carousel1 .item img {
+.section__overlay .projets__bottom #carousel1 .item img {
   width: auto;
   height: 400px;
 }
-.section__boite .projets__bottom .carouselTrack {
+.section__overlay .projets__bottom .carouselTrack {
   padding-block: 1rem;
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
 }
-.section__boite .projets__bottom .carouselContainer[data-animated=true] {
+.section__overlay .projets__bottom .carouselContainer[data-animated=true] {
   overflow: hidden;
   padding: 10px 0 10px 0;
   background: #363636;
 }
-.section__boite .projets__bottom [data-animated=true] .carouselTrack {
+.section__overlay .projets__bottom [data-animated=true] .carouselTrack {
   width: max-content;
   flex-wrap: nowrap;
   animation: scroll 30s linear infinite;
 }
-.section__boite .projets__bottom [data-animated=true] .carouselTrack:hover {
+.section__overlay .projets__bottom [data-animated=true] .carouselTrack:hover {
   animation-play-state: paused;
 }
-.section__boite .projets__bottom .carouselTrack .item:hover {
-  border: 5px solid #6930c4 !important;
+.section__overlay .projets__bottom .carouselTrack .item:hover {
+  border: 5px solid red !important;
 }
 @keyframes scroll {
   to {
     transform: translate(calc(-50% - 1rem));
   }
 }
-.section__boite .projects__miniR {
+.section__overlay .projects__miniR {
   height: 100%;
   width: fit-content;
-}
-
-.section__overlay .projets__top {
-  height: 30%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.section__overlay .projets__bottom {
-  height: 70%;
-  width: 100%;
 }
 
 @font-face {
@@ -340,8 +344,64 @@ h1 button {
   z-index: 10;
   width: 90%;
   height: 90%;
-  background: #fff;
-  /* Ajoute ton style */
+  margin: 50px;
+  border-radius: 30px;
+  background: #6930c4;
+}
+.popup-menu__contenu p,
+.popup-menu__contenu h2,
+.popup-menu__contenu h3 {
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 2%;
+}
+.popup-menu__contenu p strong,
+.popup-menu__contenu h2 strong,
+.popup-menu__contenu h3 strong {
+  font-size: 20pt;
+  font-family: "mainFont";
+  text-decoration: none !important;
+  color: #ff6a8a !important;
+  font-weight: normal;
+}
+.popup-menu__contenu p strong a,
+.popup-menu__contenu h2 strong a,
+.popup-menu__contenu h3 strong a {
+  z-index: 50;
+}
+.popup-menu__contenu p strong h1,
+.popup-menu__contenu p strong h2,
+.popup-menu__contenu p strong h3,
+.popup-menu__contenu h2 strong h1,
+.popup-menu__contenu h2 strong h2,
+.popup-menu__contenu h2 strong h3,
+.popup-menu__contenu h3 strong h1,
+.popup-menu__contenu h3 strong h2,
+.popup-menu__contenu h3 strong h3 {
+  font-weight: normal !important;
+}
+.popup-menu__contenu p strong button,
+.popup-menu__contenu h2 strong button,
+.popup-menu__contenu h3 strong button {
+  all: unset;
+  display: inline-block;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 95%;
+}
+.popup-menu__contenu .popup-menu__texte {
+  height: 55%;
+}
+.popup-menu__contenu .popup-images {
+  height: 35%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.popup-menu__contenu .close-btnProject {
+  font-size: 35pt;
+  margin-left: -1%;
+  margin-top: 1%;
 }
 
 @font-face {
@@ -442,7 +502,8 @@ h1 button {
   z-index: 50;
 }
 .section__overlay .competences__topBottom .carouselContainer .carouselTrack2 h1,
-.section__overlay .competences__topBottom .carouselContainer .carouselTrack2 h2 {
+.section__overlay .competences__topBottom .carouselContainer .carouselTrack2 h2,
+.section__overlay .competences__topBottom .carouselContainer .carouselTrack2 h3 {
   font-weight: normal !important;
 }
 .section__overlay .competences__topBottom .carouselContainer .carouselTrack2 button {
@@ -517,7 +578,8 @@ h1 button {
   z-index: 50;
 }
 .section__overlay .contact__top .contact__links h1,
-.section__overlay .contact__top .contact__links h2 {
+.section__overlay .contact__top .contact__links h2,
+.section__overlay .contact__top .contact__links h3 {
   font-weight: normal !important;
 }
 .section__overlay .contact__top .contact__links button {
@@ -527,6 +589,9 @@ h1 button {
   position: absolute;
   top: 0;
   left: 95%;
+}
+.section__overlay .contact__top a:hover {
+  color: red !important;
 }
 .section__overlay .contact__topTop {
   height: 50%;

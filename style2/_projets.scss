@@ -4,7 +4,6 @@
   background-position: center;
 
   background-color: $Purple1;
-  
 
   width: 100%;
   height: 100vh;
@@ -12,7 +11,22 @@
 
 .section__boite {
   .projets__top {
-    
+    height: 30%;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .projets__bottom {
+    height: 70%;
+    width: 100%;
+  }
+}
+
+.section__overlay {
+  .projets__top {
     height: 30%;
     width: 100%;
 
@@ -21,13 +35,12 @@
   }
 
   .projets__bottom {
-    
     height: 70%;
     width: 100%;
 
     .carouselContainer {
       max-width: 100vw;
-          
+
       z-index: 5;
     }
 
@@ -74,7 +87,7 @@
     }
 
     .carouselTrack .item:hover {
-      border: 5px solid $Purple1 !important;
+      border: 5px solid red !important;
     }
 
     @keyframes scroll {
@@ -89,21 +102,5 @@
   .projects__miniR {
     height: 100%;
     width: fit-content;
-  }
-}
-
-.section__overlay {
-  .projets__top {
-    height: 30%;
-    width: 100%;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .projets__bottom {
-    height: 70%;
-    width: 100%;
   }
 }

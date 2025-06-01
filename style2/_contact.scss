@@ -44,6 +44,10 @@
     .contact__links{
       @include fontStyle("moyen", $Purple2, "default");
     }
+
+     a:hover{
+      color: red !important;
+    }
   }
 
   
