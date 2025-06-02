@@ -36,36 +36,48 @@
 
   background: $Purple1;
 
-  
-  
-
   p,
   h2,
   h3 {
     margin-left: 5%;
     margin-right: 5%;
     margin-top: 2%;
-
-    
   }
 
-  .popup-menu__texte{
+  .popup-menu__texte {
     height: 55%;
+    display: block;
   }
 
-  .popup-images{
+  .popup-images {
+    margin-top: 1%;
     height: 35%;
 
     display: flex;
     justify-content: space-evenly;
 
+    .popup-img {
+      border-radius: 20px;
+    }
+
+    .popup-img:hover {
+      cursor: pointer;
+    }
   }
 
-  .close-btnProject{
+  .close-btnProject {
     font-size: 35pt;
     margin-left: -1%;
     margin-top: 1%;
-    
   }
+}
 
+.popupEffect {
+  width: fit-content;
+  height: 250%;
+  margin: 5vh;
+}
+
+.popup-menu__texte.popupEffect {
+  display: none !important;
 }

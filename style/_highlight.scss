@@ -22,13 +22,12 @@
   content: "";
   border-top-right-radius: 30px;
   border-radius: 30px;
-
   position: absolute;
   left: 0;
   top: 0;
   width: 0;
   height: 100%;
-  background: $Black; /* couleur du highlight */
+  background: $Black; 
   z-index: 0;
   transition: width 2s cubic-bezier(0.77, 0, 0.18, 1);
 }
@@ -52,8 +51,7 @@
   top: 0;
   width: 0;
   height: 100%;
-  background: $Black; /* couleur du highlight */
-
+  background: $Black; 
   z-index: 0;
   transition: width 2s cubic-bezier(0.77, 0, 0.18, 1);
 }

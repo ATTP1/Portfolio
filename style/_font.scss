@@ -22,7 +22,7 @@ $Black: #363636;
   //1600p Horizontale
   @else if($format == 1600) {
     @if ($taille == "petit") {
-      font-size: 18pt;
+      font-size: 17pt;
     } @else if($taille == "moyen") {
       font-size: 25pt;
     } @else if($taille == "grand") {
@@ -34,9 +34,9 @@ $Black: #363636;
   //1400p Horizontale
   @else if($format == 1400) {
     @if ($taille == "petit") {
-      font-size: 16pt;
+      font-size: 15pt;
     } @else if($taille == "moyen") {
-      font-size: 20pt;
+      font-size: 18pt;
     } @else if($taille == "grand") {
       font-size: 35pt;
     } @else {
@@ -46,29 +46,24 @@ $Black: #363636;
   //1200p Horizontale
   @else if($format == 1200) {
     @if ($taille == "petit") {
-      font-size: 14pt;
+      font-size: 13pt;
     } @else if($taille == "moyen") {
-      font-size: 18pt;
+      font-size: 16pt;
     } @else if($taille == "grand") {
       font-size: 32pt;
     } @else {
       font-size: $taille;
     }
   }
-  
 
-  
   font-family: "mainFont";
 
   text-decoration: none !important;
-  color: $couleur ;
+  color: $couleur;
 
   a {
     z-index: 50;
   }
-
-  
-
 
   h1,
   h2,

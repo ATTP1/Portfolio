@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style/style.min.css" />
+    <link rel="stylesheet" href="style/style.css" />
     <title>ALLAN TRI TAM PHAM</title>
 
     <!-- React -->
@@ -23,594 +23,456 @@
     <script src="js/gsap.min.js"></script>
     <script src="js/ScrollTrigger.min.js"></script>
     <script src="js/MotionPathPlugin.min.js"></script>
-    <script src="js/ScrambleTextPlugin.min.js"></script>
-    <script src="js/SplitText.min.js"></script>
+
     <script>
-      gsap.registerPlugin(
-        MotionPathPlugin,
-        ScrollTrigger,
-        ScrambleTextPlugin,
-        SplitText
-      );
+      gsap.registerPlugin(MotionPathPlugin, ScrollTrigger);
     </script>
   </head>
-  <body>
-    <div class="imagesZone">
-      <img class="miniMe" src="images/miniMe.png" alt="" />
-      <img class="miniS" src="images/miniS.png" alt="" />
+  <body class="MainContainer">
+    <section class="intro">
+      <div class="section__boite">
+        <div class="intro__top">
+          <img class="intro__miniS" src="images/intro__miniS.png" alt="" />
+          <div class="intro__titreBoite">
+            <img
+              class="intro__titre glowing"
+              src="images/intro__titre.png"
+              alt=""
+            />
+          </div>
 
-      <img class="prop1" src="images/prop1.png" alt="" />
-      <img class="path1" src="images/path1.png" alt="" />
-      <img class="path2" src="images/path2.png" alt="" />
+          <img class="intro__miniMe" src="images/intro__miniMe.png" alt="" />
+        </div>
+      </div>
 
-      <img class="miniR" src="images/miniR.png" alt="" />
-      <img class="miniRP" src="images/miniRP.png" alt="" />
+      <div class="section__overlay">
+        <div class="intro__top">
+          <div class="intro__topTop">
+            <div class="intro__navBar">
+              <a href="#aPropos">À Propos</a>
+              <a href="#projets">Projets</a>
+              <a href="#competences">Compétences</a>
+              <a href="#contact">Contact</a>
+            </div>
+            <div class="highlight-container highlight-gauche">
+              <h1 class="highlight-text">Que du <strong>code</strong> et</h1>
+            </div>
+          </div>
+          <div class="intro__topBottom">
+            <div class="highlight-container highlight-droite">
+              <h1 class="highlight-text">un peu de <strong>magie</strong></h1>
+            </div>
+          </div>
+        </div>
+        <div class="intro__bottom">
+          <div class="highlight-container highlight-gauche">
+            <h2 class="highlight-text">Allan Tri Tam Pham</h2>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      <img class="path3" src="images/path3.png" alt="" />
+    <section id="aPropos" class="section aPropos">
+      <div class="section__boite">
+        <div class="aPropos__top">
+          <img class="aPropos__tasse" src="images/aPropos__tasse.png" alt="" />
+        </div>
+      </div>
 
-      <img class="path4" src="images/path4.png" alt="" />
-      <img class="miniL" src="images/miniL.png" alt="" />
-      <img class="endStar" src="images/endStar.png" alt="" />
-      <img class="miniL1" src="images/miniL1.png" alt="" />
-      <img class="miniL2" src="images/miniL2.png" alt="" />
-      <img class="miniL3" src="images/miniL3.png" alt="" />
+      <div class="section__overlay">
+        <div class="aPropos__top">
+          <div class="highlight-container highlight-gauche">
+            <h1 class="highlight-text">À propos</h1>
+          </div>
+        </div>
+        <div class="aPropos__bottom">
+          <div class="highlight-container highlight-droite highlight-aPropos">
+            <p class="aPropos__texte highlight-text">
+              Je suis une personne curieuse qui apprend avant tout en créant.
+              Qu’il s’agisse de concevoir des applications web, d’explorer des
+              nouvelles formes d'art ou de développer des projets interactifs,
+              j’aime transformer les idées en expériences. Passionné par les
+              technologies, le design créatif et l’univers du jeu vidéo, je
+              combine ces domaines à travers HTML, CSS, JavaScript ainsi que des
+              outils comme Illustrator ou Spline. J’ai réalisé divers projets
+              qui m’ont permis de développer mes compétences et d’explorer de
+              nouvelles approches face à la technologie.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projets" class="section projets">
+      <div class="section__boite">
+        <div class="projets__top">
+          <div class="highlight-container highlight-gauche">
+            <h1 class="highlight-text">Mes Projets</h1>
+          </div>
+        </div>
+        <div class="projets__bottom"></div>
+      </div>
+      <div class="section__overlay">
+        <div class="projets__top">
+          <img
+            class="projects__miniR"
+            src="images/projects__miniR.png"
+            alt=""
+          />
+        </div>
+
+        <div class="projets__bottom">
+          <div id="carousel1" class="carouselContainer">
+            <div class="glowBox carouselTrack">
+              <div class="item" data-popup="popup1">
+                <img src="images/projects/1.png" alt="" />
+              </div>
+              <div class="item" data-popup="popup2">
+                <img src="images/projects/2.png" alt="" />
+              </div>
+              <div class="item" data-popup="popup3">
+                <img src="images/projects/3.png" alt="" />
+              </div>
+              <div class="item" data-popup="popup4">
+                <img src="images/projects/4.png" alt="" />
+              </div>
+              <div class="item" data-popup="popup5">
+                <img src="images/projects/5.png" alt="" />
+              </div>
+              <div class="item" data-popup="popup6">
+                <img src="images/projects/6.png" alt="" />
+              </div>
+              <div class="item" data-popup="popup7">
+                <img src="images/projects/7.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="competences" class="section competences">
+      <div class="section__boite">
+        <div class="competences__top">
+          <div class="highlight-container highlight-droite">
+            <h1 class="competences__titre highlight-text">Mes Compétences</h1>
+          </div>
+        </div>
+        <div class="competences__bottom"></div>
+      </div>
+      <div class="section__overlay">
+        <div class="competences__top">
+          <div class="competences__topTop"></div>
+          <div class="competences__topBottom">
+            <div id="carousel2" class="carouselContainer">
+              <div class="carouselTrack2">
+                <div class="item candyPulseHover">HTML5</div>
+                <div class="item candyPulseHover">CSS</div>
+                <div class="item candyPulseHover">SCSS</div>
+                <div class="item candyPulseHover">JAVASCRIPT</div>
+                <div class="item candyPulseHover">REACT</div>
+                <div class="item candyPulseHover">GSAP</div>
+                <div class="item candyPulseHover">GIT</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="competences__bottom">
+          <div id="carousel3" class="carouselContainer">
+            <div class="carouselTrack3">
+              <div class="item candyPulseHover">
+                <img src="images/softwareIcons/1.png" alt="" />
+              </div>
+              <div class="item candyPulseHover">
+                <img src="images/softwareIcons/2.png" alt="" />
+              </div>
+              <div class="item candyPulseHover">
+                <img src="images/softwareIcons/3.png" alt="" />
+              </div>
+              <div class="item candyPulseHover">
+                <img src="images/softwareIcons/4.png" alt="" />
+              </div>
+              <div class="item candyPulseHover">
+                <img src="images/softwareIcons/5.png" alt="" />
+              </div>
+              <div class="item candyPulseHover">
+                <img src="images/softwareIcons/6.png" alt="" />
+              </div>
+              <div class="item candyPulseHover">
+                <img src="images/softwareIcons/7.png" alt="" />
+              </div>
+              <div class="item candyPulseHover">
+                <img src="images/softwareIcons/8.png" alt="" />
+              </div>
+              <div class="item candyPulseHover">
+                <img src="images/softwareIcons/9.png" alt="" />
+              </div>
+              <div class="item candyPulseHover">
+                <img src="images/softwareIcons/10.png" alt="" />
+              </div>
+              <div class="item">
+                <img src="images/softwareIcons/11.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <div class="section__boite">
+        <div class="contact__top">
+          <img
+            class="contact__etoile"
+            src="images/contact__etoile.png"
+            alt=""
+          />
+          <img class="contact__miniL" src="images/contact__miniL.png" alt="" />
+        </div>
+      </div>
+      <div class="section__overlay">
+        <div class="contact__top">
+          <div class="contact__topTop">
+            <div class="highlight-container highlight-gauche">
+              <h1 class="highlight-text">Mes Contacts</h1>
+            </div>
+          </div>
+          <div class="contact__topBottom">
+            <div class="contact__linksBox">
+              <div class="highlight-container highlight-gauche">
+                <a
+                  class="contact__links highlight-text"
+                  href="mailto:allantritampham@gmail.com"
+                  >allantritampham@gmail.com</a
+                >
+              </div>
+            </div>
+
+            <div class="contact__linksBox">
+              <div class="highlight-container highlight-gauche">
+                <a
+                  class="contact__links highlight-text"
+                  href="https://github.com/ATTP1"
+                  >https://github.com/ATTP1</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contact__bottom"></div>
+      </div>
+    </section>
+
+    <div class="popup-menu" id="popupMenu">
+      <div class="popup-menu__overlay"></div>
+      <div class="popup-menu__contenu" id="popup1">
+        <div class="popup-menu__texte">
+          <h3>Project AI</h3>
+          <h2>
+            <strong>M.O.C.H.I</strong>
+          </h2>
+          <h3>2024 - Work in progress</h3>
+          <p>
+            A friendly AI assistant designed to simplify daily life, built from
+            scratch with clean <strong>HTML</strong>,
+            <strong>SCSS</strong> styling, and a touch of 3D magic via
+            <strong>Spline</strong>. It lives inside a sleek
+            <strong>Electron</strong> desktop app, responding to questions in
+            real time using the <strong>OpenAI API</strong>. Beyond chat, it
+            remembers past interactions, offers weather insights, and helps
+            freelancers stay organized with its <strong>“Blue” mode,</strong> a
+            built-in timer and hour-tracking system. Motivational quotes pop in
+            now and then to keep focus and energy high. With a responsive UI,
+            playful animations, and smart features, it feels less like a tool
+            and more like a helpful digital sidekick.
+          </p>
+        </div>
+        <div class="popup-images">
+          <img class="popup-img" src="images/projects/more/1a.png" alt="" />
+          <img class="popup-img" src="images/projects/more/1b.png" alt="" />
+        </div>
+        <button class="close-btnProject">X</button>
+      </div>
+
+      <div class="popup-menu__contenu" id="popup2">
+        <div class="popup-menu__texte">
+          <h3>Project AEC</h3>
+          <h2>
+            <strong>Street'zza</strong>
+          </h2>
+          <h1></h1>
+          <h3>2025</h3>
+          <p>
+            Un site web de restaurant responsive réalisé dans le cadre d’un
+            projet de cours en <strong>développement front-end (AEC)</strong>.
+            Construit avec <strong>HTML</strong> et
+            <strong>CSS</strong> (Flexbox et Grid), et versionné sur
+            <strong>GitLab</strong>, il comprend quatre pages : une page
+            d’accueil avec menu, un formulaire de réservation, une galerie et un
+            résumé de commande. La mise en page s’adapte efficacement grâce aux
+            media queries, avec soin apporté à l’espacement, la typographie et
+            le design responsive. Le projet mise sur la structure, la sémantique
+            et le respect des <strong>maquettes filaires</strong>. Les
+            changements ont été suivis via Git, illustrant de bonnes pratiques
+            de développement.
+          </p>
+        </div>
+        <div class="popup-images">
+          <img class="popup-img" src="images/projects/more/2a.png" alt="" />
+          <img class="popup-img" src="images/projects/more/2b.png" alt="" />
+        </div>
+        <button class="close-btnProject">X</button>
+      </div>
+
+      <div class="popup-menu__contenu" id="popup3">
+        <div class="popup-menu__texte">
+          <h3>Web Mockup</h3>
+          <h2>
+            <strong>Concrete Waves</strong>
+          </h2>
+          <h3>2024</h3>
+          <p>
+            Concrete Waves is a fictional
+            <strong>streetwear brand mockup</strong> inspired by graffiti, skate
+            culture, and the pulse of city life. Designed entirely in
+            <strong>Illustrator,</strong> it follows modern web design norms to
+            imagine what a real online store might look like. Bold typography,
+            layered textures, and street visuals blend to create a raw,
+            expressive aesthetic. From product highlights to branded headers,
+            every detail reflects the energy of urban fashion. Though not
+            functional or coded, this concept explores branding, layout, and
+            digital storytelling—bringing a
+            <strong>streetwear identity </strong>to life through design alone.
+          </p>
+        </div>
+        <div class="popup-images">
+          <img class="popup-img" src="images/projects/more/3a.png" alt="" />
+          <img class="popup-img" src="images/projects/more/3b.png" alt="" />
+        </div>
+        <button class="close-btnProject">X</button>
+      </div>
+
+      <div class="popup-menu__contenu" id="popup4">
+        <div class="popup-menu__texte">
+          <h3>Web Mockup</h3>
+          <h2>
+            <strong>COSMOFEST</strong>
+          </h2>
+          <h3>2024</h3>
+          <p>
+            COSMOFEST is a fictional music festival concept that blends outer
+            space energy with punk attitude. Created entirely as a visual
+            mockup, the design imagines a full
+            <strong>digital</strong> experience—from dramatic lineups to
+            explosive hero sections. Built in Illustrator and based on current
+            <strong>web UI trends,</strong> the site layout features bold fonts,
+            gritty overlays, and sci-fi inspired visuals. Though not a real
+            event, COSMOFEST explores how a themed experience can come to life
+            through branding, storytelling, and
+            <strong>modern interface</strong> design. It’s loud, wild, and
+            totally out of this world.
+          </p>
+        </div>
+
+        <div class="popup-images">
+          <img class="popup-img" src="images/projects/more/4a.png" alt="" />
+          <img class="popup-img" src="images/projects/more/4b.png" alt="" />
+        </div>
+        <button class="close-btnProject">X</button>
+      </div>
+
+      <div class="popup-menu__contenu" id="popup5">
+        <div class="popup-menu__texte">
+          <h3>End Of the Year Project</h3>
+          <h2>
+            <strong>Elden Ring</strong>
+          </h2>
+          <h3>2023</h3>
+          <p>
+            This Elden Ring project is a
+            <strong>functional website</strong> built to wrap up a year of
+            learning web development. Designed with
+            <strong>multiple pages</strong> and
+            <strong>interactive sections,</strong> it includes a working
+            character <strong>carousel</strong> and navigation between factions,
+            characters, and lore. It’s not just a visual concept—it runs
+            entirely in <strong>HTML, CSS, and C#,</strong> and represents the
+            first big hands-on coding project. Inspired by the game’s dark, epic
+            world, the design reflects its atmosphere while putting into
+            practice everything learned so far. From structure to styling to
+            basic functionality, this site marks a major
+            <strong>personal milestone</strong> in building real web
+            experiences.
+          </p>
+        </div>
+        <div class="popup-images">
+          <img class="popup-img" src="images/projects/more/5a.png" alt="" />
+          <img class="popup-img" src="images/projects/more/5b.png" alt="" />
+        </div>
+        <button class="close-btnProject">X</button>
+      </div>
+
+      <div class="popup-menu__contenu" id="popup6">
+        <div class="popup-menu__texte">
+          <h3>Electron App</h3>
+          <h2><strong>Chrono Chou</strong><br /></h2>
+          <h3>2024</h3>
+          <p>
+            ChronoChou is a playful and practical desktop timer app created as a
+            first dive into building with
+            <strong>Electron.</strong> Designed using <strong>HTML</strong> and
+            styled with <strong>CSS</strong>, it offers a clean, user-friendly
+            way to clock in and out of work sessions. The logic behind the app,
+            built in JavaScript, lets users start, stop, and track their time,
+            with a full list of previously recorded sessions. Everything runs
+            <strong>locally,</strong> with no need for third-party time-tracking
+            tools. From the animated timer to the exportable log of time
+            recorded, the app was built from scratch as a complete front-end and
+            desktop experience. ChronoChou makes time management simple and
+            marks a proud step in real-world app development.
+          </p>
+        </div>
+
+        <div class="popup-images">
+          <img class="popup-img" src="images/projects/more/6a.png" alt="" />
+          <img class="popup-img" src="images/projects/more/6b.png" alt="" />
+        </div>
+        <button class="close-btnProject">X</button>
+      </div>
+
+      <div class="popup-menu__contenu" id="popup7">
+        <div class="popup-menu__texte">
+          <h3>Project AEC</h3>
+          <h2><strong>Level Up</strong></h2>
+          <h3>2024-2025</h3>
+          <p>
+            This blog project was created as part of a
+            <strong>school assignment</strong> in collaboration with a
+            classmate. Following a predetermined wireframe, it was built
+            entirely with <strong>HTML, CSS, and JavaScript</strong> to
+            demonstrate front-end skills within a defined structure. The layout
+            is fully responsive and adapts across devices, while a 3D model was
+            integrated using <strong>Spline</strong> to add interactive depth.
+            All visuals, including the logo and blog images, were custom
+            designed to fit the theme and style. Although the blog content is
+            fictional, the project highlights the ability to blend
+            <strong>clean code,</strong>
+            responsive web design, and original creative assets in a cohesive
+            and polished presentation.
+          </p>
+        </div>
+        <div class="popup-images">
+          <img class="popup-img" src="images/projects/more/7a.png" alt="" />
+          <img class="popup-img" src="images/projects/more/7b.png" alt="" />
+        </div>
+        <button class="close-btnProject">X</button>
+      </div>
     </div>
-    <section class="acceuil">
-      <div id="root"></div>
 
-      <div class="underTitle">
-        <h2 id="underTitle1">where code</h2>
-      </div>
-
-      <div class="underTitle">
-        <h2 id="underTitle2">meets</h2>
-        <h2 id="magicAnimation">°°°°°</h2>
-      </div>
-
-      <div class="title">
-        <img src="images/title.png" alt="" />
-      </div>
-      <div class="titleStar"><img src="images/titleStar.png" alt="" /></div>
-      <div class="name">
-        <h2 class="underTitle3" id="jumpyName">
-          Allan Tri Tam <span>Pham</span>
-        </h2>
-      </div>
-    </section>
-    <section id="2" class="aboutMe">
-      <div class="blockText">
-        <h2 id="underTitle4">About me</h2>
-        <p id="underTitle5">
-          I'm someone who loves learning by doing. Whether it's coding small
-          apps, exploring design tools, or building fun web projects, I enjoy
-          figuring things out and seeing ideas come together. I have a strong
-          interest in gaming, technology, and creative development, and I like
-          mixing those worlds through HTML, CSS, JavaScript, and tools like
-          Illustrator and Spline. I’ve worked on a variety of projects, from
-          desktop timers to interactive websites, each one helping me improve
-          and try something new.
-        </p>
-      </div>
-    </section>
-    <section id="3" class="projects">
-      <div>
-        <h2 id="underTitle6">My Projects</h2>
-      </div>
-      <div id="carousel1" class="carouselContainer">
-        <div class="carouselTrack">
-          <div class="item" data-popup="popup1">
-            <img src="images/projects/1.png" alt="" />
-          </div>
-          <div class="item" data-popup="popup2">
-            <img src="images/projects/2.png" alt="" />
-          </div>
-          <div class="item" data-popup="popup3">
-            <img src="images/projects/3.png" alt="" />
-          </div>
-          <div class="item" data-popup="popup4">
-            <img src="images/projects/4.png" alt="" />
-          </div>
-          <div class="item" data-popup="popup5">
-            <img src="images/projects/5.png" alt="" />
-          </div>
-          <div class="item" data-popup="popup6">
-            <img src="images/projects/6.png" alt="" />
-          </div>
-          <div class="item" data-popup="popup7">
-            <img src="images/projects/7.png" alt="" />
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="4" class="skills">
-      <div>
-        <h2 id="underTitle7">My Skills</h2>
-      </div>
-
-      <div id="carousel2" class="carouselContainer">
-        <div class="carouselTrack2">
-          <div class="item candyPulseHover">HTML5</div>
-          <div class="item candyPulseHover">CSS</div>
-          <div class="item candyPulseHover">SCSS</div>
-          <div class="item candyPulseHover">JAVASCRIPT</div>
-          <div class="item candyPulseHover">REACT</div>
-          <div class="item candyPulseHover">GSAP</div>
-          <div class="item candyPulseHover">GIT</div>
-        </div>
-      </div>
-
-      <div id="carousel3" class="carouselContainer">
-        <div class="carouselTrack3">
-          <div class="item candyPulseHover">
-            <img src="images/softwareIcons/1.png" alt="" />
-          </div>
-          <div class="item candyPulseHover">
-            <img src="images/softwareIcons/2.png" alt="" />
-          </div>
-          <div class="item candyPulseHover">
-            <img src="images/softwareIcons/3.png" alt="" />
-          </div>
-          <div class="item candyPulseHover">
-            <img src="images/softwareIcons/4.png" alt="" />
-          </div>
-          <div class="item candyPulseHover">
-            <img src="images/softwareIcons/5.png" alt="" />
-          </div>
-          <div class="item candyPulseHover">
-            <img src="images/softwareIcons/6.png" alt="" />
-          </div>
-          <div class="item candyPulseHover">
-            <img src="images/softwareIcons/7.png" alt="" />
-          </div>
-          <div class="item candyPulseHover">
-            <img src="images/softwareIcons/8.png" alt="" />
-          </div>
-          <div class="item candyPulseHover">
-            <img src="images/softwareIcons/9.png" alt="" />
-          </div>
-          <div class="item candyPulseHover">
-            <img src="images/softwareIcons/10.png" alt="" />
-          </div>
-          <div class="item">
-            <img src="images/softwareIcons/11.png" alt="" />
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="5" class="contact">
-      <div>
-        <h2 id="underTitle8">My Contact</h2>
-
-        <div>
-          <h3 id="underTitle9">
-            <a href="mailto:allantritampham@gmail.com"
-              >allantritampham@gmail.com</a
-            >
-          </h3>
-
-          <h3 id="underTitle10">
-            <a href="https://github.com/ATTP1">https://github.com/ATTP1</a>
-          </h3>
-        </div>
-      </div>
-    </section>
-    <div class="highlight-section">
-      <div class="leftHighlight highlight1 highlightAcceuil"></div>
-      <div class="rightHighlight highlight2 highlightAcceuil"></div>
-      <div class="leftHighlight highlight3 highlightAcceuil"></div>
-
-      <div
-        id="colorChange"
-        class="leftHighlight highlight4 highlightAboutMe"
-      ></div>
-      <div
-        id="colorChange"
-        class="rightHighlight highlight5 highlightAboutMe"
-      ></div>
-
-      <div class="leftHighlight highlight6 highlightProjects"></div>
-
-      <div
-        id="colorChange"
-        class="rightHighlight highlight7 highlightSkills"
-      ></div>
-
-      <div class="leftHighlight highlight8 highlightContact"></div>
-      <div class="leftHighlight highlight9 highlightContact"></div>
-      <div class="leftHighlight highlight10 highlightContact"></div>
-    </div>
-    <div class="popup-section">
-      <div class="popup" id="popup1">
-        <div class="popup-content">
-          <div class="popup-text">
-            <h2>
-              <strong>Project AI</strong><br />
-              M.O.C.H.I
-            </h2>
-            <h3>2024 - Work in progress</h3>
-            <p>
-              A friendly AI assistant designed to simplify daily life, built
-              from scratch with clean <strong>HTML</strong>,
-              <strong>SCSS</strong> styling, and a touch of 3D magic via
-              <strong>Spline</strong>. It lives inside a sleek
-              <strong>Electron</strong> desktop app, responding to questions in
-              real time using the <strong>OpenAI API</strong>. Beyond chat, it
-              remembers past interactions, offers weather insights, and helps
-              freelancers stay organized with its
-              <strong>“Blue” mode,</strong> a built-in timer and hour-tracking
-              system. Motivational quotes pop in now and then to keep focus and
-              energy high. With a responsive UI, playful animations, and smart
-              features, it feels less like a tool and more like a helpful
-              digital sidekick.
-            </p>
-          </div>
-          <div class="popup-images">
-            <img src="images/projects/more/1a.png" alt="" />
-            <img src="images/projects/more/1b.png" alt="" />
-          </div>
-          <button class="close-btnProject">&times;</button>
-        </div>
-      </div>
-
-      <div class="popup" id="popup2">
-        <div class="popup-content">
-          <div class="popup-text">
-            <h2>
-              <strong>Project AEC</strong><br />
-              Street'zza
-            </h2>
-            <h3>2025</h3>
-            <p>
-              A responsive restaurant website created as part of a
-              <strong>front-end AEC</strong> course project. Built using
-              <strong>HTML, CSS</strong> (with Flexbox and Grid), and Git
-              versioning on <strong>GitLab,</strong> it includes four main
-              pages: a homepage with a menu, a reservation form, a gallery, and
-              an order summary with tables. The layout adapts cleanly across
-              breakpoints using media queries, with attention to detail in
-              spacing, typography, and responsive design. The project focused on
-              structure, semantics, and visual consistency while respecting
-              <strong>wireframes</strong>. Each update was carefully tracked
-              using Git, highlighting real-world workflow and development
-              habits.
-            </p>
-          </div>
-          <div class="popup-images">
-            <img src="images/projects/more/2a.png" alt="" />
-            <img src="images/projects/more/2b.png" alt="" />
-          </div>
-          <button class="close-btnProject">&times;</button>
-        </div>
-      </div>
-
-      <div class="popup" id="popup3">
-        <div class="popup-content">
-          <div class="popup-text">
-            <h2>
-              <strong>Web Mockup</strong><br />
-              Concrete Waves
-            </h2>
-            <h3>2024</h3>
-            <p>
-              Concrete Waves is a fictional
-              <strong>streetwear brand mockup</strong> inspired by graffiti,
-              skate culture, and the pulse of city life. Designed entirely in
-              <strong>Illustrator,</strong> it follows modern web design norms
-              to imagine what a real online store might look like. Bold
-              typography, layered textures, and street visuals blend to create a
-              raw, expressive aesthetic. From product highlights to branded
-              headers, every detail reflects the energy of urban fashion. Though
-              not functional or coded, this concept explores branding, layout,
-              and digital storytelling—bringing a
-              <strong>streetwear identity </strong>to life through design alone.
-            </p>
-          </div>
-          <div class="popup-images">
-            <img src="images/projects/more/3a.png" alt="" />
-            <img src="images/projects/more/3b.png" alt="" />
-          </div>
-          <button class="close-btnProject">&times;</button>
-        </div>
-      </div>
-
-      <div class="popup" id="popup4">
-        <div class="popup-content">
-          <div class="popup-text">
-            <h2>
-              <strong>Web Mockup</strong><br />
-              COSMOFEST
-            </h2>
-            <h3>2024</h3>
-            <p>
-              COSMOFEST is a fictional music festival concept that blends outer
-              space energy with punk attitude. Created entirely as a visual
-              mockup, the design imagines a full
-              <strong>digital</strong> experience—from dramatic lineups to
-              explosive hero sections. Built in Illustrator and based on current
-              <strong>web UI trends,</strong> the site layout features bold
-              fonts, gritty overlays, and sci-fi inspired visuals. Though not a
-              real event, COSMOFEST explores how a themed experience can come to
-              life through branding, storytelling, and
-              <strong>modern interface</strong> design. It’s loud, wild, and
-              totally out of this world.
-            </p>
-          </div>
-          <div class="popup-images">
-            <img src="images/projects/more/4a.png" alt="" />
-            <img src="images/projects/more/4b.png" alt="" />
-          </div>
-          <button class="close-btnProject">&times;</button>
-        </div>
-      </div>
-
-      <div class="popup" id="popup5">
-        <div class="popup-content">
-          <div class="popup-text">
-            <h2>
-              <strong>End Of the Year Project</strong><br />
-              Elden Ring
-            </h2>
-            <h3>2023</h3>
-            <p>
-              This Elden Ring project is a
-              <strong>functional website</strong> built to wrap up a year of
-              learning web development. Designed with
-              <strong>multiple pages</strong> and
-              <strong>interactive sections,</strong> it includes a working
-              character <strong>carousel</strong> and navigation between
-              factions, characters, and lore. It’s not just a visual concept—it
-              runs entirely in <strong>HTML, CSS, and C#,</strong> and
-              represents the first big hands-on coding project. Inspired by the
-              game’s dark, epic world, the design reflects its atmosphere while
-              putting into practice everything learned so far. From structure to
-              styling to basic functionality, this site marks a major
-              <strong>personal milestone</strong> in building real web
-              experiences.
-            </p>
-          </div>
-          <div class="popup-images">
-            <img src="images/projects/more/5a.png" alt="" />
-            <img src="images/projects/more/5b.png" alt="" />
-          </div>
-          <button class="close-btnProject">&times;</button>
-        </div>
-      </div>
-
-      <div class="popup" id="popup6">
-        <div class="popup-content">
-          <div class="popup-text">
-            <h2>
-              <strong>Electron App</strong><br />
-              Chrono Chou
-            </h2>
-            <h3>2024</h3>
-            <p>
-              ChronoChou is a playful and practical desktop timer app created as
-              a first dive into building with
-              <strong>Electron.</strong> Designed using
-              <strong>HTML</strong> and styled with <strong>CSS</strong>, it
-              offers a clean, user-friendly way to clock in and out of work
-              sessions. The logic behind the app, built in JavaScript, lets
-              users start, stop, and track their time, with a full list of
-              previously recorded sessions. Everything runs
-              <strong>locally,</strong> with no need for third-party
-              time-tracking tools. From the animated timer to the exportable log
-              of time recorded, the app was built from scratch as a complete
-              front-end and desktop experience. ChronoChou makes time management
-              simple and marks a proud step in real-world app development.
-            </p>
-          </div>
-          <div class="popup-images">
-            <img src="images/projects/more/6a.png" alt="" />
-            <img src="images/projects/more/6b.png" alt="" />
-          </div>
-          <button class="close-btnProject">&times;</button>
-        </div>
-      </div>
-
-      <div class="popup" id="popup7">
-        <div class="popup-content">
-          <div class="popup-text">
-            <h2><strong>Project AEC</strong> <br />Level Up</h2>
-            <h3>2024-2025</h3>
-            <p>
-              This blog project was created as part of a
-              <strong>school assignment</strong> in collaboration with a
-              classmate. Following a predetermined wireframe, it was built
-              entirely with <strong>HTML, CSS, and JavaScript</strong> to
-              demonstrate front-end skills within a defined structure. The
-              layout is fully responsive and adapts across devices, while a 3D
-              model was integrated using <strong>Spline</strong> to add
-              interactive depth. All visuals, including the logo and blog
-              images, were custom designed to fit the theme and style. Although
-              the blog content is fictional, the project highlights the ability
-              to blend
-              <strong>clean code,</strong>
-              responsive web design, and original creative assets in a cohesive
-              and polished presentation.
-            </p>
-          </div>
-          <div class="popup-images">
-            <img src="images/projects/more/7a.png" alt="" />
-            <img src="images/projects/more/7b.png" alt="" />
-          </div>
-          <button class="close-btnProject">&times;</button>
-        </div>
-      </div>
-    </div>
-    <div class="pathObjects-section">
-      <img src="images/pathItem1.png" id="pathItem1" />
-      <img src="images/pathItem2.png" id="pathItem2" />
-      <img src="images/pathItem3.png" id="pathItem3" />
-      <img src="images/pathItem4.png" id="pathItem4" />
-    </div>
-
-    <script>
-      //blockText Effect
-
-      /*const st = SplitText.create("p", { type: "chars", charsClass: "char" });
-
-      st.chars.forEach((char) => {
-        gsap.set(char, { attr: { "data-content": char.innerHTML } });
-      });
-
-      const textBlock = document.querySelector(".blockText");
-
-      textBlock.onpointermove = (e) => {
-        st.chars.forEach((char) => {
-          const rect = char.getBoundingClientRect();
-          const cx = rect.left + rect.width / 2;
-          const cy = rect.top + rect.height / 2;
-          const dx = e.clientX - cx;
-          const dy = e.clientY - cy;
-          const dist = Math.sqrt(dx * dx + dy * dy);
-          if (dist < 100)
-            gsap.to(char, {
-              overwrite: true,
-              duration: 1.2 - dist / 100,
-              scrambleText: {
-                text: char.dataset.content,
-                chars: ".:",
-                speed: 0.5,
-              },
-              ease: "none",
-            });
-        });
-      };
-*/
-      //scrambleText Effect
-
-      ScrollTrigger.create({
-        trigger: "#underTitle1",
-        toggleActions: "restart none none none",
-        onEnter: () => {
-          scramble("#underTitle1");
-          scramble("#codeAnimation");
-        },
-        onEnterBack: () => {
-          scramble("#underTitle1");
-          scramble("#codeAnimation");
-          document.querySelector("#codeAnimation").textContent = "###";
-        },
-      });
-
-      ScrollTrigger.create({
-        trigger: "#underTitle2",
-        toggleActions: "restart none none none",
-        onEnter: () => {
-          scramble("#underTitle2");
-          scrambleWild("#magicAnimation");
-        },
-        onEnterBack: () => {
-          scramble("#underTitle2");
-          scrambleWild("#magicAnimation");
-          document.querySelector("#magicAnimation").textContent = "###";
-        },
-      });
-
-      ScrollTrigger.create({
-        trigger: ".highlightAboutMe",
-        toggleActions: "restart none none none",
-        onEnter: () => scramble("#underTitle4"),
-        onEnterBack: () => scramble("#underTitle4"),
-      });
-
-      ScrollTrigger.create({
-        trigger: ".highlightProjects",
-        toggleActions: "restart none none none",
-        onEnter: () => scramble("#underTitle6"),
-        onEnterBack: () => scramble("#underTitle6"),
-      });
-
-      ScrollTrigger.create({
-        trigger: ".highlightSkills",
-        toggleActions: "restart none none none",
-        onEnter: () => scramble("#underTitle7"),
-        onEnterBack: () => scramble("#underTitle7"),
-      });
-
-      ScrollTrigger.create({
-        trigger: ".highlightContact",
-        toggleActions: "restart none none none",
-        onEnter: () => scramble("#underTitle8"),
-        onEnterBack: () => scramble("#underTitle8"),
-      });
-
-      // Scramble function
-      function scramble(selector) {
-        const element = document.querySelector(selector);
-        if (!element) return;
-        gsap.to(element, {
-          scrambleText: {
-            text: element.textContent,
-            chars: "lowerCase",
-
-            speed: 0.5,
-          },
-
-          color: "#bb95f8",
-          duration: 1,
-        });
-      }
-
-      function scrambleWild(selector) {
-        const element = document.querySelector(selector);
-
-        gsap.to(element, {
-          scrambleText: {
-            text: "magic",
-            chars: "✧✦✩★",
-
-            speed: 0.35,
-          },
-
-          color: "#bb95f8",
-          duration: 2,
-        });
-      }
-      /*
-      function scrambleCode(selector) {
-        const element = document.querySelector(selector);
-
-        gsap.to(element, {
-          scrambleText: {
-            chars: "⚡🔥",
-            text: "code",
-            speed: 0.1,
-          },
-          top: "160px",
-          delay: 0.5,
-          duration: 4,
-          onComplete: () => {
-            gsap.to(element, {
-              duration: 0.5,
-            });
-          },
-        });
-      }
-      function scrambleMagic(selector) {
-        const element = document.querySelector(selector);
-
-        gsap.to(element, {
-          scrambleText: {
-            chars: "✨💫",
-            text: "magic",
-            speed: 0.1,
-          },
-          top: "250px",
-          delay: 0.5,
-          duration: 4,
-          onComplete: () => {
-            gsap.to(element, {
-              duration: 0.5,
-            });
-          },
-        });
-      }
-        */
-    </script>
-    <script>
+    <script id="testNON_FONCTIONEL">
       //pathObjects animation
+      /*
+
 
       gsap.to("#pathItem1", {
         scrollTrigger: {
@@ -698,53 +560,43 @@
           },
         });
       });
+      
+      
+      */
+    </script>
+
+    <script id="highlightLogic">
       //highlight
 
-      gsap.to(".highlightAcceuil", {
-        duration: 2,
-        x: 0,
-        duration: 4,
-      });
-
-      gsap.to(".highlightAboutMe", {
-        scrollTrigger: {
-          trigger: ".highlightAboutMe",
-          toggleActions: "restart",
-          scrub: true,
-        },
-        x: 0,
-        duration: 4,
-      });
-
-      gsap.to(".highlightProjects", {
-        scrollTrigger: {
-          trigger: ".highlightProjects",
-          toggleActions: "restart none none none",
-          scrub: true,
-        },
-        x: 0,
-      });
-
-      gsap.to(".highlightSkills", {
-        scrollTrigger: {
-          trigger: ".highlightSkills",
-          toggleActions: "restart none none none",
-          scrub: true,
-        },
-        x: 0,
-      });
-
-      gsap.to(".highlightContact", {
-        scrollTrigger: {
-          trigger: ".highlightContact",
-          toggleActions: "restart none none none",
-        },
-        x: 0,
-        duration: 4,
+      gsap.utils.toArray(".highlight-container").forEach((container, i) => {
+        gsap.to(container, {
+          "--highlight-width": "100%",
+          scrollTrigger: {
+            trigger: container,
+            start: "top 80%",
+            toggleActions: "play none none none",
+            onLeave: () => {
+              container.style.setProperty("--highlight-width", "0%");
+              container.classList.remove("highlighted");
+            },
+            onLeaveBack: () => {
+              container.style.setProperty("--highlight-width", "0%");
+              //container.classList.remove("highlighted");
+            },
+            onEnter: () => {
+              container.style.setProperty("--highlight-width", "100%");
+              container.classList.add("highlighted");
+            },
+            onEnterBack: () => {
+              container.style.setProperty("--highlight-width", "100%");
+              container.classList.add("highlighted");
+            },
+          },
+        });
       });
     </script>
 
-    <script>
+    <script id="carouselLogic">
       const carouselContainer = document.querySelectorAll(".carouselContainer");
 
       //Debug tool pour le glitch des reload de page decall/ par les carousels
@@ -787,103 +639,81 @@
         });
       }
 
-      //popup Project
-
-      const popups = document.querySelectorAll(".popup");
-      const closeBtns = document.querySelectorAll(".close-btnProject");
-
-      const buttons = document.querySelectorAll("[data-popup]");
-
-      buttons.forEach((btn) => {
-        btn.addEventListener("click", () => {
-          const popupId = btn.getAttribute("data-popup");
-          document.getElementById(popupId).classList.add("active");
+      // Ouvre le popup
+      document.querySelectorAll(".item").forEach((item) => {
+        item.addEventListener("click", function () {
+          const popupId = this.dataset.popup;
+          document
+            .querySelectorAll(".popup-menu__contenu")
+            .forEach((el) => (el.style.display = "none"));
+          document.getElementById(popupId).style.display = "block";
+          document
+            .getElementById("popupMenu")
+            .classList.add("popup-menu--ouvert");
         });
       });
 
-      closeBtns.forEach((btn) => {
-        btn.addEventListener("click", () => {
-          btn.closest(".popup").classList.remove("active");
+      // Ferme le popup (clic sur overlay)
+
+      document.querySelectorAll(".close-btnProject").forEach((btn) => {
+        btn.addEventListener("click", function () {
+          document
+            .getElementById("popupMenu")
+            .classList.remove("popup-menu--ouvert");
+          document
+            .querySelectorAll(".popup-menu__contenu")
+            .forEach((el) => (el.style.display = "none"));
         });
       });
-    </script>
 
-    <script type="text/babel">
-      //
-      function RainbowLink({ text, href }) {
-        const center = Math.floor(text.length / 2);
-        const colors = ["#6930c4", "#7130be", "#aa7beb", "#aaa1f0"];
-
-        return (
-          <a href={href} className="rainbow-link">
-            {text.split("").map((char, i) => {
-              const distance = Math.abs(i - center);
-              const color = colors[i % colors.length];
-              return (
-                <span
-                  key={i}
-                  style={{
-                    "--i": i,
-                    "--distance": distance,
-                    "--rainbow-color": color,
-                  }}
-                >
-                  {char}
-                </span>
-              );
-            })}
-          </a>
-        );
-      }
-
-      function HeaderBar() {
-        return (
-          <div className="headerBar">
-            <RainbowLink className="headerBarLink" href="#2" text="About me" />
-            <RainbowLink className="headerBarLink" href="#3" text="Projects" />
-            <RainbowLink className="headerBarLink" href="#4" text="Skills" />
-            <RainbowLink className="headerBarLink" href="#5" text="Contact" />
-          </div>
-        );
-      }
-
-      function injectJumpyEffectToName() {
-        const target = document.getElementById("jumpyName");
-        const text = "Allan Tri Tam Pham";
-
-        if (!target) return;
-
-        const letters = text.split("").map((char, i) => {
-          // Ajoute un span spécial après "Tam" (juste avant "Pham")
-          if (i === 13) {
-            const gap = document.createElement("span");
-            gap.className = "jumpy-gap";
-            gap.innerHTML = "&nbsp;";
-            return gap;
-          }
-
-          if (char === " ") {
-            const space = document.createElement("span");
-            space.className = "jumpy-space";
-            space.innerHTML = "&nbsp;";
-            return space;
-          }
-
-          const span = document.createElement("span");
-          span.className = "jumpy-letter";
-          span.style.animationDelay = `${i * 0.05}s`;
-          span.textContent = char;
-          return span;
+      document
+        .querySelector(".popup-menu__overlay")
+        .addEventListener("click", function () {
+          document
+            .getElementById("popupMenu")
+            .classList.remove("popup-menu--ouvert");
+          document
+            .querySelectorAll(".popup-menu__contenu")
+            .forEach((el) => (el.style.display = "none"));
         });
 
-        target.innerHTML = ""; // vide l'ancien contenu
-        letters.forEach((span) => target.appendChild(span));
-      }
+      const images = document.querySelectorAll(".popup-img");
 
-      ReactDOM.createRoot(document.getElementById("root")).render(
-        <HeaderBar />
-      );
-      injectJumpyEffectToName();
+      images.forEach(function (image) {
+        image.onclick = function () {
+          const currentPopup = image.closest(".popup-menu__contenu");
+          const allImages = currentPopup.querySelectorAll(".popup-img");
+
+          // If the clicked image is already the only one visible
+          const isOnlyVisible = Array.from(allImages).every(
+            (img) =>
+              (img === image && img.style.display !== "none") ||
+              (img !== image && img.style.display === "none")
+          );
+
+          if (isOnlyVisible) {
+            // Show all images again
+            allImages.forEach((img) => (img.style.display = ""));
+          } else {
+            // Hide all except the clicked one
+            allImages.forEach((img) => {
+              img.style.display = img === image ? "" : "none";
+            });
+          }
+
+          // (Optional) Border logic if you want the border to toggle
+          const popUpText = currentPopup.querySelector(".popup-menu__texte");
+          if (popUpText) {
+            if (image.classList.contains("popupEffect")) {
+              image.classList.remove("popupEffect");
+              popUpText.classList.remove("popupEffect");
+            } else {
+              image.classList.add("popupEffect");
+              popUpText.classList.add("popupEffect");
+            }
+          }
+        };
+      });
     </script>
   </body>
 </html>
