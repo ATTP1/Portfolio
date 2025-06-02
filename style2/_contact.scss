@@ -13,25 +13,25 @@
 
 .section__boite {
   .contact__top {
-    
     height: 100%;
     width: 100%;
 
     display: flex;
     justify-content: space-between;
-    
-    .contact__miniL{margin-right: -10%;}
 
-    .contact__etoile{margin-left: -4%;}
+    .contact__miniL {
+      margin-right: -10%;
+    }
+
+    .contact__etoile {
+      margin-left: -4%;
+    }
 
     .contact__etoile,
-    .contact__miniL{
+    .contact__miniL {
       transform: scale(85%);
     }
   }
-
-  
-
 }
 
 .section__overlay {
@@ -41,16 +41,15 @@
 
     margin-left: 10%;
 
-    .contact__links{
+    .contact__links {
       @include fontStyle("moyen", $Purple2, "default");
     }
-
-     a:hover{
-      color: red !important;
-    }
+  }
+  .highlight-container {
+    padding-top: 1.5vh;
+    padding-bottom: 1.5vh;
   }
 
-  
   .contact__topTop {
     height: 50%;
     width: 100%;

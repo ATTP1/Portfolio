@@ -11,7 +11,7 @@ body {
   font-size: 20pt;
   font-family: "mainFont";
   text-decoration: none !important;
-  color: #bb95f8 !important;
+  color: #bb95f8;
   overflow-x: hidden;
 }
 body a {
@@ -21,8 +21,9 @@ body h1,
 body h2,
 body h3 {
   font-weight: normal !important;
-  margin-top: 1vh;
-  margin-bottom: 1vh;
+  margin-top: 1.5vh;
+  margin-bottom: 1.5vh;
+  white-space: nowrap;
 }
 body strong {
   font-weight: normal !important;
@@ -83,7 +84,7 @@ h1 {
   font-size: 45pt;
   font-family: "mainFont";
   text-decoration: none !important;
-  color: #bb95f8 !important;
+  color: #bb95f8;
 }
 h1 a {
   z-index: 50;
@@ -92,8 +93,9 @@ h1 h1,
 h1 h2,
 h1 h3 {
   font-weight: normal !important;
-  margin-top: 1vh;
-  margin-bottom: 1vh;
+  margin-top: 1.5vh;
+  margin-bottom: 1.5vh;
+  white-space: nowrap;
 }
 h1 strong {
   font-weight: normal !important;
@@ -119,7 +121,7 @@ h1 button {
   height: fit-content;
   width: 25%;
   margin-left: -3%;
-  z-index: 2;
+  z-index: 3;
 }
 .section__boite .intro__top .intro__titreBoite {
   position: absolute;
@@ -138,7 +140,7 @@ h1 button {
   height: fit-content;
   width: 45%;
   margin-right: -10%;
-  z-index: 2;
+  z-index: 3;
 }
 
 .section__overlay .intro__top {
@@ -173,7 +175,7 @@ h1 button {
   font-size: 30pt;
   font-family: "mainFont";
   text-decoration: none !important;
-  color: #bb95f8 !important;
+  color: #bb95f8;
 }
 .section__overlay .intro__navBar a a {
   z-index: 50;
@@ -182,8 +184,9 @@ h1 button {
 .section__overlay .intro__navBar a h2,
 .section__overlay .intro__navBar a h3 {
   font-weight: normal !important;
-  margin-top: 1vh;
-  margin-bottom: 1vh;
+  margin-top: 1.5vh;
+  margin-bottom: 1.5vh;
+  white-space: nowrap;
 }
 .section__overlay .intro__navBar a strong {
   font-weight: normal !important;
@@ -197,11 +200,8 @@ h1 button {
   top: 0;
   left: 95%;
 }
-.section__overlay .intro__navBar a:hover {
-  color: red !important;
-}
 .section__overlay .intro__topBottom {
-  height: 40%;
+  height: fit-content;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -238,9 +238,6 @@ h1 button {
 .section__overlay .aPropos__bottom {
   height: 70%;
   width: 100%;
-}
-.section__overlay .aPropos__texte {
-  margin-left: 20%;
 }
 
 .projets {
@@ -311,9 +308,6 @@ h1 button {
 }
 .section__overlay .projets__bottom [data-animated=true] .carouselTrack:hover {
   animation-play-state: paused;
-}
-.section__overlay .projets__bottom .carouselTrack .item:hover {
-  border: 5px solid red !important;
 }
 @keyframes scroll {
   to {
@@ -409,7 +403,7 @@ h1 button {
   align-items: center;
   flex-direction: row-reverse;
 }
-.section__boite .competences__top .competences__titre {
+.section__boite .competences__top .competences__titre, .section__boite .competences__top .highlight-container {
   margin-right: 10%;
 }
 .section__boite .competences__bottom {
@@ -426,7 +420,6 @@ h1 button {
   width: 100%;
 }
 .section__overlay .competences__bottom #carousel3 {
-  top: 3850px;
   background: #363636;
 }
 .section__overlay .competences__bottom #carousel3 .item {
@@ -444,7 +437,7 @@ h1 button {
   animation: scroll3 20s linear infinite;
 }
 .section__overlay .competences__bottom .carouselTrack3 {
-  padding-block: 1rem;
+  padding-block: 2%;
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
@@ -479,7 +472,7 @@ h1 button {
   font-size: 30pt;
   font-family: "mainFont";
   text-decoration: none !important;
-  color: #653080 !important;
+  color: #653080;
 }
 .section__overlay .competences__topBottom .carouselContainer .carouselTrack2 a {
   z-index: 50;
@@ -488,8 +481,9 @@ h1 button {
 .section__overlay .competences__topBottom .carouselContainer .carouselTrack2 h2,
 .section__overlay .competences__topBottom .carouselContainer .carouselTrack2 h3 {
   font-weight: normal !important;
-  margin-top: 1vh;
-  margin-bottom: 1vh;
+  margin-top: 1.5vh;
+  margin-bottom: 1.5vh;
+  white-space: nowrap;
 }
 .section__overlay .competences__topBottom .carouselContainer .carouselTrack2 strong {
   font-weight: normal !important;
@@ -509,7 +503,7 @@ h1 button {
   animation: scroll2 25s linear infinite;
 }
 .section__overlay .competences__topBottom .carouselTrack2 {
-  padding-block: 1rem;
+  padding-block: 2%;
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
@@ -561,7 +555,7 @@ h1 button {
   font-size: 30pt;
   font-family: "mainFont";
   text-decoration: none !important;
-  color: #bb95f8 !important;
+  color: #bb95f8;
 }
 .section__overlay .contact__top .contact__links a {
   z-index: 50;
@@ -570,8 +564,9 @@ h1 button {
 .section__overlay .contact__top .contact__links h2,
 .section__overlay .contact__top .contact__links h3 {
   font-weight: normal !important;
-  margin-top: 1vh;
-  margin-bottom: 1vh;
+  margin-top: 1.5vh;
+  margin-bottom: 1.5vh;
+  white-space: nowrap;
 }
 .section__overlay .contact__top .contact__links strong {
   font-weight: normal !important;
@@ -585,8 +580,9 @@ h1 button {
   top: 0;
   left: 95%;
 }
-.section__overlay .contact__top a:hover {
-  color: red !important;
+.section__overlay .highlight-container {
+  padding-top: 1.5vh;
+  padding-bottom: 1.5vh;
 }
 .section__overlay .contact__topTop {
   height: 50%;
@@ -607,9 +603,21 @@ h1 button {
   width: 100%;
 }
 
-.highlight-container {
+@font-face {
+  font-family: "mainFont";
+  src: url("../style/MonumentExtended-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+.highlight-gauche,
+.highlight-droite,
+.highlight-aPropos {
   display: inline-block;
   position: relative;
+}
+
+.highlight-aPropos {
+  margin-left: 20%;
 }
 
 .highlight-text {
@@ -617,8 +625,10 @@ h1 button {
   z-index: 1;
 }
 
-.highlight-container::before {
+.highlight-gauche::before {
   content: "";
+  border-top-right-radius: 30px;
+  border-radius: 30px;
   position: absolute;
   left: 0;
   top: 0;
@@ -629,13 +639,498 @@ h1 button {
   transition: width 2s cubic-bezier(0.77, 0, 0.18, 1);
 }
 
-.highlight-container.highlighted::before {
+.highlight-gauche.highlighted::before {
   width: 300%;
-  margin-left: -190%; /* longueur moin 100% */
+  margin-left: -195%; /* longueur moin 100% */
 }
 
-.highlight-container::before {
+.highlight-gauche::before {
   width: var(--highlight-width, 0);
+}
+
+.highlight-droite::before {
+  content: "";
+  border-bottom-left-radius: 30px;
+  border-radius: 30px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background: #363636; /* couleur du highlight */
+  z-index: 0;
+  transition: width 2s cubic-bezier(0.77, 0, 0.18, 1);
+}
+
+.highlight-droite.highlighted::before {
+  width: 300%;
+  margin-right: -195%; /* longueur moin 100% */
+}
+
+.highlight-droite::before {
+  width: var(--highlight-width, 0);
+}
+
+@font-face {
+  font-family: "mainFont";
+  src: url("../style/MonumentExtended-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+.glowing {
+  filter: drop-shadow(0 0 15px #653080) drop-shadow(0 0 30px #bb95f8);
+}
+
+a:hover {
+  color: #ff6a8a !important;
+  filter: drop-shadow(0 0 15px #653080) drop-shadow(0 0 30px #bb95f8);
+}
+
+.glowBox .item:hover {
+  filter: drop-shadow(0 0 15px #653080) drop-shadow(0 0 30px #bb95f8);
+  border: 5px solid #ff6a8a !important;
+}
+
+@media (max-width: 1600px) {
+  body {
+    font-size: 18pt;
+    font-family: "mainFont";
+    text-decoration: none !important;
+    color: #bb95f8;
+  }
+  body a {
+    z-index: 50;
+  }
+  body h1,
+  body h2,
+  body h3 {
+    font-weight: normal !important;
+    margin-top: 1.5vh;
+    margin-bottom: 1.5vh;
+    white-space: nowrap;
+  }
+  body strong {
+    font-weight: normal !important;
+    color: #ff6a8a;
+  }
+  body button {
+    all: unset;
+    display: inline-block;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 95%;
+  }
+  .section__overlay .competences__topBottom .carouselContainer .carouselTrack2 {
+    font-size: 25pt;
+    font-family: "mainFont";
+    text-decoration: none !important;
+    color: #653080;
+  }
+  .section__overlay .competences__topBottom .carouselContainer .carouselTrack2 a {
+    z-index: 50;
+  }
+  .section__overlay .competences__topBottom .carouselContainer .carouselTrack2 h1,
+  .section__overlay .competences__topBottom .carouselContainer .carouselTrack2 h2,
+  .section__overlay .competences__topBottom .carouselContainer .carouselTrack2 h3 {
+    font-weight: normal !important;
+    margin-top: 1.5vh;
+    margin-bottom: 1.5vh;
+    white-space: nowrap;
+  }
+  .section__overlay .competences__topBottom .carouselContainer .carouselTrack2 strong {
+    font-weight: normal !important;
+    color: #ff6a8a;
+  }
+  .section__overlay .competences__topBottom .carouselContainer .carouselTrack2 button {
+    all: unset;
+    display: inline-block;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 95%;
+  }
+  .section__overlay .contact__top .contact__links {
+    font-size: 25pt;
+    font-family: "mainFont";
+    text-decoration: none !important;
+    color: #bb95f8;
+  }
+  .section__overlay .contact__top .contact__links a {
+    z-index: 50;
+  }
+  .section__overlay .contact__top .contact__links h1,
+  .section__overlay .contact__top .contact__links h2,
+  .section__overlay .contact__top .contact__links h3 {
+    font-weight: normal !important;
+    margin-top: 1.5vh;
+    margin-bottom: 1.5vh;
+    white-space: nowrap;
+  }
+  .section__overlay .contact__top .contact__links strong {
+    font-weight: normal !important;
+    color: #ff6a8a;
+  }
+  .section__overlay .contact__top .contact__links button {
+    all: unset;
+    display: inline-block;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 95%;
+  }
+  .section__overlay .intro__navBar a {
+    font-size: 25pt;
+    font-family: "mainFont";
+    text-decoration: none !important;
+    color: #bb95f8;
+  }
+  .section__overlay .intro__navBar a a {
+    z-index: 50;
+  }
+  .section__overlay .intro__navBar a h1,
+  .section__overlay .intro__navBar a h2,
+  .section__overlay .intro__navBar a h3 {
+    font-weight: normal !important;
+    margin-top: 1.5vh;
+    margin-bottom: 1.5vh;
+    white-space: nowrap;
+  }
+  .section__overlay .intro__navBar a strong {
+    font-weight: normal !important;
+    color: #ff6a8a;
+  }
+  .section__overlay .intro__navBar a button {
+    all: unset;
+    display: inline-block;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 95%;
+  }
+  h1 {
+    font-size: 40pt;
+    font-family: "mainFont";
+    text-decoration: none !important;
+    color: #bb95f8;
+  }
+  h1 a {
+    z-index: 50;
+  }
+  h1 h1,
+  h1 h2,
+  h1 h3 {
+    font-weight: normal !important;
+    margin-top: 1.5vh;
+    margin-bottom: 1.5vh;
+    white-space: nowrap;
+  }
+  h1 strong {
+    font-weight: normal !important;
+    color: #ff6a8a;
+  }
+  h1 button {
+    all: unset;
+    display: inline-block;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 95%;
+  }
+}
+@media (max-width: 1400px) {
+  body {
+    font-size: 16pt;
+    font-family: "mainFont";
+    text-decoration: none !important;
+    color: #bb95f8;
+  }
+  body a {
+    z-index: 50;
+  }
+  body h1,
+  body h2,
+  body h3 {
+    font-weight: normal !important;
+    margin-top: 1.5vh;
+    margin-bottom: 1.5vh;
+    white-space: nowrap;
+  }
+  body strong {
+    font-weight: normal !important;
+    color: #ff6a8a;
+  }
+  body button {
+    all: unset;
+    display: inline-block;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 95%;
+  }
+  .section__overlay .competences__topBottom .carouselContainer .carouselTrack2 {
+    font-size: 20pt;
+    font-family: "mainFont";
+    text-decoration: none !important;
+    color: #653080;
+  }
+  .section__overlay .competences__topBottom .carouselContainer .carouselTrack2 a {
+    z-index: 50;
+  }
+  .section__overlay .competences__topBottom .carouselContainer .carouselTrack2 h1,
+  .section__overlay .competences__topBottom .carouselContainer .carouselTrack2 h2,
+  .section__overlay .competences__topBottom .carouselContainer .carouselTrack2 h3 {
+    font-weight: normal !important;
+    margin-top: 1.5vh;
+    margin-bottom: 1.5vh;
+    white-space: nowrap;
+  }
+  .section__overlay .competences__topBottom .carouselContainer .carouselTrack2 strong {
+    font-weight: normal !important;
+    color: #ff6a8a;
+  }
+  .section__overlay .competences__topBottom .carouselContainer .carouselTrack2 button {
+    all: unset;
+    display: inline-block;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 95%;
+  }
+  .section__overlay .contact__top .contact__links {
+    font-size: 20pt;
+    font-family: "mainFont";
+    text-decoration: none !important;
+    color: #bb95f8;
+  }
+  .section__overlay .contact__top .contact__links a {
+    z-index: 50;
+  }
+  .section__overlay .contact__top .contact__links h1,
+  .section__overlay .contact__top .contact__links h2,
+  .section__overlay .contact__top .contact__links h3 {
+    font-weight: normal !important;
+    margin-top: 1.5vh;
+    margin-bottom: 1.5vh;
+    white-space: nowrap;
+  }
+  .section__overlay .contact__top .contact__links strong {
+    font-weight: normal !important;
+    color: #ff6a8a;
+  }
+  .section__overlay .contact__top .contact__links button {
+    all: unset;
+    display: inline-block;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 95%;
+  }
+  .section__overlay .intro__navBar a {
+    font-size: 20pt;
+    font-family: "mainFont";
+    text-decoration: none !important;
+    color: #bb95f8;
+  }
+  .section__overlay .intro__navBar a a {
+    z-index: 50;
+  }
+  .section__overlay .intro__navBar a h1,
+  .section__overlay .intro__navBar a h2,
+  .section__overlay .intro__navBar a h3 {
+    font-weight: normal !important;
+    margin-top: 1.5vh;
+    margin-bottom: 1.5vh;
+    white-space: nowrap;
+  }
+  .section__overlay .intro__navBar a strong {
+    font-weight: normal !important;
+    color: #ff6a8a;
+  }
+  .section__overlay .intro__navBar a button {
+    all: unset;
+    display: inline-block;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 95%;
+  }
+  h1 {
+    font-size: 35pt;
+    font-family: "mainFont";
+    text-decoration: none !important;
+    color: #bb95f8;
+  }
+  h1 a {
+    z-index: 50;
+  }
+  h1 h1,
+  h1 h2,
+  h1 h3 {
+    font-weight: normal !important;
+    margin-top: 1.5vh;
+    margin-bottom: 1.5vh;
+    white-space: nowrap;
+  }
+  h1 strong {
+    font-weight: normal !important;
+    color: #ff6a8a;
+  }
+  h1 button {
+    all: unset;
+    display: inline-block;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 95%;
+  }
+}
+@media (max-width: 1200px) {
+  body {
+    font-size: 14pt;
+    font-family: "mainFont";
+    text-decoration: none !important;
+    color: #bb95f8;
+  }
+  body a {
+    z-index: 50;
+  }
+  body h1,
+  body h2,
+  body h3 {
+    font-weight: normal !important;
+    margin-top: 1.5vh;
+    margin-bottom: 1.5vh;
+    white-space: nowrap;
+  }
+  body strong {
+    font-weight: normal !important;
+    color: #ff6a8a;
+  }
+  body button {
+    all: unset;
+    display: inline-block;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 95%;
+  }
+  .section__overlay .competences__topBottom .carouselContainer .carouselTrack2 {
+    font-size: 18pt;
+    font-family: "mainFont";
+    text-decoration: none !important;
+    color: #653080;
+  }
+  .section__overlay .competences__topBottom .carouselContainer .carouselTrack2 a {
+    z-index: 50;
+  }
+  .section__overlay .competences__topBottom .carouselContainer .carouselTrack2 h1,
+  .section__overlay .competences__topBottom .carouselContainer .carouselTrack2 h2,
+  .section__overlay .competences__topBottom .carouselContainer .carouselTrack2 h3 {
+    font-weight: normal !important;
+    margin-top: 1.5vh;
+    margin-bottom: 1.5vh;
+    white-space: nowrap;
+  }
+  .section__overlay .competences__topBottom .carouselContainer .carouselTrack2 strong {
+    font-weight: normal !important;
+    color: #ff6a8a;
+  }
+  .section__overlay .competences__topBottom .carouselContainer .carouselTrack2 button {
+    all: unset;
+    display: inline-block;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 95%;
+  }
+  .section__overlay .contact__top .contact__links {
+    font-size: 18pt;
+    font-family: "mainFont";
+    text-decoration: none !important;
+    color: #bb95f8;
+  }
+  .section__overlay .contact__top .contact__links a {
+    z-index: 50;
+  }
+  .section__overlay .contact__top .contact__links h1,
+  .section__overlay .contact__top .contact__links h2,
+  .section__overlay .contact__top .contact__links h3 {
+    font-weight: normal !important;
+    margin-top: 1.5vh;
+    margin-bottom: 1.5vh;
+    white-space: nowrap;
+  }
+  .section__overlay .contact__top .contact__links strong {
+    font-weight: normal !important;
+    color: #ff6a8a;
+  }
+  .section__overlay .contact__top .contact__links button {
+    all: unset;
+    display: inline-block;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 95%;
+  }
+  .section__overlay .intro__navBar a {
+    font-size: 18pt;
+    font-family: "mainFont";
+    text-decoration: none !important;
+    color: #bb95f8;
+  }
+  .section__overlay .intro__navBar a a {
+    z-index: 50;
+  }
+  .section__overlay .intro__navBar a h1,
+  .section__overlay .intro__navBar a h2,
+  .section__overlay .intro__navBar a h3 {
+    font-weight: normal !important;
+    margin-top: 1.5vh;
+    margin-bottom: 1.5vh;
+    white-space: nowrap;
+  }
+  .section__overlay .intro__navBar a strong {
+    font-weight: normal !important;
+    color: #ff6a8a;
+  }
+  .section__overlay .intro__navBar a button {
+    all: unset;
+    display: inline-block;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 95%;
+  }
+  h1 {
+    font-size: 32pt;
+    font-family: "mainFont";
+    text-decoration: none !important;
+    color: #bb95f8;
+  }
+  h1 a {
+    z-index: 50;
+  }
+  h1 h1,
+  h1 h2,
+  h1 h3 {
+    font-weight: normal !important;
+    margin-top: 1.5vh;
+    margin-bottom: 1.5vh;
+    white-space: nowrap;
+  }
+  h1 strong {
+    font-weight: normal !important;
+    color: #ff6a8a;
+  }
+  h1 button {
+    all: unset;
+    display: inline-block;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 95%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

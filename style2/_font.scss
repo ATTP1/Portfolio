@@ -7,7 +7,7 @@ $Pink: #ff6a8a;
 $Black: #363636;
 
 @mixin fontStyle($taille, $couleur, $format) {
-  //2k 125%WinZoom DEFAULT
+  //1080p DEFAULT
   @if ($format == "default") {
     @if ($taille == "petit") {
       font-size: 20pt;
@@ -19,10 +19,10 @@ $Black: #363636;
       font-size: $taille;
     }
   }
-  //1080p
-  @else if($format == 1950) {
+  //1600p Horizontale
+  @else if($format == 1600) {
     @if ($taille == "petit") {
-      font-size: 20pt;
+      font-size: 18pt;
     } @else if($taille == "moyen") {
       font-size: 25pt;
     } @else if($taille == "grand") {
@@ -31,10 +31,10 @@ $Black: #363636;
       font-size: $taille;
     }
   }
-  //MacBook Pro
-  @else if($format == 1450) {
+  //1400p Horizontale
+  @else if($format == 1400) {
     @if ($taille == "petit") {
-      font-size: 15pt;
+      font-size: 16pt;
     } @else if($taille == "moyen") {
       font-size: 20pt;
     } @else if($taille == "grand") {
@@ -43,50 +43,46 @@ $Black: #363636;
       font-size: $taille;
     }
   }
-  //Ipad Vertical
-  @else if($format == 770) {
+  //1200p Horizontale
+  @else if($format == 1200) {
     @if ($taille == "petit") {
-      font-size: 15pt;
+      font-size: 14pt;
     } @else if($taille == "moyen") {
-      font-size: 20pt;
+      font-size: 18pt;
     } @else if($taille == "grand") {
-      font-size: 30pt;
+      font-size: 32pt;
     } @else {
       font-size: $taille;
     }
   }
-  //Iphone 12 Pro
-  @else if($format == 500) {
-    @if ($taille == "petit") {
-      font-size: 12pt;
-    } @else if($taille == "moyen") {
-      font-size: 15pt;
-    } @else if($taille == "grand") {
-      font-size: 25pt;
-    } @else {
-      font-size: $taille;
-    }
-  }
+  
+
+  
+  font-family: "mainFont";
+
+  text-decoration: none !important;
+  color: $couleur ;
 
   a {
     z-index: 50;
   }
 
-  font-family: "mainFont";
+  
 
-  text-decoration: none !important;
-  color: $couleur !important;
 
   h1,
   h2,
   h3 {
     font-weight: normal !important;
-    margin-top: 1vh;
-    margin-bottom: 1vh;
+    margin-top: 1.5vh;
+    margin-bottom: 1.5vh;
+    white-space: nowrap;
   }
 
-  strong{font-weight: normal !important;
-  color: $Pink;}
+  strong {
+    font-weight: normal !important;
+    color: $Pink;
+  }
 
   button {
     all: unset;

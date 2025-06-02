@@ -28,7 +28,7 @@ h1 {
       width: 25%;
 
       margin-left: -3%;
-      z-index: 2;
+      z-index: 3;
     }
 
     .intro__titreBoite {
@@ -53,15 +53,17 @@ h1 {
       width: 45%;
       margin-right: -10%;
 
-      z-index: 2;
+      z-index: 3;
     }
   }
 }
 
 .section__overlay {
+  
   .intro__top {
     height: 50%;
     width: 100%;
+    
   }
 
   .intro__bottom {
@@ -71,6 +73,8 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    
   }
 
   .intro__topTop {
@@ -81,6 +85,8 @@ h1 {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+
+    
   }
 
   .intro__navBar {
@@ -96,14 +102,14 @@ h1 {
       @include fontStyle("moyen", $Purple2, "default");
     }
 
-    a:hover{
-      color: red !important;
-    }
+    
   }
 
   .intro__topBottom {
-    height: 40%;
+    height: fit-content;
     width: 100%;
+
+   
 
     display: flex;
     justify-content: center;

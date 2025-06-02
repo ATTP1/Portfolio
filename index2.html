@@ -40,7 +40,7 @@
         <div class="intro__top">
           <img class="intro__miniS" src="images/intro__miniS.png" alt="" />
           <div class="intro__titreBoite">
-            <img class="intro__titre" src="images/intro__titre.png" alt="" />
+            <img class="intro__titre glowing" src="images/intro__titre.png" alt="" />
           </div>
 
           <img class="intro__miniMe" src="images/intro__miniMe.png" alt="" />
@@ -56,16 +56,20 @@
               <a href="#competences">Compétences</a>
               <a href="#contact">Contact</a>
             </div>
-            <div class="highlight-container">
+            <div class="highlight-container highlight-gauche">
               <h1 class="highlight-text">Que du <strong>code</strong> et</h1>
             </div>
           </div>
           <div class="intro__topBottom">
-            <h1>un peu de magie</h1>
+            <div class="highlight-container highlight-droite">
+              <h1 class="highlight-text">un peu de <strong>magie</strong></h1>
+            </div>
           </div>
         </div>
         <div class="intro__bottom">
-          <h2>Allan Tri Tam Pham</h2>
+          <div class="highlight-container highlight-gauche">
+            <h2 class="highlight-text">Allan Tri Tam Pham</h2>
+          </div>
         </div>
       </div>
     </section>
@@ -79,21 +83,24 @@
 
       <div class="section__overlay">
         <div class="aPropos__top">
-          <h1>À propos</h1>
+          <div class="highlight-container highlight-gauche">
+            <h1 class="highlight-text">À propos</h1>
+          </div>
         </div>
         <div class="aPropos__bottom">
-          <p class="aPropos__texte">
-            Je suis une personne curieuse qui apprend avant tout en créant.
-            Qu’il s’agisse de concevoir des applications web, d’explorer des
-            outils de design ou de développer des projets interactifs, j’aime
-            transformer les idées en expériences concrètes. Passionné par les
-            technologies, le design créatif et l’univers du jeu vidéo, je
-            combine ces domaines à travers HTML, CSS, JavaScript ainsi que des
-            outils comme Illustrator ou Spline. J’ai réalisé divers projets,
-            allant de minuteries de bureau à des sites web interactifs, qui
-            m’ont permis de développer mes compétences et d’explorer de
-            nouvelles approches.
-          </p>
+          <div class="highlight-container highlight-droite highlight-aPropos">
+            <p class="aPropos__texte highlight-text">
+              Je suis une personne curieuse qui apprend avant tout en créant.
+              Qu’il s’agisse de concevoir des applications web, d’explorer des
+              nouvelles formes d'art ou de développer des projets interactifs, j’aime
+              transformer les idées en expériences. Passionné par les
+              technologies, le design créatif et l’univers du jeu vidéo, je
+              combine ces domaines à travers HTML, CSS, JavaScript ainsi que des
+              outils comme Illustrator ou Spline. J’ai réalisé divers projets qui
+              m’ont permis de développer mes compétences et d’explorer de
+              nouvelles approches face à la technologie.
+            </p>
+          </div>
         </div>
       </div>
     </section>
@@ -101,7 +108,9 @@
     <section id="projets" class="section projets">
       <div class="section__boite">
         <div class="projets__top">
-          <h1>Mes Projets</h1>
+          <div class="highlight-container highlight-gauche">
+            <h1 class="highlight-text">Mes Projets</h1>
+          </div>
         </div>
         <div class="projets__bottom"></div>
       </div>
@@ -116,7 +125,7 @@
 
         <div class="projets__bottom">
           <div id="carousel1" class="carouselContainer">
-            <div class="carouselTrack">
+            <div class="glowBox carouselTrack">
               <div class="item" data-popup="popup1">
                 <img src="images/projects/1.png" alt="" />
               </div>
@@ -147,7 +156,9 @@
     <section id="competences" class="section competences">
       <div class="section__boite">
         <div class="competences__top">
-          <h1 class="competences__titre">Mes Compétences</h1>
+          <div class="highlight-container highlight-droite">
+            <h1 class="competences__titre highlight-text">Mes Compétences</h1>
+          </div>
         </div>
         <div class="competences__bottom"></div>
       </div>
@@ -224,15 +235,30 @@
       <div class="section__overlay">
         <div class="contact__top">
           <div class="contact__topTop">
-            <h1>Mes Contacts</h1>
+            <div class="highlight-container highlight-gauche">
+              <h1 class="highlight-text">Mes Contacts</h1>
+            </div>
           </div>
           <div class="contact__topBottom">
-            <a class="contact__links" href="mailto:allantritampham@gmail.com"
-              >allantritampham@gmail.com</a
-            >
-            <a class="contact__links" href="https://github.com/ATTP1"
-              >https://github.com/ATTP1</a
-            >
+            <div class="contact__linksBox">
+              <div class="highlight-container highlight-gauche">
+                <a
+                  class="contact__links highlight-text"
+                  href="mailto:allantritampham@gmail.com"
+                  >allantritampham@gmail.com</a
+                >
+              </div>
+            </div>
+
+            <div class="contact__linksBox">
+              <div class="highlight-container highlight-gauche">
+                <a
+                  class="contact__links highlight-text"
+                  href="https://github.com/ATTP1"
+                  >https://github.com/ATTP1</a
+                >
+              </div>
+            </div>
           </div>
         </div>
         <div class="contact__bottom"></div>
@@ -675,36 +701,35 @@
       //highlight
 
       gsap.utils.toArray(".highlight-container").forEach((container, i) => {
-  gsap.to(container, {
-    "--highlight-width": "100%",
-    scrollTrigger: {
-      trigger: container,
-      start: "top 80%",
-      toggleActions: "play none none none",
-      onLeave: () => {
-        // Reset l'animation quand tu quittes le viewport vers le bas
-        container.style.setProperty("--highlight-width", "0%");
-        container.classList.remove("highlighted");
-      },
-      onLeaveBack: () => {
-        // Reset l'animation quand tu quittes le viewport vers le haut
-        container.style.setProperty("--highlight-width", "0%");
-        container.classList.remove("highlighted");
-      },
-      onEnter: () => {
-        // Rejoue l'animation quand tu entres dans le viewport
-        container.style.setProperty("--highlight-width", "100%");
-        container.classList.add("highlighted");
-      },
-      onEnterBack: () => {
-        // Rejoue l'animation quand tu reviens dans le viewport (scroll up)
-        container.style.setProperty("--highlight-width", "100%");
-        container.classList.add("highlighted");
-      }
-    }
-  });
-});
-     
+        gsap.to(container, {
+          "--highlight-width": "100%",
+          scrollTrigger: {
+            trigger: container,
+            start: "top 80%",
+            toggleActions: "play none none none",
+            onLeave: () => {
+              
+              container.style.setProperty("--highlight-width", "0%");
+              container.classList.remove("highlighted");
+            },
+            onLeaveBack: () => {
+              
+              container.style.setProperty("--highlight-width", "0%");
+              //container.classList.remove("highlighted");
+            },
+            onEnter: () => {
+              
+              container.style.setProperty("--highlight-width", "100%");
+              container.classList.add("highlighted");
+            },
+            onEnterBack: () => {
+              
+              container.style.setProperty("--highlight-width", "100%");
+              container.classList.add("highlighted");
+            },
+          },
+        });
+      });
     </script>
 
     <script>

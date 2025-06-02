@@ -1,0 +1,89 @@
+@media (max-width: 1600px) {
+  body {
+    @include fontStyle("petit", $Purple2, 1600);
+  }
+
+  .section__overlay {
+    .competences__topBottom {
+      .carouselContainer .carouselTrack2 {
+        @include fontStyle("moyen", $Purple3, 1600);
+      }
+    }
+
+    .contact__top {
+      .contact__links {
+        @include fontStyle("moyen", $Purple2, 1600);
+      }
+    }
+
+    .intro__navBar {
+      a {
+        @include fontStyle("moyen", $Purple2, 1600);
+      }
+    }
+  }
+
+  h1 {
+    @include fontStyle("grand", $Purple2, 1600);
+  }
+}
+
+@media (max-width: 1400px) {
+  body {
+    @include fontStyle("petit", $Purple2, 1400);
+  }
+
+  .section__overlay {
+    .competences__topBottom {
+      .carouselContainer .carouselTrack2 {
+        @include fontStyle("moyen", $Purple3, 1400);
+      }
+    }
+
+    .contact__top {
+      .contact__links {
+        @include fontStyle("moyen", $Purple2, 1400);
+      }
+    }
+
+    .intro__navBar {
+      a {
+        @include fontStyle("moyen", $Purple2, 1400);
+      }
+    }
+  }
+
+  h1 {
+    @include fontStyle("grand", $Purple2, 1400);
+  }
+}
+
+@media (max-width: 1200px) {
+  body {
+    @include fontStyle("petit", $Purple2, 1200);
+  }
+
+  .section__overlay {
+    .competences__topBottom {
+      .carouselContainer .carouselTrack2 {
+        @include fontStyle("moyen", $Purple3, 1200);
+      }
+    }
+
+    .contact__top {
+      .contact__links {
+        @include fontStyle("moyen", $Purple2, 1200);
+      }
+    }
+
+    .intro__navBar {
+      a {
+        @include fontStyle("moyen", $Purple2, 1200);
+      }
+    }
+  }
+
+  h1 {
+    @include fontStyle("grand", $Purple2, 1200);
+  }
+}

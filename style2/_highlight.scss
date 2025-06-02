@@ -1,37 +1,71 @@
-.highlight-container {
+@import "font";
+
+.highlight-gauche,
+.highlight-droite,
+.highlight-aPropos {
   display: inline-block;
   position: relative;
   
+  
+}
+
+.highlight-aPropos{
+  margin-left: 20%;
 }
 
 .highlight-text {
   position: relative;
   z-index: 1;
-  
- 
 }
 
-.highlight-container::before {
-  content: '';
-  
+.highlight-gauche::before {
+  content: "";
+  border-top-right-radius: 30px;
+  border-radius: 30px;
+
   position: absolute;
   left: 0;
   top: 0;
   width: 0;
   height: 100%;
-  background: #363636; /* couleur du highlight */
+  background: $Black; /* couleur du highlight */
   z-index: 0;
-  transition: width 2s cubic-bezier(0.77,0,0.18,1);
+  transition: width 2s cubic-bezier(0.77, 0, 0.18, 1);
 }
 
-.highlight-container.highlighted::before {
-  width: 300%; 
-  margin-left: -190%; /* longueur moin 100% */
-  
+.highlight-gauche.highlighted::before {
+  width: 300%;
+  margin-left: -195%; /* longueur moin 100% */
 }
 
-.highlight-container::before {
+.highlight-gauche::before {
   width: var(--highlight-width, 0);
-  
 }
+
+.highlight-droite::before {
+  content: "";
+  border-bottom-left-radius: 30px;
+  border-radius: 30px;
+
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background: $Black; /* couleur du highlight */
+
+  z-index: 0;
+  transition: width 2s cubic-bezier(0.77, 0, 0.18, 1);
+}
+
+.highlight-droite.highlighted::before {
+  width: 300%;
+  margin-right: -195%; /* longueur moin 100% */
+}
+
+.highlight-droite::before {
+  width: var(--highlight-width, 0);
+}
+
+
 
