@@ -1,0 +1,37 @@
+.highlight-container {
+  display: inline-block;
+  position: relative;
+  
+}
+
+.highlight-text {
+  position: relative;
+  z-index: 1;
+  
+ 
+}
+
+.highlight-container::before {
+  content: '';
+  
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background: #363636; /* couleur du highlight */
+  z-index: 0;
+  transition: width 2s cubic-bezier(0.77,0,0.18,1);
+}
+
+.highlight-container.highlighted::before {
+  width: 300%; 
+  margin-left: -190%; /* longueur moin 100% */
+  
+}
+
+.highlight-container::before {
+  width: var(--highlight-width, 0);
+  
+}
+

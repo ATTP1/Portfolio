@@ -21,6 +21,12 @@ body h1,
 body h2,
 body h3 {
   font-weight: normal !important;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+}
+body strong {
+  font-weight: normal !important;
+  color: #ff6a8a;
 }
 body button {
   all: unset;
@@ -86,6 +92,12 @@ h1 h1,
 h1 h2,
 h1 h3 {
   font-weight: normal !important;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+}
+h1 strong {
+  font-weight: normal !important;
+  color: #ff6a8a;
 }
 h1 button {
   all: unset;
@@ -170,6 +182,12 @@ h1 button {
 .section__overlay .intro__navBar a h2,
 .section__overlay .intro__navBar a h3 {
   font-weight: normal !important;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+}
+.section__overlay .intro__navBar a strong {
+  font-weight: normal !important;
+  color: #ff6a8a;
 }
 .section__overlay .intro__navBar a button {
   all: unset;
@@ -355,41 +373,6 @@ h1 button {
   margin-right: 5%;
   margin-top: 2%;
 }
-.popup-menu__contenu p strong,
-.popup-menu__contenu h2 strong,
-.popup-menu__contenu h3 strong {
-  font-size: 20pt;
-  font-family: "mainFont";
-  text-decoration: none !important;
-  color: #ff6a8a !important;
-  font-weight: normal;
-}
-.popup-menu__contenu p strong a,
-.popup-menu__contenu h2 strong a,
-.popup-menu__contenu h3 strong a {
-  z-index: 50;
-}
-.popup-menu__contenu p strong h1,
-.popup-menu__contenu p strong h2,
-.popup-menu__contenu p strong h3,
-.popup-menu__contenu h2 strong h1,
-.popup-menu__contenu h2 strong h2,
-.popup-menu__contenu h2 strong h3,
-.popup-menu__contenu h3 strong h1,
-.popup-menu__contenu h3 strong h2,
-.popup-menu__contenu h3 strong h3 {
-  font-weight: normal !important;
-}
-.popup-menu__contenu p strong button,
-.popup-menu__contenu h2 strong button,
-.popup-menu__contenu h3 strong button {
-  all: unset;
-  display: inline-block;
-  cursor: pointer;
-  position: absolute;
-  top: 0;
-  left: 95%;
-}
 .popup-menu__contenu .popup-menu__texte {
   height: 55%;
 }
@@ -505,6 +488,12 @@ h1 button {
 .section__overlay .competences__topBottom .carouselContainer .carouselTrack2 h2,
 .section__overlay .competences__topBottom .carouselContainer .carouselTrack2 h3 {
   font-weight: normal !important;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+}
+.section__overlay .competences__topBottom .carouselContainer .carouselTrack2 strong {
+  font-weight: normal !important;
+  color: #ff6a8a;
 }
 .section__overlay .competences__topBottom .carouselContainer .carouselTrack2 button {
   all: unset;
@@ -581,6 +570,12 @@ h1 button {
 .section__overlay .contact__top .contact__links h2,
 .section__overlay .contact__top .contact__links h3 {
   font-weight: normal !important;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+}
+.section__overlay .contact__top .contact__links strong {
+  font-weight: normal !important;
+  color: #ff6a8a;
 }
 .section__overlay .contact__top .contact__links button {
   all: unset;
@@ -610,6 +605,37 @@ h1 button {
 .section__overlay .contact__bottom {
   height: 20%;
   width: 100%;
+}
+
+.highlight-container {
+  display: inline-block;
+  position: relative;
+}
+
+.highlight-text {
+  position: relative;
+  z-index: 1;
+}
+
+.highlight-container::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background: #363636; /* couleur du highlight */
+  z-index: 0;
+  transition: width 2s cubic-bezier(0.77, 0, 0.18, 1);
+}
+
+.highlight-container.highlighted::before {
+  width: 300%;
+  margin-left: -190%; /* longueur moin 100% */
+}
+
+.highlight-container::before {
+  width: var(--highlight-width, 0);
 }
 
 /*# sourceMappingURL=style.css.map */

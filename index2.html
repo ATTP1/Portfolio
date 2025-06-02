@@ -56,8 +56,9 @@
               <a href="#competences">Compétences</a>
               <a href="#contact">Contact</a>
             </div>
-
-            <h1>Que du code et</h1>
+            <div class="highlight-container">
+              <h1 class="highlight-text">Que du <strong>code</strong> et</h1>
+            </div>
           </div>
           <div class="intro__topBottom">
             <h1>un peu de magie</h1>
@@ -624,6 +625,7 @@
         });
       });
       //highlight
+      /*
 
       gsap.to(".highlightAcceuil", {
         duration: 2,
@@ -666,7 +668,43 @@
         },
         x: 0,
         duration: 4,
-      });
+      });*/
+    </script>
+
+    <script>
+      //highlight
+
+      gsap.utils.toArray(".highlight-container").forEach((container, i) => {
+  gsap.to(container, {
+    "--highlight-width": "100%",
+    scrollTrigger: {
+      trigger: container,
+      start: "top 80%",
+      toggleActions: "play none none none",
+      onLeave: () => {
+        // Reset l'animation quand tu quittes le viewport vers le bas
+        container.style.setProperty("--highlight-width", "0%");
+        container.classList.remove("highlighted");
+      },
+      onLeaveBack: () => {
+        // Reset l'animation quand tu quittes le viewport vers le haut
+        container.style.setProperty("--highlight-width", "0%");
+        container.classList.remove("highlighted");
+      },
+      onEnter: () => {
+        // Rejoue l'animation quand tu entres dans le viewport
+        container.style.setProperty("--highlight-width", "100%");
+        container.classList.add("highlighted");
+      },
+      onEnterBack: () => {
+        // Rejoue l'animation quand tu reviens dans le viewport (scroll up)
+        container.style.setProperty("--highlight-width", "100%");
+        container.classList.add("highlighted");
+      }
+    }
+  });
+});
+     
     </script>
 
     <script>

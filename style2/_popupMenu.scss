@@ -46,10 +46,7 @@
     margin-right: 5%;
     margin-top: 2%;
 
-    strong {
-      @include fontStyle("petit", $Pink, "default");
-      font-weight: normal;
-    }
+    
   }
 
   .popup-menu__texte{

@@ -81,7 +81,12 @@ $Black: #363636;
   h2,
   h3 {
     font-weight: normal !important;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
   }
+
+  strong{font-weight: normal !important;
+  color: $Pink;}
 
   button {
     all: unset;
